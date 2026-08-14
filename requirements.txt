@@ -30,11 +30,14 @@ langgraph-sdk==0.4.2
 langsmith==0.10.18
 multidict==6.7.1
 numpy==2.5.2
+nvidia-ml-py==13.610.43
 ollama==0.6.2
 orjson==3.11.9
 ormsgpack==1.12.2
 packaging==26.3
 propcache==0.5.2
+psutil==7.2.2
+pyamdgpuinfo==2.1.8
 pydantic==2.13.4
 pydantic-settings==2.15.0
 pydantic_core==2.46.4

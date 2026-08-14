@@ -2,3 +2,6 @@ venv/
 
 context_docs/*
 !context_docs/.gitkeep
+
+datasets/*
+!datasets/.gitkeep

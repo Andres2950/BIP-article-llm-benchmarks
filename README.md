@@ -1,6 +1,9 @@
 # BIP-article-llm-benchmarks
 A python program to do benchmarks on LLM models that run in Ollama
 
+## Tests
+
+Since the context documents for this benchmark are in spanish, the dataset questions are made in spanish
 
 ## Ollama
 
