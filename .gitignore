@@ -1,0 +1,4 @@
+venv/
+
+context_docs/*
+!context_docs/.gitkeep
