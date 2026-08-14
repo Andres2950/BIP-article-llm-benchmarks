@@ -62,8 +62,10 @@ if __name__ == "__main__":
     print("Modelo: ", response.response_metadata["model"])
     print("Duración total: ", response.response_metadata["total_duration"])
     print("Duración de carga: ", response.response_metadata["load_duration"])
-    print("Tokens de input: ", response.response_metadata["input_tokens"])
-    print("Tokens de output: ", response.response_metadata["output_tokens"])
-    print("Tokens totales: ", response.response_metadata["total_tokens"])
+
+    print("\n" + "=" * 20)
+    print("Tokens de input: ", response.usage_metadata["input_tokens"])
+    print("Tokens de output: ", response.usage_metadata["output_tokens"])
+    print("Tokens totales: ", response.usage_metadata["total_tokens"])
 
 
