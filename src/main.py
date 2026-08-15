@@ -16,8 +16,26 @@ TYPES_RANGES = {
     "open_ended": (201, 203)
 }
 
-BAG_SIZE_PER_TYPE = 3
-NUM_BAGS = 1
+BAG_SIZE_PER_TYPE = 1
+NUM_BAGS = 2
+
+RECORD_COLUMNS = [
+    "bag_id",
+    "model",
+    "question_id",
+    "expected_answer",
+    "response",
+    "total_duration_sec",
+    "load_duration_sec",
+    "input_tokens",
+    "output_tokens",
+    "total_tokens",
+    "question_type",
+    "cpu_avg", "cpu_min", "cpu_max",
+    "memory_avg", "memory_min", "memory_max",
+    "gpu_util_avg", "gpu_util_min", "gpu_util_max",
+    "gpu_mem_avg", "gpu_mem_min", "gpu_mem_max",
+]
 
 # Función auxiliar (ponerla fuera del main)
 def get_question_type(q_id):
@@ -86,7 +104,9 @@ if __name__ == "__main__":
             benchmark.print_question_result(result)
         exit()
 
-    master_records = []
+    csv_path = f"./out/benchmark_raw_data_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv"
+    pd.DataFrame(columns=RECORD_COLUMNS).to_csv(csv_path, index=False)
+    print(f"Saving results incrementally to {csv_path}")
 
     for model in models:
         for bag_id in range(NUM_BAGS):
@@ -129,10 +149,10 @@ if __name__ == "__main__":
                         record[f"{resource}_min"] = None
                         record[f"{resource}_max"] = None
 
-                master_records.append(record)
+                pd.DataFrame([record], columns=RECORD_COLUMNS).to_csv(
+                    csv_path, mode="a", header=False, index=False
+                )
+                print(f"Question {question_id} | bag {bag_id} | model {model} | saved to {csv_path}")
 
-    df_raw_data = pd.DataFrame(master_records)
-    csv_path = f"benchmark_raw_data_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv"
-    df_raw_data.to_csv(csv_path, index=False)
     print(f"Raw data saved to {csv_path}")
     

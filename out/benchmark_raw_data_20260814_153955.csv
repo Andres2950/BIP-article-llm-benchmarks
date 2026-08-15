@@ -1,0 +1,140 @@
+bag_id,model,question_id,expected_answer,response,total_duration_sec,load_duration_sec,input_tokens,output_tokens,total_tokens,question_type,cpu_avg,cpu_min,cpu_max,memory_avg,memory_min,memory_max,gpu_util_avg,gpu_util_min,gpu_util_max,gpu_mem_avg,gpu_mem_min,gpu_mem_max
+0,qwen2.5-coder:3b,3,"Sí. El centro tiene sus raíces en el año 1995, cuando fue creado como un proyecto piloto mediante un convenio de cooperación entre la CCSS, la Universidad de Costa Rica (UCR) y la Agencia Japonesa de Cooperación Internacional (JICA).","Sí, la respuesta es correcta. El CNDTCG fue creado originalmente en 1995 como un proyecto piloto mediante un convenio que involucró a la Universidad de Costa Rica (UCR) y a la Agencia Japonesa de Cooperación Internacional (JICA).",43.295336082,2.479861052,2050,65,2115,yes_no,725.4518518518519,0.0,809.1,5371.3027102623455,3229.6328125,5453.65625,,,,,,
+0,qwen2.5-coder:3b,103,El método DELPHI modificada.,"El método estructurado de consenso entre expertos institucionales utilizado para la validación final del Manual de Gestión fue el proceso de ""Revisión y Aprobación por Consenso"".",52.605256541,0.157086358,2050,41,2091,short_answer,766.8614583333333,0.0,808.9,5624.3594156901045,5490.12109375,5625.828125,,,,,,
+0,qwen2.5-coder:3b,201,"De acuerdo con el documento de Creación de la Unidad Programática, sin la implementación del Programa Nacional (bajo la evolución natural de la enfermedad), se proyecta una mortalidad de 234 muertes anuales. Con el programa nacional propuesto, se proyecta una disminución del 35% en la mortalidad de la población objetivo, logrando evitar 82 muertes anuales de forma específica en cáncer colorrectal. Asimismo, se alcanzará una tasa de detección de más del 40% al 50% de los casos de cáncer en etapas tempranas. Este logro clínico acarrea un impacto socioeconómico estimado de un ahorro de ₡3,563,250,779 anuales.","El impacto social y epidemiológico que se proyecta lograr a nivel nacional en un período de 10 años con la implementación del Programa Nacional del CNDTCG es significativo. En un escenario sin el programa, se espera que:
+
+1. La tasa de mortalidad por cáncer de próstata aumente debido al bajo acceso a diagnóstico y tratamiento.
+
+2. El número de personas diagnosticadas con cáncer de próstata crezca, lo que podría llevar a un aumento en la demanda de servicios médicos y el costo total del sistema sanitario.
+
+3. La calidad del servicio médico disminuirá debido a la falta de recursos para mantener las instalaciones y equipos adecuados.
+
+4. El tiempo de espera para recibir atención médica aumentará, lo que podría afectar la calidad de vida de los pacientes.
+
+5. Las tasas de mortalidad por cáncer de próstata en el país podrían seguir siendo altas, lo que podría tener un impacto negativo en el desarrollo económico y social del país.
+
+En contrastando con este escenario, si se implementa el Programa Nacional del CNDTCG, se espera que:
+
+1. La tasa de mortalidad por cáncer de próstata disminuirá debido a la mejoría en el acceso a diagnóstico y tratamiento.
+
+2. El número de personas diagnosticadas con cáncer de próstata disminuirá, lo que podría reducir la demanda de servicios médicos y el costo total del sistema sanitario.
+
+3. La calidad del servicio médico mejorarán debido a la inversión en instalaciones y equipos adecuados.
+
+4. El tiempo de espera para recibir atención médica se reducirá, lo que podría aumentar la satisfacción de los pacientes.
+
+5. Las tasas de mortalidad por cáncer de próstata en el país podrían disminuir, lo que podría tener un impacto positivo en el desarrollo económico y social del país.
+
+En resumen, la implementación del Programa Nacional del CNDTCG tiene el potencial de mejorar significativamente la calidad de vida de los pacientes con cáncer de próstata y reducir el costo total del sistema sanitario.",73.876681066,0.155193843,2050,472,2522,open_ended,774.9575949367089,0.0,898.9,3646.19511471519,2546.4453125,5749.6328125,,,,,,
+1,qwen2.5-coder:3b,3,"Sí. El centro tiene sus raíces en el año 1995, cuando fue creado como un proyecto piloto mediante un convenio de cooperación entre la CCSS, la Universidad de Costa Rica (UCR) y la Agencia Japonesa de Cooperación Internacional (JICA).","Sí, es correcto. El CNDTCG fue creado originalmente en 1995 como un proyecto piloto mediante un convenio que involucró a la Universidad de Costa Rica (UCR) y a la Agencia Japonesa de Cooperación Internacional (JICA).",4.888678692,0.1650757,2050,63,2113,yes_no,677.4166666666666,69.9,798.8,2589.9430338541665,2555.75,2596.21484375,,,,,,
+1,qwen2.5-coder:3b,102,CNDTCG y DICE.,"Las siglas utilizadas son:
+
+1. CNDTCG: Centro Nacional de Detección Temprana de Cáncer Gastrointestinal
+2. DCE: Dirección de Centros Especializados
+
+Estas siglas se refieren a dos departamentos o entidades importantes en el Sistema Nacional de Salud, específicamente relacionados con la detección temprana de cáncer gastrointestinal y la gestión de centros especializados en salud.",31.542754361,0.161439225,2050,97,2147,short_answer,767.65,79.9,808.9,2682.1661698190787,2582.8515625,2684.47265625,,,,,,
+1,qwen2.5-coder:3b,202,"El Plan de Abordaje señala las normativas de seguridad que protegen el EDUS. De acuerdo con el artículo 11 de la Ley del EDUS, toda la información en el expediente se cataloga como privada y contiene datos sensibles. En el artículo 19 del reglamento del EDUS, se determina que el acceso no autorizado a datos de pacientes se rige por el secreto profesional (bajo el artículo 203 del Código Penal), acarreando sanciones disciplinarias, administrativas, civiles y penales, un deber de confidencialidad que se mantiene aún después de finalizar la relación con el EDUS. Por otro lado, el artículo 58 del reglamento restringe el acceso de terceros a los datos y exige la presentación de una autorización escrita y expresa del titular, debiendo resguardarse la solicitud junto con la autorización por un plazo de 10 años, de acuerdo con la Ley de Protección de la Persona Frente al Tratamiento de sus Datos Personales (Ley 8968). El artículo 14 de esta misma ley general exige que toda transferencia de datos en bases de datos sea expresa y válidamente autorizada por el titular.","Las limitaciones y riesgos de seguridad informática relacionados con la privacidad de datos sensibles de los pacientes bajo el sistema EDUS, de acuerdo con la legislación costarricense (Ley del EDUS y Ley 8968) citada en los documentos, incluyen:
+
+1. **Confidencialidad y secreto profesional**: La Ley del EDUS establece que toda información contenida en el expediente digital único de salud se considera información privada que contiene datos sensibles. Además, las personas que intervengan en cualquier fase del tratamiento de datos personales están obligadas al secreto profesional o funcional, aun después de finalizada su relación con la base de datos.
+
+2. **Confidencialidad y secreto profesional**: El Reglamento del EDUS establece un régimen sancionatorio para la confidencialidad y secreto profesional. La violación de esta disposición general puede acarrear consecuencias disciplinarias y administrativas, así como civiles y penales.
+
+3. **Acceso restringido a terceros**: El Reglamento del EDUS establece que estará restringido el acceso a los datos contenidos en el EDUS para poder acceder a los datos de un tercero. La persona física o jurídica interesada deberá aportar la autorización escrita del titular de éstos.
+
+4. **Transferencia de datos personales**: La Ley 8968 establece que los responsables de las bases de datos solo podrán transferir datos contenidos en ellas cuando el titular del derecho haya autorizado expresa y válidamente tal transferencia y se haga sin vulnerar los principios y derechos reconocidos en esta ley.
+
+5. **Normalización del proceso de administración de la seguridad**: El Oficio GM-18654-2023 normaliza el proceso de administración de la seguridad en la gestión de los accesos a los usuarios autorizados en los aplicativos del EDUS y herramientas de inteligencia de negocios, creando roles y responsabilidades para la autorización, creación, asociación de perfiles, modificación, administración, control y seguimiento de tales accesos.
+
+6. **Protección de derechos de las personas usuarias**: La Ley 8968 establece que los responsables de las bases de datos deben proteger los derechos de las personas usuarias titulares de los datos contenidos en el EDUS, incluyendo la privacidad y confidencialidad.
+
+7. **Seguridad informática**: Los sistemas EDUS deben implementar medidas de seguridad informática adecuadas para proteger los datos sensibles de los pacientes, como cifrado de datos, control de acceso y auditoría de accesos.
+
+8. **Responsabilidad del personal**: La Ley del EDUS establece que la responsabilidad por el tratamiento de datos personales se asume por parte de los usuarios autorizados en los aplicativos del EDUS y herramientas de inteligencia de negocios.
+
+9. **Seguridad física**: Los sistemas EDUS deben tener medidas de seguridad física adecuadas para proteger los datos sensibles de los pacientes, como acceso controlado a las instalaciones y almacenamiento seguro de los datos.
+
+10. **Auditoría y seguimiento**: Los sistemas EDUS deben tener un sistema de auditoría y seguimiento efectivo para detectar y corregir cualquier violación de la privacidad de datos sensibles de los pacientes.
+
+Estas limitaciones y riesgos son fundamentales para garantizar la seguridad informática y la privacidad de los datos sensibles de los pacientes bajo el sistema EDUS, de acuerdo con la legislación costarricense.",102.879064394,0.16323761,2050,778,2828,open_ended,782.0791489361702,69.9,809.0,2770.1988198138297,2692.18359375,2783.61328125,,,,,,
+0,llama3.2:3b,1,"Sí. El Centro Nacional de Detección Temprana de Cáncer Gastrointestinal posee el número de Unidad Programática 2806, encontrándose bajo la Dirección de Centros Especializados de la Gerencia Médica de la Caja Costarricense de Seguro Social.",No se proporciona información sobre la unidad programática asignada al Centro Nacional de Detección Temprana de Cáncer Gastrointestinal (CNDTCG) en el texto proporcionado.,31.514717659,3.849289351,2050,43,2093,yes_no,687.4741935483871,0.0,809.0,5143.708606350807,2764.8125,5334.08203125,,,,,,
+0,llama3.2:3b,101,Cáncer gástrico y cáncer colorrectal.,"No se proporciona información específica sobre las dos principales causas de carga de enfermedad y mortalidad en cáncer gastrointestinal abordadas por los programas de tamizaje del CNDTCG. Sin embargo, puedo ofrecerte una respuesta general basada en conocimientos generales sobre el tema.
+
+Los programas de tamizaje para cáncer gastrointestinal suelen enfocarse en detectar enfermedades precancerosas y cánceres tempranos, con el objetivo de prevenir o retrasar la progresión de la enfermedad. Las causas más comunes de carga de enfermedad y mortalidad en cáncer gastrointestinal incluyen:
+
+1. **Infecciones por Helicobacter pylori (H. pylori):** Esta bacteria es una causa importante de úlceras pépticas y cánceres gastrointestinales, como el cáncer de estómago y el cáncer del duodeno.
+2. **Alteraciones genéticas:** Mutaciones en genes como TP53, CDKN2A y SMAD4 pueden aumentar el riesgo de desarrollar cáncer gastrointestinal. Estas mutaciones pueden ser detectadas mediante pruebas de tamizaje genético.
+
+Es importante destacar que los programas de tamizaje para cáncer gastrointestinal suelen enfocarse en poblaciones con un mayor riesgo de desarrollar estas enfermedades, como personas con antecedentes familiares de cáncer gastrointestinal, aquellos con síntomas gastrointestinales persistentes o aquellos que han sido expuestos a factores de riesgo como el tabaco y la infección por H. pylori.
+
+Si necesitas información más específica sobre los programas de tamizaje del CNDTCG, te recomiendo consultar fuentes oficiales o documentos relacionados con sus políticas y procedimientos de detección temprana para cáncer gastrointestinal.",31.89267841,0.20164201,2050,402,2452,short_answer,764.2870967741936,0.0,805.1,5387.431451612903,5370.515625,5387.81640625,,,,,,
+0,llama3.2:3b,203,"El programa requiere una coordinación interdependiente en red. El primer nivel (EBAIS, Áreas de Salud) se encarga de la captación estructurada de personas asintomáticas entre 50 y 74 años mediante la adscripción, la coordinación de cupos y programación de usuarios para la entrega de muestras biológicas de FIT, y el suministro de materiales promocionales y campañas de concientización. El segundo nivel (hospitales periféricos y regionales) se encarga de la red de laboratorios clínicos que procesan las muestras FIT, priorizar y programar colonoscopias para aquellos casos con resultados alterados, realizar procedimientos terapéuticos (polipectomías) y dar seguimiento activo a los resultados histopatológicos (biopsias) de anatomía patológica, estadiaje de imágenes, cirugías oncológicas generales y administración de quimioterapia complementaria. Finalmente, el tercer nivel (hospitales nacionales) resuelve casos oncológicos avanzados o complejos mediante técnicas altamente especializadas de mínima invasión (como la Resección Submucosa Endoscópica - ESD) para pacientes de toda la red, realiza estadiajes completos y tratamientos oncológicos específicos, audita los procesos de referencia y contrarreferencia para evitar que los pacientes queden desatendidos, y brinda acompañamiento técnico y capacitación especializada en endoscopía al personal asistencial de la red nacional.","En el contexto del Programa de Tamizaje de Cáncer Colorrectal, la ruta de atención clínica y coordinación funcional en red de servicios de salud requiere una serie de componentes interconectados entre el primer, segundo y tercer nivel de atención. A continuación, se describen los principales componentes de esta ruta:
+
+** Primer Nivel de Atención: Consultorio Médico**
+
+* Es el punto de partida para la evaluación inicial del paciente.
+* Los médicos realizan un examen físico, toma de historial clínico y realizar pruebas de detección temprana (como el FIT o el colonoscopia).
+* Se identifican los pacientes con riesgo de cáncer colorrectal y se les remite al segundo nivel de atención.
+
+** Segundo Nivel de Atención: Unidad de Tamizaje de Cáncer Colorrectal**
+
+* Es un centro especializado que realiza pruebas de detección temprana, como el colonoscopia, la biopsia del colon y la evaluación de los resultados.
+* Los médicos especializados en gastroenterología y oncología realizan la evaluación y toman decisiones sobre el tratamiento.
+* Se identifican los pacientes con cáncer colorrectal temprano y se les remite al tercer nivel de atención.
+
+** Tercer Nivel de Atención: Hospital Universitario**
+
+* Es el centro de referencia para el tratamiento del cáncer colorrectal.
+* Los médicos especializados en oncología y cirugía realizan el diagnóstico, la evaluación y el tratamiento del paciente.
+* Se ofrecen opciones de tratamiento, como la cirugía, la quimioterapia y la terapia dirigida.
+
+** Coordinación Funcional**
+
+* La coordinación entre los niveles de atención es fundamental para garantizar la continuidad del cuidado del paciente.
+* Los médicos del primer y segundo nivel de atención deben comunicarse con los especialistas del tercer nivel de atención para obtener información actualizada sobre el estado del paciente.
+* Se requiere una comunicación efectiva y transparente entre las instituciones para evitar duplicados de pruebas, tratamientos y medicamentos.
+
+En resumen, la ruta de atención clínica y coordinación funcional en red de servicios de salud para el Programa de Tamizaje de Cáncer Colorrectal requiere una serie de componentes interconectados entre el primer, segundo y tercer nivel de atención. La comunicación efectiva y la coordinación entre las instituciones son fundamentales para garantizar la calidad del cuidado del paciente.",68.533696233,0.19812038,2050,559,2609,open_ended,778.5901515151514,0.0,809.0,5711.003639914773,5425.42578125,5713.37109375,,,,,,
+1,llama3.2:3b,1,"Sí. El Centro Nacional de Detección Temprana de Cáncer Gastrointestinal posee el número de Unidad Programática 2806, encontrándose bajo la Dirección de Centros Especializados de la Gerencia Médica de la Caja Costarricense de Seguro Social.","No, no tengo información suficiente para responder a esta pregunta. ¿Puedo ayudarte con algo más?",3.868059695,0.197544274,2050,24,2074,yes_no,587.6,29.8,798.7,5731.80126953125,5724.8515625,5732.82421875,,,,,,
+1,llama3.2:3b,102,CNDTCG y DICE.,"Las siglas que se utilizan son:
+
+* CNDTCG: Centro Nacional de Detección Temprana de Cáncer Gastrointestinal
+* CCSS: Dirección de Centros Especializados.",30.671775575,0.193215628,2050,47,2097,short_answer,771.2883333333333,0.0,826.6,5958.6455078125,5749.26953125,5962.19921875,,,,,,
+1,llama3.2:3b,203,"El programa requiere una coordinación interdependiente en red. El primer nivel (EBAIS, Áreas de Salud) se encarga de la captación estructurada de personas asintomáticas entre 50 y 74 años mediante la adscripción, la coordinación de cupos y programación de usuarios para la entrega de muestras biológicas de FIT, y el suministro de materiales promocionales y campañas de concientización. El segundo nivel (hospitales periféricos y regionales) se encarga de la red de laboratorios clínicos que procesan las muestras FIT, priorizar y programar colonoscopias para aquellos casos con resultados alterados, realizar procedimientos terapéuticos (polipectomías) y dar seguimiento activo a los resultados histopatológicos (biopsias) de anatomía patológica, estadiaje de imágenes, cirugías oncológicas generales y administración de quimioterapia complementaria. Finalmente, el tercer nivel (hospitales nacionales) resuelve casos oncológicos avanzados o complejos mediante técnicas altamente especializadas de mínima invasión (como la Resección Submucosa Endoscópica - ESD) para pacientes de toda la red, realiza estadiajes completos y tratamientos oncológicos específicos, audita los procesos de referencia y contrarreferencia para evitar que los pacientes queden desatendidos, y brinda acompañamiento técnico y capacitación especializada en endoscopía al personal asistencial de la red nacional.","En el contexto del Programa de Tamizaje de Cáncer Colorrectal, la ruta de atención clínica y coordinación funcional en red de servicios de salud requiere una estructura compleja para garantizar la eficiencia y efectividad en la detección temprana del cáncer colorrectal. A continuación, se describen los principales componentes de esta ruta:
+
+**Nivel 1: Primer Nivel de Atención**
+
+*   Características:
+    *   Consultas de rutina para pacientes con riesgo de cáncer colorrectal.
+    *   Realización de pruebas de detección temprana (como el FIT y el colonoscopia).
+*   Roles y responsabilidades:
+    *   Médicos de práctica general y especialistas en gastroenterología realizan las consultas y pruebas de rutina.
+    *   Personal de enfermería y técnicos de laboratorio apoyan en la realización de las pruebas.
+
+**Nivel 2: Segundo Nivel de Atención**
+
+*   Características:
+    *   Realización de colonoscopias y biopsias para pacientes con resultados positivos del FIT o otros indicadores de riesgo.
+    *   Evaluación y tratamiento de lesiones polipoides y neoplásicas.
+*   Roles y responsabilidades:
+    *   Gastroenterólogos y cirujanos especializados en colonoscopia realizan las biopsias y evaluaciones.
+    *   Equipo de enfermería y técnicos de laboratorio apoyan en la realización de los procedimientos.
+
+**Nivel 3: Tercer Nivel de Atención**
+
+*   Características:
+    *   Evaluación y tratamiento de pacientes con diagnóstico de cáncer colorrectal.
+    *   Realización de quimioterapia, radioterapia y cirugía según el caso.
+*   Roles y responsabilidades:
+    *   Oncólogos y cirujanos especializados en oncología realizan los tratamientos.
+    *   Equipo de enfermería y técnicos de laboratorio apoyan en la atención a los pacientes.
+
+**Coordinación Funcional**
+
+*   Características:
+    *   Comunicación efectiva entre los niveles de atención para garantizar la continuidad del tratamiento.
+    *   Coordinación de servicios para minimizar las espera y maximizar la eficiencia.
+*   Roles y responsabilidades:
+    *   Equipo de coordinación interdisciplinario (médicos, enfermeras, técnicos) se encarga de coordinar los servicios entre niveles.
+    *   Tecnologías de información y comunicación (TIC) como el sistema de gestión de expedientes electrónicos (EGE) facilitan la comunicación y la coordinación.
+
+En resumen, la ruta de atención clínica y coordinación funcional en red de servicios de salud para el Programa de Tamizaje de Cáncer Colorrectal requiere una estructura compleja que involucre a múltiples niveles de atención, roles y responsabilidades específicas, y una coordinación efectiva entre ellos.",51.795801649,0.197696395,2050,686,2736,open_ended,769.7339999999999,0.0,798.5,5914.03953125,5913.26953125,5976.07421875,,,,,,
