@@ -1,40 +1,89 @@
+import time
 import psutil
 
-from langchain_ollama import ChatOllama
+import torch
+from transformers import AutoModelForCausalLM, AutoTokenizer, pipeline as hf_pipeline
 
-from resource_monitor import ResourceMonitor, find_ollama_pid
+from resource_monitor import ResourceMonitor, get_current_pid
 from utils import build_prompt
 
+class HFModelWrapper:
+    def __init__(self, model_name, temperature=0.2, max_new_tokens=512):
+        self.tokenizer = AutoTokenizer.from_pretrained(model_name)
+        self.model = AutoModelForCausalLM.from_pretrained(
+            model_name,
+            torch_dtype=torch.float16 if torch.cuda.is_available() else torch.float32,
+            device_map="auto",
+        )
+        self.pipeline = hf_pipeline(
+            "text-generation",
+            model=self.model,
+            tokenizer=self.tokenizer,
+            temperature=temperature,
+            max_new_tokens=max_new_tokens,
+            do_sample=True,
+            return_full_text=False,
+        )
+
+    def generate(self, prompt: str) -> str:
+        outputs = self.pipeline(prompt)
+        generated_text = outputs[0]['generated_text']
+
+        if generated_text.startswith(prompt):
+            return generated_text[len(prompt):].lstrip()
+
+        return generated_text
+
+    def count_tokens(self, text: str) -> int:
+        return len(self.tokenizer.encode(text))
+
+    def unload(self):
+        del self.model
+        del self.pipeline
+        if torch.cuda.is_available():
+            torch.cuda.empty_cache()
+
+
+def load_hf_model(model_name, temperature=0.2, max_new_tokens=512):
+    return HFModelWrapper(model_name, temperature, max_new_tokens)
+
+
+def unload_hf_model(wrapper):
+    wrapper.unload()
+
+
 class Benchmark:
-    def __init__(self, model, temperature, context, question):
-        self.model = model
-        self.temperature = temperature
+    def __init__(self, model_name, model_wrapper, context, question):
+        self.model_name = model_name
+        self.model_wrapper = model_wrapper
         self.context = context
         self.question = question
-        self.llm = ChatOllama(model=model, temperature=temperature)
         self.prompt = build_prompt(context, question)
 
     def run_question(self):
-        ollama_pid = find_ollama_pid()
-        if not ollama_pid:
-            raise Exception("No se encontró el proceso de Ollama, no se puede monitorear el uso de recursos.")
+        pid = psutil.Process().pid
+        monitor = ResourceMonitor(pid)
 
-        monitor = ResourceMonitor(ollama_pid)
-
+        input_tokens = self.model_wrapper.count_tokens(self.prompt)
+        
         monitor.start()
-        response = self.llm.invoke(self.prompt)
+        start_time = time.perf_counter()
+        response_text = self.model_wrapper.generate(self.prompt)
+        total_duration = time.perf_counter() - start_time
         monitor.stop()
 
         resources = monitor.get_resource_usage()
 
+        output_tokens = self.model_wrapper.count_tokens(response_text)
+        
+
         result = {
-            "model": self.model,
-            "response": response.content,
-            "total_duration": response.response_metadata["total_duration"],
-            "load_duration": response.response_metadata["load_duration"],
-            "input_tokens": response.usage_metadata["input_tokens"],
-            "output_tokens": response.usage_metadata["output_tokens"],
-            "total_tokens": response.usage_metadata["total_tokens"],
+            "model": self.model_name,
+            "response": response_text,
+            "total_duration": total_duration * 1e9, # ns
+            "input_tokens": input_tokens,
+            "output_tokens": output_tokens,
+            "total_tokens": input_tokens + output_tokens,
             "cpu": resources["cpu"],
             "memory": resources["memory"],
             "gpu_util": resources["gpu_util"],
@@ -52,7 +101,6 @@ class Benchmark:
 
         print("\n" + "=" * 10)
         print("Duración total: ", result["total_duration"])
-        print("Duración de carga: ", result["load_duration"])
         print("Tokens de input: ", result["input_tokens"])
         print("Tokens de output: ", result["output_tokens"])
         print("Tokens totales: ", result["total_tokens"])

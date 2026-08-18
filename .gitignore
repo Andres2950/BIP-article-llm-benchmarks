@@ -5,3 +5,8 @@ context_docs/*
 
 datasets/*
 !datasets/.gitkeep
+
+__pycache__/*
+*.pyc
+*.pyo
+*.pyd

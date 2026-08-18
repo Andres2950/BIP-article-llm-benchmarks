@@ -1,3 +1,4 @@
+import os
 import time
 import threading
 import psutil
@@ -53,15 +54,8 @@ class GPUMonitor:
         return None, None
 
 
-def find_ollama_pid():
-    for proc in psutil.process_iter(['pid', 'name']):
-        try:
-            name = proc.info['name'].lower()
-            if 'ollama' in name:
-                return proc.info['pid']
-        except (psutil.NoSuchProcess, psutil.AccessDenied):
-            continue
-    return None
+def get_current_pid():
+    return os.getpid()
 
 
 class ResourceMonitor:
