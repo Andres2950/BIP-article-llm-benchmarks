@@ -8,7 +8,7 @@ from langchain_community.document_loaders import PyPDFLoader
 
 from benchmark import Benchmark
 from evaluator import ejecutar_evaluacion
-from wrappers import load_hf_model, load_gguf_model, unload_model
+from wrappers import load_model_from_config, unload_model
 from model_config import MODELS
 
 
@@ -79,21 +79,6 @@ def load_dataset(path, question_id=None):
     return groups
 
 
-def load_model_wrapper(model_cfg, temperature):
-    if model_cfg.format == "hf":
-        return load_hf_model(model_cfg.repo_id, temperature)
-    elif model_cfg.format == "gguf":
-        model_path = f"{GGUF_BASE_PATH}/{model_cfg.filename}"
-        return load_gguf_model(
-            model_path,
-            temperature=temperature,
-            n_ctx=model_cfg.context_size,
-            n_gpu_layers=model_cfg.gpu_layers
-        )
-    else:
-        raise ValueError(f"Formato no soportado: {model_cfg.format}")
-
-
 if __name__ == "__main__":
     args = parse_arguments()
     context = load_context(args.context_docs)
@@ -105,7 +90,7 @@ if __name__ == "__main__":
         row = question_groups[0]
         for model_cfg in MODELS:
             print(f"Loading model {model_cfg.name}")
-            wrapper = load_model_wrapper(model_cfg, args.temperature)
+            wrapper = load_model_from_config(model_cfg, args.temperature)
             print(f"Benchmarking model {model_cfg.name} with question {row['ID']}")
             question = row["Question"]
             benchmark = Benchmark(model_cfg.name, wrapper, context, question)
@@ -122,7 +107,7 @@ if __name__ == "__main__":
     # Iterar sobre los modelos definidos en model_config (ya ordenados por VRAM)
     for model_cfg in MODELS:
         print(f"Loading model {model_cfg.name}")
-        wrapper = load_model_wrapper(model_cfg, args.temperature)
+        wrapper = load_model_from_config(model_cfg, args.temperature)
 
         for bag_id in range(NUM_BAGS):
             sampled_questions = []
