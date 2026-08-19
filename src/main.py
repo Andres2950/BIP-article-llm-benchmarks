@@ -169,5 +169,5 @@ if __name__ == "__main__":
         unload_model(wrapper)
 
     print(f"Raw data saved to {csv_path}")
-    print("Evaluando Métricas")
-    ejecutar_evaluacion(csv_path)
+    #print("Evaluando Métricas") # Evaluacion se deja para despues porque parece que no van a caber todos los modelos en una sola corrida
+    #ejecutar_evaluacion(csv_path)
