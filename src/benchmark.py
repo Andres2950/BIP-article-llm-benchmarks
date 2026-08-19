@@ -1,55 +1,9 @@
 import time
 import psutil
 
-import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer, pipeline as hf_pipeline
-
-from resource_monitor import ResourceMonitor, get_current_pid
+from resource_monitor import ResourceMonitor
 from utils import build_prompt
-
-class HFModelWrapper:
-    def __init__(self, model_name, temperature=0.2, max_new_tokens=512):
-        self.tokenizer = AutoTokenizer.from_pretrained(model_name)
-        self.model = AutoModelForCausalLM.from_pretrained(
-            model_name,
-            torch_dtype=torch.float16 if torch.cuda.is_available() else torch.float32,
-            device_map="auto",
-        )
-        self.pipeline = hf_pipeline(
-            "text-generation",
-            model=self.model,
-            tokenizer=self.tokenizer,
-            temperature=temperature,
-            max_new_tokens=max_new_tokens,
-            do_sample=True,
-            return_full_text=False,
-        )
-
-    def generate(self, prompt: str) -> str:
-        outputs = self.pipeline(prompt)
-        generated_text = outputs[0]['generated_text']
-
-        if generated_text.startswith(prompt):
-            return generated_text[len(prompt):].lstrip()
-
-        return generated_text
-
-    def count_tokens(self, text: str) -> int:
-        return len(self.tokenizer.encode(text))
-
-    def unload(self):
-        del self.model
-        del self.pipeline
-        if torch.cuda.is_available():
-            torch.cuda.empty_cache()
-
-
-def load_hf_model(model_name, temperature=0.2, max_new_tokens=512):
-    return HFModelWrapper(model_name, temperature, max_new_tokens)
-
-
-def unload_hf_model(wrapper):
-    wrapper.unload()
+from wrappers import unload_model
 
 
 class Benchmark:
@@ -65,7 +19,7 @@ class Benchmark:
         monitor = ResourceMonitor(pid)
 
         input_tokens = self.model_wrapper.count_tokens(self.prompt)
-        
+
         monitor.start()
         start_time = time.perf_counter()
         response_text = self.model_wrapper.generate(self.prompt)
@@ -73,14 +27,12 @@ class Benchmark:
         monitor.stop()
 
         resources = monitor.get_resource_usage()
-
         output_tokens = self.model_wrapper.count_tokens(response_text)
-        
 
         result = {
             "model": self.model_name,
             "response": response_text,
-            "total_duration": total_duration * 1e9, # ns
+            "total_duration": total_duration * 1e9,  # ns
             "input_tokens": input_tokens,
             "output_tokens": output_tokens,
             "total_tokens": input_tokens + output_tokens,
@@ -89,22 +41,19 @@ class Benchmark:
             "gpu_util": resources["gpu_util"],
             "gpu_mem": resources["gpu_mem"]
         }
-
         return result
-    
-    def print_question_result(self, result):
-        cpu_cores = psutil.cpu_count(logical=False)
 
+    def print_question_result(self, result):
+        # (sin cambios, igual que antes)
+        cpu_cores = psutil.cpu_count(logical=False)
         print("\n" + "=" * 10)
         print("Modelo: ", result["model"])
         print("Respuesta: ", result["response"])
-
         print("\n" + "=" * 10)
         print("Duración total: ", result["total_duration"])
         print("Tokens de input: ", result["input_tokens"])
         print("Tokens de output: ", result["output_tokens"])
         print("Tokens totales: ", result["total_tokens"])
-
         print("\n" + "=" * 10)
         print("Recursos:")
         if result["cpu"] is not None:
