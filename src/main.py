@@ -49,7 +49,7 @@ def parse_arguments():
 
     parser.add_argument("--temperature", type=float, default=0.2, help="Temperature to use")
     parser.add_argument("--context-docs", type=str, default="./context_docs", help="Path to the context documents directory")
-    parser.add_argument("--dataset", type=str, default="./datasets/dataset-normativas.csv", help="Path to the CSV dataset file with columns: ID, Question, Answer")
+    parser.add_argument("--dataset", type=str, default="./datasets/dataset_normativas.csv", help="Path to the CSV dataset file with columns: ID, Question, Answer")
     parser.add_argument("--question_id", type=int, default=None, help="Question ID in the csv dataset file (if not provided, all questions will be benchmarked)")
 
     return parser.parse_args()
