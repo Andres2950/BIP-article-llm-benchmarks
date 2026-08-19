@@ -3,6 +3,7 @@ import re
 import string
 from collections import Counter
 from pathlib import Path
+from typing import Optional
 
 import pandas as pd
 import nltk
@@ -238,7 +239,7 @@ def asegurar_recursos_nltk():
             nltk.download(nombre, quiet=True)
 
 
-def ejecutar_evaluacion(csv_path: str, out_dir: str | None = None) -> dict:
+def ejecutar_evaluacion(csv_path: str, out_dir: Optional[str] = None) -> dict:
     asegurar_recursos_nltk()
     csv_path = Path(csv_path)
     out_dir = Path(out_dir) if out_dir else csv_path.parent

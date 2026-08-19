@@ -89,7 +89,7 @@ if __name__ == "__main__":
     question_groups = load_dataset(args.dataset, args.question_id)
 
     models = [
-        "Qwen/Qwen3.5-2B", # Luego cambiar a los modelos reales cuando se ejecute en el servidor
+        "Qwen/Qwen3.5-4B", # Luego cambiar a los modelos reales cuando se ejecute en el servidor
     ]
 
     if isinstance(question_groups, list):
