@@ -1,5 +1,5 @@
 import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer, pipeline as hf_pipeline
+from transformers import BitsAndBytesConfig, AutoModelForCausalLM, AutoTokenizer, pipeline as hf_pipeline
 
 # ----------------------------------------------
 # WRAPPER PARA MODELOS HUGGING FACE
