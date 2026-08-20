@@ -21,6 +21,7 @@ MODELS = [
         context_size=4096,
         gpu_layers=-1,
     ),
+    """
     # 4.6 GB
     ModelConfig(
         name = "Llama-3.1-8B-Instruct-Q4_K_M",
@@ -102,4 +103,5 @@ MODELS = [
         context_size=4096,
         gpu_layers=-1,
     ),
+    """
 ]
