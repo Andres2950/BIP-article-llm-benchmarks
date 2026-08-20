@@ -14,10 +14,10 @@ class ModelConfig:
 MODELS = [
     # 4.6 GB
     ModelConfig(
-        name = "Qwen3.5-4B-Q8_0",
-        repo_id="lmstudio-community/Qwen3.5-4B-GGUF",
-        format="gguf",
-        filename="Qwen3.5-4B-Q8_0.gguf",
+        name = "Qwen3.5-4B",
+        repo_id="Qwen/Qwen3.5-4B",
+        format="hf",
+        filename="",
         context_size=4096,
         gpu_layers=-1,
     ),
