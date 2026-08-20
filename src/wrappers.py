@@ -13,7 +13,7 @@ class HFModelWrapper:
         if quant == "4bit":
             quant_config = BitsAndBytesConfig(
                 load_in_4bit=True,
-                bnb_4bit_compute_dtype=torch.float16
+                bnb_4bit_compute_dtype=torch.float16,
                 bnb_4bit_use_double_quant=True,
             )
         elif quant == "8bit":
