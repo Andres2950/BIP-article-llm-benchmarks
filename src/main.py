@@ -60,6 +60,9 @@ def load_context(dir_path):
         loader = PyPDFLoader(str(route))
         pages = loader.load()
         text = "\n".join([p.page_content for p in pages])
+        # No se puede tener tanto texto dentro del contexto
+        # Se trunca el texto por archivo, pero puede tener problemas
+        text = text[:15000] + "[truncated]..." if len(text) > 15000 else text
         context.append(f"### Document {route.name}\n{text}")
     return "\n\n".join(context)
 
