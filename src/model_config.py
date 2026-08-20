@@ -30,24 +30,24 @@ MODELS = [
         context_size=16384,
         gpu_layers=-1,
     ),
-    ## 5 GB
-    #ModelConfig(
-    #    name = "DeepSeek-R1-Distill-Qwen-14B-Q2_K",
-    #    repo_id="bartowski/DeepSeek-R1-Distill-Qwen-14B-GGUF",
-    #    format="gguf",
-    #    filename="DeepSeek-R1-Distill-Qwen-14B-Q2_K.gguf",
-    #    context_size=16384,
-    #    gpu_layers=-1,
-    #),
-    ## 8.7 GB
-    #ModelConfig(
-    #    name = "Llama-3.1-8B-Instruct-Q8_0",
-    #    repo_id="bartowski/Meta-Llama-3.1-8B-Instruct-GGUF",
-    #    format="gguf",
-    #    filename="Meta-Llama-3.1-8B-Instruct-Q8_0.gguf",
-    #    context_size=16384,
-    #    gpu_layers=-1,
-    #),
+    # 5 GB
+    ModelConfig(
+        name = "DeepSeek-R1-Distill-Qwen-14B-Q2_K",
+        repo_id="bartowski/DeepSeek-R1-Distill-Qwen-14B-GGUF",
+        format="gguf",
+        filename="DeepSeek-R1-Distill-Qwen-14B-Q2_K.gguf",
+        context_size=16384,
+        gpu_layers=-1,
+    ),
+    # 8.7 GB
+    ModelConfig(
+        name = "Llama-3.1-8B-Instruct-Q8_0",
+        repo_id="bartowski/Meta-Llama-3.1-8B-Instruct-GGUF",
+        format="gguf",
+        filename="Meta-Llama-3.1-8B-Instruct-Q8_0.gguf",
+        context_size=16384,
+        gpu_layers=-1,
+    ),
     ##  11.3 GB 
     #ModelConfig(
     #    name="DeepSeek-R1-Distill-Qwen-14B-Q6_K",

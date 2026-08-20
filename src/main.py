@@ -13,12 +13,12 @@ from model_config import MODELS
 
 
 TYPES_RANGES = {
-    "yes_no": (1, 3),
-    "short_answer": (101, 103),
-    "open_ended": (201, 203)
+    "yes_no": (1, 100),
+    "short_answer": (101, 200),
+    "open_ended": (201, 300)
 }
 
-BAG_SIZE_PER_TYPE = 1
+BAG_SIZE_PER_TYPE = 100
 NUM_BAGS = 2
 
 RECORD_COLUMNS = [
