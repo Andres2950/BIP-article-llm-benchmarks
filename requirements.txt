@@ -13,3 +13,4 @@ pynvml>=11.0.0
 huggingface-hub>=0.20.0
 pypdf>=3.0.0
 gguf>=0.1.0
+bitsandbytes>=0.43.0
