@@ -95,6 +95,8 @@ class HFGGUFModelWrapper:
             do_sample=True,
             return_full_text=False,
             pad_token_id=self.tokenizer.eos_token_id,
+            repetition_penalty=1.1,
+            early_stopping=True,
         )
 
     def generate(self, prompt: str) -> str:

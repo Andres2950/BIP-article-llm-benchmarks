@@ -3,24 +3,24 @@ from dataclasses import dataclass
 @dataclass
 class ModelConfig:
     name: str 
-    repo_id: str                    # repo id de huggingface, solo si es hf
+    repo_id: str                    # repo id de huggingface
     format: str
-    filename: str  # nombre del gguf
+    filename: str                  # nombre del gguf o vacío si es hf
     context_size: int = 4096
-    gpu_layers: int = -1            # solo gguf
+    gpu_layers: int = -1            
 
 
 
 MODELS = [
-    ## 4.6 GB
-    #ModelConfig(
-    #    name = "Qwen3.5-4B",
-    #    repo_id="Qwen/Qwen3.5-4B",
-    #    format="hf",
-    #    filename="",
-    #    context_size=16384,
-    #    gpu_layers=-1,
-    #),
+    # 4.6 GB
+    ModelConfig(
+        name = "Qwen3.5-4B",
+        repo_id="Qwen/Qwen3.5-4B",
+        format="hf",
+        filename="",
+        context_size=16384,
+        gpu_layers=-1,
+    ),
     # 4.6 GB
     ModelConfig(
         name = "Llama-3.1-8B-Instruct-Q4_K_M",
