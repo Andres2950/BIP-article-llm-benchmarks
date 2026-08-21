@@ -16,7 +16,7 @@ class Benchmark:
         self.prompt = build_prompt(context, question, question_type)
 
     def run_question(self):
-         if self.question_type == "yes_no":
+        if self.question_type == "yes_no":
             self.model_wrapper.set_max_tokens(20)
         elif self.question_type == "short_answer":
             self.model_wrapper.set_max_tokens(60)
