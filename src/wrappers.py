@@ -135,8 +135,8 @@ class HFGGUFModelWrapper:
         )
 
     def generate(self, prompt: str) -> str:
-        outputs = self.pipeline(prompt).strip()
-        generated_text = outputs[0]['generated_text']
+        outputs = self.pipeline(prompt)
+        generated_text = outputs[0]['generated_text'].strip()
         generated_text = generated_text.replace(prompt, "")
         generated_text = generated_text.replace("<｜end▁of▁sentence｜>", "")
         generated_text = generated_text.replace("</think>", "")
