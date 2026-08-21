@@ -90,12 +90,13 @@ if __name__ == "__main__":
     if isinstance(question_groups, list):
         print("Single question mode")
         row = question_groups[0]
+        question_type = get_question_type(row["ID"])
         for model_cfg in MODELS:
             print(f"Loading model {model_cfg.name}")
             wrapper = load_model_from_config(model_cfg, args.temperature)
             print(f"Benchmarking model {model_cfg.name} with question {row['ID']}")
             question = row["Question"]
-            benchmark = Benchmark(model_cfg.name, wrapper, context, question)
+            benchmark = Benchmark(model_cfg.name, wrapper, context, question, question_type)
             result = benchmark.run_question()
             benchmark.print_question_result(result)
             unload_model(wrapper)
