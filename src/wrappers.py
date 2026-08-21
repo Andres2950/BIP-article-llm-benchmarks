@@ -34,7 +34,7 @@ class HFModelWrapper:
         self.repetition_penalty = 1.2
         self.no_repeat_ngram_size = 3
 
-    def set_max_new_tokens(self, max_new_tokens: int):
+    def set_max_tokens(self, max_new_tokens: int):
         self.max_new_tokens = max_new_tokens
 
     def generate(self, prompt: str) -> str:
