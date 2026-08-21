@@ -3,6 +3,7 @@ from pathlib import Path
 import pandas as pd
 import random
 from datetime import datetime
+import gc
 
 from langchain_community.document_loaders import PyPDFLoader
 
@@ -164,6 +165,8 @@ if __name__ == "__main__":
                 print(f"Question {question_id} | bag {bag_id} | model {model_cfg.name} | saved to {csv_path}")
 
         unload_model(wrapper)
+        gc.collect()
+        torch.cuda.empty_cache()
 
     print(f"Raw data saved to {csv_path}")
     #print("Evaluando Métricas") # Evaluacion se deja para despues porque parece que no van a caber todos los modelos en una sola corrida
