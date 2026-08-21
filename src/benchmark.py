@@ -5,7 +5,7 @@ from resource_monitor import ResourceMonitor
 from utils import build_prompt, load_context
 from wrappers import unload_model
 
-
+# Corre 1 pregunta 
 class Benchmark:
     def __init__(self, model_name, model_wrapper, context_dir, question, question_type):
         self.model_name = model_name

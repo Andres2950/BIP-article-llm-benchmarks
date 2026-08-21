@@ -19,8 +19,9 @@ TYPES_RANGES = {
     "open_ended": (201, 300)
 }
 
-BAG_SIZE_PER_TYPE = 100
-NUM_BAGS = 3
+BAG_SIZE_PER_TYPE = 100 # 3 * 100 = 300 preguntas por bag completa
+NUM_BAGS = 3 # 3 bags por modelo 300 * 3 = 900 preguntas por modelo
+
 
 RECORD_COLUMNS = [
     "bag_id", "model", "question_id", "expected_answer", "response",

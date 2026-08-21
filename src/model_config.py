@@ -12,6 +12,7 @@ class ModelConfig:
 
 
 MODELS = [
+    ############
     # 4.6 GB
     ModelConfig(
         name = "Qwen3.5-4B",
@@ -48,6 +49,7 @@ MODELS = [
         context_size=16384,
         gpu_layers=-1,
     ),
+    ##########3 ESTEFANÍA
     ##  11.3 GB 
     #ModelConfig(
     #    name="DeepSeek-R1-Distill-Qwen-14B-Q6_K",
@@ -66,6 +68,7 @@ MODELS = [
     #    context_size=16384,
     #    gpu_layers=-1,
     #),
+    ############# OSCAR
     ##  	29.2 GB
     #ModelConfig(
     #    name="DeepSeek-R1-Distill-Qwen-14B-F16",
@@ -75,6 +78,7 @@ MODELS = [
     #    context_size=16384,
     #    gpu_layers=-1,
     #),
+    ##########3 ESTEFANÍA
     ## 36.4 GB
     #ModelConfig(
     #    name = "Qwen3.5-35B-A3B-Q8_0",
@@ -84,6 +88,7 @@ MODELS = [
     #    context_size=16384,
     #    gpu_layers=-1,
     #),
+    ##########3 OSCAR
     ## 36.4 GB - 42.52 GB
     #ModelConfig(
     #    name = "Llama-3.3-70B-Instruct-Q4_K_M",
@@ -93,7 +98,7 @@ MODELS = [
     #    context_size=16384,
     #    gpu_layers=-1,
     #),
-    ## ???   
+    ####################### ???   
     #ModelConfig(
     #    name = "Llama-3.1-70B-LatamGPT",
     #    repo_id="latam-gpt/Llama-3.1-70B-LatamGPT-SFT-1.0",
