@@ -23,7 +23,7 @@ class Benchmark:
             self.model_wrapper.set_max_tokens(1024)
 
         context = load_context(self.context_dir, self.question, k=5)
-        prompt = build_prompt(context, question, question_type)
+        prompt = build_prompt(context, self.question, self.question_type)
         pid = psutil.Process().pid
         monitor = ResourceMonitor(pid)
 
