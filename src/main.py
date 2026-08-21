@@ -20,7 +20,7 @@ TYPES_RANGES = {
 }
 
 BAG_SIZE_PER_TYPE = 100
-NUM_BAGS = 2
+NUM_BAGS = 3
 
 RECORD_COLUMNS = [
     "bag_id", "model", "question_id", "expected_answer", "response",
