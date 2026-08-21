@@ -155,13 +155,13 @@ class HFGGUFModelWrapper:
 # ----------------------------------------------
 # FUNCIONES DE CARGA
 # ----------------------------------------------
-def load_hf_model(model_name, temperature=0.3, max_new_tokens=512, quant="4bit"):
+def load_hf_model(model_name, temperature=0.2, max_new_tokens=512, quant="4bit"):
     return HFModelWrapper(model_name, temperature, max_new_tokens, quant)
 
-def load_hf_gguf_model(repo_id, filename, temperature=0.3, max_new_tokens=512):
+def load_hf_gguf_model(repo_id, filename, temperature=0.2, max_new_tokens=512):
     return HFGGUFModelWrapper(repo_id, filename, temperature, max_new_tokens)
 
-def load_model_from_config(model_cfg, temperature=0.3, max_new_tokens=512):
+def load_model_from_config(model_cfg, temperature=0.2, max_new_tokens=512):
     if model_cfg.format == "hf":
         return load_hf_model(model_cfg.repo_id, temperature, max_new_tokens, quant="4bit")
     elif model_cfg.format == "gguf":

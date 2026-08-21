@@ -7,13 +7,12 @@ from wrappers import unload_model
 
 
 class Benchmark:
-    def __init__(self, model_name, model_wrapper, context, question, question_type):
+    def __init__(self, model_name, model_wrapper, context_dir, question, question_type):
         self.model_name = model_name
         self.model_wrapper = model_wrapper
-        self.context = context
+        self.context_dir = context_dir
         self.question = question
         self.question_type = question_type
-        self.prompt = build_prompt(context, question, question_type)
 
     def run_question(self):
         if self.question_type == "yes_no":
@@ -22,6 +21,9 @@ class Benchmark:
             self.model_wrapper.set_max_tokens(60)
         else:  # open_ended
             self.model_wrapper.set_max_tokens(1024)
+
+        context = load_context(self.context_dir, self.question, k=5)
+        prompt = build_prompt(context, question, question_type)
         pid = psutil.Process().pid
         monitor = ResourceMonitor(pid)
 

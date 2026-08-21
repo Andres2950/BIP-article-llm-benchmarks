@@ -53,6 +53,7 @@ def parse_arguments():
     return parser.parse_args()
 
 
+# Esto ya no se esta usando, pero lo dejo por si es necesario hacer rollback
 def load_context(dir_path):
     context = []
     routes = sorted(p for p in Path(dir_path).iterdir() if p.is_file() and p.suffix == ".pdf")
@@ -83,12 +84,11 @@ def load_dataset(path, question_id=None):
 
 if __name__ == "__main__":
     args = parse_arguments()
-    context = load_context(args.context_docs)
     question_groups = load_dataset(args.dataset, args.question_id)
 
     # Si es modo de una sola pregunta
     if isinstance(question_groups, list):
-        print("Single question mode")
+        print("Single questin mode")
         row = question_groups[0]
         question_type = get_question_type(row["ID"])
         for model_cfg in MODELS:
@@ -96,7 +96,7 @@ if __name__ == "__main__":
             wrapper = load_model_from_config(model_cfg, args.temperature)
             print(f"Benchmarking model {model_cfg.name} with question {row['ID']}")
             question = row["Question"]
-            benchmark = Benchmark(model_cfg.name, wrapper, context, question, question_type)
+            benchmark = Benchmark(model_cfg.name, wrapper, args.context_docs, question, question_type)
             result = benchmark.run_question()
             benchmark.print_question_result(result)
             unload_model(wrapper)
@@ -124,7 +124,7 @@ if __name__ == "__main__":
                 expected_answer = row["Answer"]
                 question_id = row["ID"]
 
-                benchmark = Benchmark(model_cfg.name, wrapper, context, question, question_type)
+                benchmark = Benchmark(model_cfg.name, wrapper, args.context_docs, question, question_type)
                 result = benchmark.run_question()
 
                 response_text = result["response"]
