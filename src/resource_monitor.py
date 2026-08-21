@@ -59,7 +59,7 @@ def get_current_pid():
 
 
 class ResourceMonitor:
-    def __init__(self, pid, interval=0.2):
+    def __init__(self, pid, interval=0.05):
         self.interval = interval
         self.root_pid = pid
         self.samples = {'cpu': [], 'memory': [], 'gpu_util': [], 'gpu_mem': []}

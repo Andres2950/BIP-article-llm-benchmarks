@@ -1,3 +1,4 @@
+import re
 import torch
 from transformers import BitsAndBytesConfig, AutoModelForCausalLM, AutoTokenizer, pipeline as hf_pipeline
 
@@ -65,7 +66,7 @@ class HFModelWrapper:
         generated_text = self.tokenizer.decode(new_tokens, skip_special_tokens=True).strip()
         generated_text = generated_text.replace(prompt, "")
         generated_text = generated_text.replace("<｜end▁of▁sentence｜>", "")
-        generated_text = generated_text.replace("</think>", "")
+        generated_text = re.sub(r'<think>.*?</think>', '', generated_text, flags=re.DOTALL)
         return generated_text.strip()
 
     def count_tokens(self, text: str) -> int:
@@ -139,7 +140,7 @@ class HFGGUFModelWrapper:
         generated_text = outputs[0]['generated_text'].strip()
         generated_text = generated_text.replace(prompt, "")
         generated_text = generated_text.replace("<｜end▁of▁sentence｜>", "")
-        generated_text = generated_text.replace("</think>", "")
+        generated_text = re.sub(r'<think>.*?</think>', '', generated_text, flags=re.DOTALL)
         return generated_text
 
     def count_tokens(self, text: str) -> int:

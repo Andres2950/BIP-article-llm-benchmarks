@@ -37,8 +37,6 @@ def load_vectorstore(dir_path):
         length_function=len,
     )
     chunks = splitter.split_documents(documents)
-    print(f"📄 {len(chunks)} fragmentos creados.")
-
     embeddings = get_embeddings()
     _vectordb = FAISS.from_documents(chunks, embeddings)
     return _vectordb
@@ -59,7 +57,7 @@ def build_prompt(context, question, question_type):
 
     return f"""
 Eres un asistente que responde preguntas basándose EXCLUSIVAMENTE en el siguiente contexto.
-+
+**MUY IMPORTANTE: NO muestres tu razonamiento interno. Responde directamente.**
 CONTEXTO:
 {context}
 
