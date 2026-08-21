@@ -2,7 +2,7 @@ import time
 import psutil
 
 from resource_monitor import ResourceMonitor
-from utils import build_prompt
+from utils import build_prompt, load_context
 from wrappers import unload_model
 
 
