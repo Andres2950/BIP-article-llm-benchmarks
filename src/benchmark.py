@@ -27,11 +27,11 @@ class Benchmark:
         pid = psutil.Process().pid
         monitor = ResourceMonitor(pid)
 
-        input_tokens = self.model_wrapper.count_tokens(self.prompt)
+        input_tokens = self.model_wrapper.count_tokens(prompt)
 
         monitor.start()
         start_time = time.perf_counter()
-        response_text = self.model_wrapper.generate(self.prompt)
+        response_text = self.model_wrapper.generate(prompt)
         total_duration = time.perf_counter() - start_time
         monitor.stop()
 
