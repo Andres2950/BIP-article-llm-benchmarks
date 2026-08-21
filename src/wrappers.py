@@ -117,7 +117,7 @@ class HFGGUFModelWrapper:
             eos_token_id=self.tokenizer.eos_token_id,
         )
 
-     def set_max_tokens(self, n: int):
+    def set_max_tokens(self, n: int):
         self.max_new_tokens = n
         self.pipeline = hf_pipeline(
             "text-generation",
