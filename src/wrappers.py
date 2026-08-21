@@ -31,7 +31,12 @@ class HFModelWrapper:
 
         self.temperature = temperature
         self.max_new_tokens = max_new_tokens
-        
+        self.repetition_penalty = 1.2
+        self.no_repeat_ngram_size = 3
+
+    def set_max_new_tokens(self, max_new_tokens: int):
+        self.max_new_tokens = max_new_tokens
+
     def generate(self, prompt: str) -> str:
         messages = [{"role": "user", "content": prompt}]
         encoded = self.tokenizer.apply_chat_template(
@@ -50,11 +55,18 @@ class HFModelWrapper:
                 do_sample=True,
                 temperature=self.temperature,
                 pad_token_id=self.tokenizer.eos_token_id,
+                repetition_penalty=self.repetition_penalty,
+                no_repeat_ngram_size=self.no_repeat_ngram_size,
+                early_stopping=True,
+                eos_token_id=self.tokenizer.eos_token_id,
             )
 
         new_tokens = output_ids[0][input_len:]
-        raw_text = self.tokenizer.decode(new_tokens, skip_special_tokens=True)
-        return raw_text.strip()
+        generated_text = self.tokenizer.decode(new_tokens, skip_special_tokens=True).strip()
+        generated_text = generated_text.replace(prompt, "")
+        generated_text = generated_text.replace("<｜end▁of▁sentence｜>", "")
+        generated_text = generated_text.replace("</think>", "")
+        return generated_text.strip()
 
     def count_tokens(self, text: str) -> int:
         return len(self.tokenizer.encode(text, add_special_tokens=False))
@@ -85,25 +97,49 @@ class HFGGUFModelWrapper:
             device_map="auto",
             low_cpu_mem_usage=True,
         )
+        self.temperature = temperature
+        self.max_new_tokens = max_new_tokens
+        self.repetition_penalty = 1.2
+        self.no_repeat_ngram_size = 3
 
         self.pipeline = hf_pipeline(
             "text-generation",
             model=self.model,
             tokenizer=self.tokenizer,
-            temperature=temperature,
-            max_new_tokens=max_new_tokens,
+            temperature=self.temperature,
+            max_new_tokens=self.max_new_tokens,
             do_sample=True,
             return_full_text=False,
             pad_token_id=self.tokenizer.eos_token_id,
-            repetition_penalty=1.1,
+            repetition_penalty=self.repetition_penalty,
             early_stopping=True,
+            no_repeat_ngram_size=self.no_repeat_ngram_size,
+            eos_token_id=self.tokenizer.eos_token_id,
+        )
+
+     def set_max_tokens(self, n: int):
+        self.max_new_tokens = n
+        self.pipeline = hf_pipeline(
+            "text-generation",
+            model=self.model,
+            tokenizer=self.tokenizer,
+            temperature=self.temperature,
+            max_new_tokens=n,
+            do_sample=True,
+            return_full_text=False,
+            pad_token_id=self.tokenizer.eos_token_id,
+            repetition_penalty=self.repetition_penalty,
+            no_repeat_ngram_size=self.no_repeat_ngram_size,
+            early_stopping=True,
+            eos_token_id=self.tokenizer.eos_token_id,
         )
 
     def generate(self, prompt: str) -> str:
-        outputs = self.pipeline(prompt)
+        outputs = self.pipeline(prompt).strip()
         generated_text = outputs[0]['generated_text']
-        if generated_text.startswith(prompt):
-            return generated_text[len(prompt):].lstrip()
+        generated_text = generated_text.replace(prompt, "")
+        generated_text = generated_text.replace("<｜end▁of▁sentence｜>", "")
+        generated_text = generated_text.replace("</think>", "")
         return generated_text
 
     def count_tokens(self, text: str) -> int:
@@ -119,13 +155,13 @@ class HFGGUFModelWrapper:
 # ----------------------------------------------
 # FUNCIONES DE CARGA
 # ----------------------------------------------
-def load_hf_model(model_name, temperature=0.2, max_new_tokens=512, quant="4bit"):
+def load_hf_model(model_name, temperature=0.3, max_new_tokens=512, quant="4bit"):
     return HFModelWrapper(model_name, temperature, max_new_tokens, quant)
 
-def load_hf_gguf_model(repo_id, filename, temperature=0.2, max_new_tokens=512):
+def load_hf_gguf_model(repo_id, filename, temperature=0.3, max_new_tokens=512):
     return HFGGUFModelWrapper(repo_id, filename, temperature, max_new_tokens)
 
-def load_model_from_config(model_cfg, temperature=0.2, max_new_tokens=512):
+def load_model_from_config(model_cfg, temperature=0.3, max_new_tokens=512):
     if model_cfg.format == "hf":
         return load_hf_model(model_cfg.repo_id, temperature, max_new_tokens, quant="4bit")
     elif model_cfg.format == "gguf":

@@ -7,7 +7,7 @@ from datetime import datetime
 from langchain_community.document_loaders import PyPDFLoader
 
 from benchmark import Benchmark
-from evaluator import ejecutar_evaluacion
+from evaluator import extraer_si_no
 from wrappers import load_model_from_config, unload_model
 from model_config import MODELS
 
@@ -120,23 +120,32 @@ if __name__ == "__main__":
 
             for row in sampled_questions:
                 question = row["Question"]
+                question_type = get_question_type(row["ID"])
                 expected_answer = row["Answer"]
                 question_id = row["ID"]
 
-                benchmark = Benchmark(model_cfg.name, wrapper, context, question)
+                benchmark = Benchmark(model_cfg.name, wrapper, context, question, question_type)
                 result = benchmark.run_question()
+
+                response_text = result["response"]
+                
+                if question_type == "yes_no":
+                    extracted = extraer_si_no(response_text)
+                    if extracted is not None:
+                        response_text = "sí" if extracted else "no"
+
 
                 record = {
                     "bag_id": bag_id,
                     "model": model_cfg.name,
                     "question_id": question_id,
                     "expected_answer": expected_answer,
-                    "response": result["response"],
+                    "response": response_text,
                     "total_duration_sec": result["total_duration"] / 1e9,
                     "input_tokens": result["input_tokens"],
                     "output_tokens": result["output_tokens"],
                     "total_tokens": result["total_tokens"],
-                    "question_type": get_question_type(question_id)
+                    "question_type": question_type
                 }
 
                 for resource in ['cpu', 'memory', 'gpu_util', 'gpu_mem']:

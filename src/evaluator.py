@@ -43,14 +43,15 @@ def f1_score(esperada: str, obtenida: str) -> float:
 
 
 def extraer_si_no(texto: str):
-    t = texto.lower()
-    if t.startswith("sí") or t.startswith("si,") or t.startswith("si.") or t.startswith("si "):
-        return True
-    if t.startswith("no"):
-        return False
-
+    t = texto.lower().strip()
+    
+    match = re.search(r'\b(sí|si|no)\b', t)
+    if match:
+        palabra = match.group(1)
+        if palabra == 'si':
+            return True
+        return palabra == 'sí'
     return None
-
 
 def acierto_binario(esperada: str, obtenida: str):
     e = extraer_si_no(esperada)
