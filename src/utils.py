@@ -1,5 +1,5 @@
 def build_prompt(context, question, question_type):
-   type_instructions = {
+    TYPE_INSTRUCTIONS = {
         "yes_no": "Responde únicamente con la palabra exacta 'sí' o 'no' (minúscula, sin acentos, sin puntuación, sin texto adicional). Ejemplo: 'sí'",
         "short_answer": "Responde con una frase corta y concisa de máximo 15 palabras.",
         "open_ended": "Responde detalladamente pero sin superar las 200 palabras.",
@@ -19,7 +19,7 @@ Eres un asistente que responde preguntas basándose EXCLUSIVAMENTE en el context
 - Si la pregunta no es clara, di "No estoy seguro".
 
 TIPO DE PREGUNTA: {question_type}
-{type_instructions.get(question_type, "")}
+{TYPE_INSTRUCTIONS.get(question_type, "")}
 
 IMPORTANTE: Tu respuesta debe estar en español, sin mezclar con inglés.
 RESPONDE AHORA:
