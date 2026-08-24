@@ -1,0 +1,6 @@
+,,f1_token,f1_token,f1_token,f1_token,rouge1,rouge1,rouge1,rouge1,rouge2,rouge2,rouge2,rouge2,meteor,meteor,meteor,meteor,bertscore,bertscore,bertscore,bertscore
+,,mean,std,min,max,mean,std,min,max,mean,std,min,max,mean,std,min,max,mean,std,min,max
+model,question_type,,,,,,,,,,,,,,,,,,,,
+Qwen3.5-4B,open_ended,,,,,0.08,0.0025,0.0119,0.3395,0.0144,0.0009,0.0,0.1536,0.0959,0.0012,0.0272,0.2339,0.588129603272299,0.001,0.5180337429046631,0.6735171675682068
+Qwen3.5-4B,short_answer,0.0106,0.0011,0.0,0.1008,,,,,,,,,,,,,,,,
+Qwen3.5-4B,yes_no,0.0317,0.0137,0.0,1.0,,,,,,,,,,,,,,,,
