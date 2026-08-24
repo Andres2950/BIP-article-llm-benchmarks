@@ -83,11 +83,9 @@ class HFModelWrapper:
 # ----------------------------------------------
 class HFGGUFModelWrapper:
     def __init__(self, repo_id, filename, temperature=0.2, max_new_tokens=512):
-        self.tokenizer = AutoTokenizer.from_pretrained(
-            repo_id,
-            gguf_file=filename,
-            use_fast=True
-        )
+        
+        self.tokenizer = AutoTokenizer.from_pretrained(repo_id, use_fast=True)
+
         if self.tokenizer.pad_token is None:
             self.tokenizer.pad_token = self.tokenizer.eos_token
 
