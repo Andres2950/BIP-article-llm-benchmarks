@@ -292,6 +292,11 @@ O si desea cancelar un job:
 ```bash 
 scancel <Job ID>
 ```
+
+O si desea cancelar todo:
+```bash 
+scancel -u usuario
+```
 ---
 
 ## Notas importantes

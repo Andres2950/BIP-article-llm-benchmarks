@@ -51,23 +51,23 @@ MODELS = [
    # ), 
     ######3 ESTEFANÍA
       #11.3 GB 
+   # ModelConfig(
+    #    name="DeepSeek-R1-Distill-Qwen-14B-Q6_K",
+     #   repo_id="bartowski/DeepSeek-R1-Distill-Qwen-14B-GGUF",
+      #  format="gguf",
+       # filename="DeepSeek-R1-Distill-Qwen-14B-Q6_K.gguf",
+        #context_size=16384,
+       # gpu_layers=-1,
+    #),
+     #18.4 GB
     ModelConfig(
-        name="DeepSeek-R1-Distill-Qwen-14B-Q6_K",
-        repo_id="bartowski/DeepSeek-R1-Distill-Qwen-14B-GGUF",
+        name = "Qwen3.5-35B-A3B-Q4_K_M",
+        repo_id="lmstudio-community/Qwen3.5-35B-A3B-GGUF",
         format="gguf",
-        filename="DeepSeek-R1-Distill-Qwen-14B-Q6_K.gguf",
+        filename="Qwen3.5-35B-A3B-Q4_K_M.gguf",
         context_size=16384,
         gpu_layers=-1,
-    ),
-    # 18.4 GB
-   # ModelConfig(
-   #     name = "Qwen3.5-35B-A3B-Q4_K_M",
-  #      repo_id="lmstudio-community/Qwen3.5-35B-A3B-GGUF",
-   #     format="gguf",
-   #     filename="Qwen3.5-35B-A3B-Q4_K_M.gguf",
-    #    context_size=16384,
-   #     gpu_layers=-1,
- #   ), 
+    ), 
     ############ OSCAR
     ##  	29.2 GB
     #ModelConfig(
