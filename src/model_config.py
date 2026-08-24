@@ -14,7 +14,7 @@ class ModelConfig:
 MODELS = [
     ############
     # 4.6 GB
-    ModelConfig(
+   """  ModelConfig(
         name = "Qwen3.5-4B",
         repo_id="Qwen/Qwen3.5-4B",
         format="hf",
@@ -48,27 +48,27 @@ MODELS = [
         filename="Meta-Llama-3.1-8B-Instruct-Q8_0.gguf",
         context_size=16384,
         gpu_layers=-1,
-    ),
-    ##########3 ESTEFANÍA
-    ##  11.3 GB 
-    #ModelConfig(
-    #    name="DeepSeek-R1-Distill-Qwen-14B-Q6_K",
-    #    repo_id="bartowski/DeepSeek-R1-Distill-Qwen-14B-GGUF",
-    #    format="gguf",
-    #    filename="DeepSeek-R1-Distill-Qwen-14B-Q6_K.gguf",
-    #    context_size=16384,
-    #    gpu_layers=-1,
-    #),
-    ## 18.4 GB
-    #ModelConfig(
-    #    name = "Qwen3.5-35B-A3B-Q4_K_M",
-    #    repo_id="lmstudio-community/Qwen3.5-35B-A3B-GGUF",
-    #    format="gguf",
-    #    filename="Qwen3.5-35B-A3B-Q4_K_M.gguf",
-    #    context_size=16384,
-    #    gpu_layers=-1,
-    #),
-    ############# OSCAR
+    ), """
+    ######3 ESTEFANÍA
+      #11.3 GB 
+    ModelConfig(
+        name="DeepSeek-R1-Distill-Qwen-14B-Q6_K",
+        repo_id="bartowski/DeepSeek-R1-Distill-Qwen-14B-GGUF",
+        format="gguf",
+        filename="DeepSeek-R1-Distill-Qwen-14B-Q6_K.gguf",
+        context_size=16384,
+        gpu_layers=-1,
+    ),"""
+    # 18.4 GB
+    ModelConfig(
+        name = "Qwen3.5-35B-A3B-Q4_K_M",
+        repo_id="lmstudio-community/Qwen3.5-35B-A3B-GGUF",
+        format="gguf",
+        filename="Qwen3.5-35B-A3B-Q4_K_M.gguf",
+        context_size=16384,
+        gpu_layers=-1,
+    ), """
+    ############ OSCAR
     ##  	29.2 GB
     #ModelConfig(
     #    name="DeepSeek-R1-Distill-Qwen-14B-F16",
@@ -80,14 +80,14 @@ MODELS = [
     #),
     ##########3 ESTEFANÍA
     ## 36.4 GB
-    #ModelConfig(
-    #    name = "Qwen3.5-35B-A3B-Q8_0",
-    #    repo_id="lmstudio-community/Qwen3.5-35B-A3B-GGUF",
-    #    format="gguf",
-    #    filename="Qwen3.5-35B-A3B-Q8_0.gguf",
-    #    context_size=16384,
-    #    gpu_layers=-1,
-    #),
+    """ModelConfig(
+        name = "Qwen3.5-35B-A3B-Q8_0",
+        repo_id="lmstudio-community/Qwen3.5-35B-A3B-GGUF",
+        format="gguf",
+        filename="Qwen3.5-35B-A3B-Q8_0.gguf",
+        context_size=16384,
+        gpu_layers=-1,
+    ),"""
     ##########3 OSCAR
     ## 36.4 GB - 42.52 GB
     #ModelConfig(
