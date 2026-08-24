@@ -83,19 +83,36 @@ class HFModelWrapper:
 # ----------------------------------------------
 class HFGGUFModelWrapper:
     def __init__(self, repo_id, filename, temperature=0.2, max_new_tokens=512):
-        
-        self.tokenizer = AutoTokenizer.from_pretrained(repo_id, use_fast=True)
+        # Mapeo de repositorios GGUF a repositorios base del modelo
+        base_repo_map = {
+            "lmstudio-community/Qwen3.5-4B-GGUF": "Qwen/Qwen3.5-4B",
+            "lmstudio-community/Qwen3.5-35B-A3B-GGUF": "Qwen/Qwen3.5-35B-A3B",
+            "bartowski/DeepSeek-R1-Distill-Qwen-14B-GGUF": "deepseek-ai/DeepSeek-R1-Distill-Qwen-14B",
+            "bartowski/Meta-Llama-3.1-8B-Instruct-GGUF": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+            "bartowski/Llama-3.3-70B-Instruct-GGUF": "meta-llama/Llama-3.3-70B-Instruct",
+        }
+        # Si no está en el mapa, intenta quitar el sufijo "-GGUF"
+        if repo_id in base_repo_map:
+            base_repo = base_repo_map[repo_id]
+        elif repo_id.endswith("-GGUF"):
+            base_repo = repo_id[:-5]  # Elimina "-GGUF"
+        else:
+            base_repo = repo_id  # Fallback
 
+        # Cargar tokenizador desde el repositorio base, con la versión lenta (sentencepiece)
+        self.tokenizer = AutoTokenizer.from_pretrained(base_repo, use_fast=False)
         if self.tokenizer.pad_token is None:
             self.tokenizer.pad_token = self.tokenizer.eos_token
 
+        # Cargar el modelo GGUF desde el repositorio y archivo específico
         self.model = AutoModelForCausalLM.from_pretrained(
             repo_id,
             gguf_file=filename,
-            torch_dtype=torch.float16,  
+            torch_dtype=torch.float16,
             device_map="auto",
             low_cpu_mem_usage=True,
         )
+
         self.temperature = temperature
         self.max_new_tokens = max_new_tokens
         self.repetition_penalty = 1.2
