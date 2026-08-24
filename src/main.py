@@ -4,6 +4,7 @@ import pandas as pd
 import random
 from datetime import datetime
 import gc
+import torch
 
 from langchain_community.document_loaders import PyPDFLoader
 
