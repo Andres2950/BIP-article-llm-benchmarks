@@ -34,7 +34,7 @@ RECORD_COLUMNS = [
     "gpu_mem_avg", "gpu_mem_min", "gpu_mem_max",
 ]
 
-GGUF_BASE_PATH = "/data/oobando/models"
+GGUF_BASE_PATH = "/data/edelgado/models"
 
 
 def get_question_type(q_id):

@@ -1,9 +1,12 @@
 import re
+import os
 import torch
 from transformers import BitsAndBytesConfig, AutoModelForCausalLM, AutoTokenizer, pipeline as hf_pipeline
+from llama_cpp import Llama
+from huggingface_hub import hf_hub_download
 
 # ----------------------------------------------
-# WRAPPER PARA MODELOS HUGGING FACE
+# WRAPPER PARA MODELOS HUGGING FACE (HF)
 # ----------------------------------------------
 class HFModelWrapper:
     def __init__(self, model_name, temperature=0.2, max_new_tokens=512, quant="4bit"):
@@ -79,78 +82,52 @@ class HFModelWrapper:
 
 
 # ----------------------------------------------
-# WRAPPER PARA MODELOS GGUF
+# WRAPPER PARA MODELOS GGUF USANDO LLAMA-CPP-PYTHON
 # ----------------------------------------------
-class HFGGUFModelWrapper:
-    def __init__(self, repo_id, filename, temperature=0.2, max_new_tokens=512):
-        self.tokenizer = AutoTokenizer.from_pretrained(
-            repo_id,
-            gguf_file=filename,
-            use_fast=True
-        )
-        if self.tokenizer.pad_token is None:
-            self.tokenizer.pad_token = self.tokenizer.eos_token
-
-        self.model = AutoModelForCausalLM.from_pretrained(
-            repo_id,
-            gguf_file=filename,
-            torch_dtype=torch.float16,  
-            device_map="auto",
-            low_cpu_mem_usage=True,
-        )
+class LlamaCppGGUFWrapper:
+    def __init__(self, repo_id, filename, temperature=0.2, max_new_tokens=512, n_ctx=16384):
         self.temperature = temperature
         self.max_new_tokens = max_new_tokens
-        self.repetition_penalty = 1.2
-        self.no_repeat_ngram_size = 3
+        self.n_ctx = n_ctx
 
-        self.pipeline = hf_pipeline(
-            "text-generation",
-            model=self.model,
-            tokenizer=self.tokenizer,
-            temperature=self.temperature,
-            max_new_tokens=self.max_new_tokens,
-            do_sample=True,
-            return_full_text=False,
-            pad_token_id=self.tokenizer.eos_token_id,
-            repetition_penalty=self.repetition_penalty,
-            early_stopping=True,
-            no_repeat_ngram_size=self.no_repeat_ngram_size,
-            eos_token_id=self.tokenizer.eos_token_id,
+        # Directorio de caché para los archivos GGUF
+        cache_dir = os.environ.get("HF_HOME", "/data/edelgado/huggingface_cache")
+        self.model_path = hf_hub_download(
+            repo_id=repo_id,
+            filename=filename,
+            cache_dir=cache_dir,
+            local_files_only=False,
+        )
+
+        # Cargar el modelo con llama-cpp-python
+        self.model = Llama(
+            model_path=self.model_path,
+            n_ctx=self.n_ctx,
+            n_gpu_layers=-1,          # -1 = todas las capas en GPU; ajusta si hay memoria limitada
+            verbose=False,
         )
 
     def set_max_tokens(self, n: int):
         self.max_new_tokens = n
-        self.pipeline = hf_pipeline(
-            "text-generation",
-            model=self.model,
-            tokenizer=self.tokenizer,
-            temperature=self.temperature,
-            max_new_tokens=n,
-            do_sample=True,
-            return_full_text=False,
-            pad_token_id=self.tokenizer.eos_token_id,
-            repetition_penalty=self.repetition_penalty,
-            no_repeat_ngram_size=self.no_repeat_ngram_size,
-            early_stopping=True,
-            eos_token_id=self.tokenizer.eos_token_id,
-        )
 
     def generate(self, prompt: str) -> str:
-        outputs = self.pipeline(prompt)
-        generated_text = outputs[0]['generated_text'].strip()
-        generated_text = generated_text.replace(prompt, "")
-        generated_text = generated_text.replace("<｜end▁of▁sentence｜>", "")
-        generated_text = re.sub(r'<think>.*?</think>', '', generated_text, flags=re.DOTALL)
-        return generated_text
+        # Generar respuesta
+        output = self.model(
+            prompt,
+            max_tokens=self.max_new_tokens,
+            temperature=self.temperature,
+            echo=False,
+            stop=["<|im_end|>", "</s>", "\\n\\n"],  # tokens de parada según el modelo
+        )
+        return output["choices"][0]["text"].strip()
 
     def count_tokens(self, text: str) -> int:
-        return len(self.tokenizer.encode(text, add_special_tokens=False))
+        return len(self.model.tokenize(text.encode("utf-8")))
 
     def unload(self):
         del self.model
-        del self.pipeline
-        if torch.cuda.is_available():
-            torch.cuda.empty_cache()
+        import gc
+        gc.collect()
 
 
 # ----------------------------------------------
@@ -160,7 +137,8 @@ def load_hf_model(model_name, temperature=0.2, max_new_tokens=512, quant="4bit")
     return HFModelWrapper(model_name, temperature, max_new_tokens, quant)
 
 def load_hf_gguf_model(repo_id, filename, temperature=0.2, max_new_tokens=512):
-    return HFGGUFModelWrapper(repo_id, filename, temperature, max_new_tokens)
+    # Usa el nuevo wrapper basado en llama-cpp-python
+    return LlamaCppGGUFWrapper(repo_id, filename, temperature, max_new_tokens)
 
 def load_model_from_config(model_cfg, temperature=0.2, max_new_tokens=512):
     if model_cfg.format == "hf":
