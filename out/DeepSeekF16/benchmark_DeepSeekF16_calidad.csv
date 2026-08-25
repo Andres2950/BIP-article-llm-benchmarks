@@ -1,0 +1,6 @@
+,,f1_token,f1_token,f1_token,f1_token,rouge1,rouge1,rouge1,rouge1,rouge2,rouge2,rouge2,rouge2,meteor,meteor,meteor,meteor,bertscore,bertscore,bertscore,bertscore
+,,mean,std,min,max,mean,std,min,max,mean,std,min,max,mean,std,min,max,mean,std,min,max
+model,question_type,,,,,,,,,,,,,,,,,,,,
+DeepSeek-R1-Distill-Qwen-14B-F16,open_ended,,,,,0.2805,0.0078,0.0209,0.5706,0.0737,0.0044,0.0,0.3409,0.1898,0.0038,0.0291,0.4977,0.6364998331394646,0.0073,0.5331864953041077,0.7275243401527405
+DeepSeek-R1-Distill-Qwen-14B-F16,short_answer,0.0299,0.0039,0.0,0.2105,,,,,,,,,,,,,,,,
+DeepSeek-R1-Distill-Qwen-14B-F16,yes_no,0.7109,0.1042,0.0,1.0,,,,,,,,,,,,,,,,
