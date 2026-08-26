@@ -1,0 +1,4 @@
+,total_duration_sec,total_duration_sec,total_duration_sec,total_duration_sec,output_tokens,output_tokens,output_tokens,output_tokens,cpu_avg,cpu_avg,cpu_avg,cpu_avg,memory_avg,memory_avg,memory_avg,memory_avg,gpu_util_avg,gpu_util_avg,gpu_util_avg,gpu_util_avg,gpu_mem_avg,gpu_mem_avg,gpu_mem_avg,gpu_mem_avg
+,mean,std,min,max,mean,std,min,max,mean,std,min,max,mean,std,min,max,mean,std,min,max,mean,std,min,max
+model,,,,,,,,,,,,,,,,,,,,,,,,
+DeepSeek-R1-Distill-Qwen-14B-Q6_K,11.66,0.2454,2.2605,35.8686,255.2821,2.366,50,533,99.5301,0.0612,52.1222,106.05,6054.6747,26.5318,5948.8127,6086.8398,96.0082,0.2063,44.8056,99.2158,30003.402,38.7253,29710.8056,30034.75
