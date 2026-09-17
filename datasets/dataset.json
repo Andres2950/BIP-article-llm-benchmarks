@@ -1,0 +1,1802 @@
+[
+  {
+    "id": "sino_001",
+    "categoria": "sino",
+    "pregunta": "¿La Unidad Programática asignada al Centro Nacional de Detección Temprana de Cáncer Gastrointestinal (CNDTCG) es la número 2806?",
+    "ground_truth": "Sí. El Centro Nacional de Detección Temprana de Cáncer Gastrointestinal posee el número de Unidad Programática 2806, encontrándose bajo la Dirección de Centros Especializados de la Gerencia Médica de la Caja Costarricense de Seguro Social."
+  },
+  {
+    "id": "sino_002",
+    "categoria": "sino",
+    "pregunta": "¿Establece el Transitorio I de la norma para la prevención del cáncer colorrectal un plazo de 12 meses para que los servicios de salud cuenten con sus manuales de procedimientos y protocolos?",
+    "ground_truth": "No. El Transitorio I de la norma colorrectal otorga a los servicios de salud públicos, privados y mixtos un plazo de seis meses a partir de la publicación del Decreto Ejecutivo para contar con el manual de procedimientos, guía, protocolo u otro instrumento."
+  },
+  {
+    "id": "sino_003",
+    "categoria": "sino",
+    "pregunta": "El CNDTCG fue creado originalmente en 1995 como un proyecto piloto mediante un convenio que involucró a la Universidad de Costa Rica (UCR) y a la Agencia Japonesa de Cooperación Internacional (JICA)?",
+    "ground_truth": "Sí. El centro tiene sus raíces en el año 1995, cuando fue creado como un proyecto piloto mediante un convenio de cooperación entre la CCSS, la Universidad de Costa Rica (UCR) y la Agencia Japonesa de Cooperación Internacional (JICA)."
+  },
+  {
+    "id": "sino_004",
+    "categoria": "sino",
+    "pregunta": "¿El Plan de Abordaje Integral para el Tamizaje de Cáncer de Estómago y Colorrectal tiene un horizonte temporal que finaliza en diciembre de 2029?",
+    "ground_truth": "Sí, el plan tiene un horizonte temporal de 5 años, comenzando en julio de 2024 y finalizando en diciembre de 2029."
+  },
+  {
+    "id": "sino_005",
+    "categoria": "sino",
+    "pregunta": "¿El Plan de Abordaje Integral para el Tamizaje de Cáncer de Estómago y Colorrectal contempla la colaboración con universidades estatales para optimizar el sistema de información de salud?",
+    "ground_truth": "Sí. El plan establece que se recurrirá a universidades estatales con proyectos de investigación y extensión para colaborar en los requerimientos que optimicen el sistema de información en función de los programas de tamizaje."
+  },
+  {
+    "id": "sino_006",
+    "categoria": "sino",
+    "pregunta": "¿El plan de abordaje integral abarca a toda la población costarricense, independientemente de su rango de edad?",
+    "ground_truth": "No. El plan abarca específicamente a la población costarricense adscrita a la CCSS entre los 50 y 74 años. No cubre a toda la población sin distinción de edad."
+  },
+  {
+    "id": "sino_007",
+    "categoria": "sino",
+    "pregunta": "¿Uno de los supuestos del plan es que el CNDTCG coordinará eficientemente a todos los actores involucrados, asegurando que los programas de tamizaje funcionen sin interrupciones?",
+    "ground_truth": "Sí."
+  },
+  {
+    "id": "sino_008",
+    "categoria": "sino",
+    "pregunta": "¿La incidencia del cáncer de colon en Costa Rica durante el periodo 2017-2022 mostró una disminución significativa similar a la del cáncer de estómago?",
+    "ground_truth": "No."
+  },
+  {
+    "id": "sino_009",
+    "categoria": "sino",
+    "pregunta": "¿La incidencia total combinada de cáncer de estómago, colon y recto en la población objetivo (50-74 años) disminuyó entre 2017 y 2022?",
+    "ground_truth": "Sí."
+  },
+  {
+    "id": "sino_010",
+    "categoria": "sino",
+    "pregunta": "De acuerdo con el análisis de incidencia por cantón del Plan de Abordaje Integral, ¿el modelo de tamizaje para el cáncer de recto y el cáncer de colon es el mismo, utilizando la prueba FIT?",
+    "ground_truth": "Sí."
+  },
+  {
+    "id": "sino_011",
+    "categoria": "sino",
+    "pregunta": "¿la mortalidad por cáncer de estómago en hombres es mayor que en mujeres?",
+    "ground_truth": "Sí."
+  },
+  {
+    "id": "sino_012",
+    "categoria": "sino",
+    "pregunta": "Según el análisis de mortalidad por cantón del Plan de Abordaje Integral, ¿los cantones con mayor mortalidad combinada por cáncer de estómago, colon y recto se concentran principalmente en una sola provincia?",
+    "ground_truth": "No."
+  },
+  {
+    "id": "sino_013",
+    "categoria": "sino",
+    "pregunta": "Según el análisis de años de vida potencialmente perdidos (YPLL) del Plan de Abordaje Integral, ¿las mujeres pierden en promedio más años de vida que los hombres debido a cáncer de estómago, colon y recto?",
+    "ground_truth": "Sí."
+  },
+  {
+    "id": "sino_014",
+    "categoria": "sino",
+    "pregunta": "Según el análisis de proyección poblacional del Plan de Abordaje Integral, ¿se proyecta que la población de Costa Rica aumente de 5.3 a 5.7 millones entre 2025 y 2034?",
+    "ground_truth": "Sí."
+  },
+  {
+    "id": "sino_015",
+    "categoria": "sino",
+    "pregunta": "Según el Cuadro No. 17 del Plan de Abordaje Integral, ¿el cantón de San José ocupa el primer lugar en incidencia de cáncer de estómago y el segundo lugar en incidencia de cáncer colorrectal?",
+    "ground_truth": "Sí."
+  },
+  {
+    "id": "sino_016",
+    "categoria": "sino",
+    "pregunta": "De acuerdo con el Cuadro No. 19 del Plan de Abordaje Integral, ¿el cantón de Tilarán presenta la incidencia más alta para tamizaje de cáncer colorrectal?",
+    "ground_truth": "Sí."
+  },
+  {
+    "id": "sino_017",
+    "categoria": "sino",
+    "pregunta": "Según el inventario de recursos del Plan de Abordaje Integral, ¿la CCSS cuenta con 19 salas de fluoroscopia disponibles a nivel nacional?",
+    "ground_truth": "Sí."
+  },
+  {
+    "id": "sino_018",
+    "categoria": "sino",
+    "pregunta": "Según el inventario de recursos del Plan de Abordaje Integral, ¿el Hospital Maximiliano Peralta Jiménez en Cartago cuenta con dos salas de fluoroscopia?",
+    "ground_truth": "Sí."
+  },
+  {
+    "id": "sino_019",
+    "categoria": "sino",
+    "pregunta": "Según el inventario de recursos de endoscopia del Plan de Abordaje Integral, ¿la prueba cuantitativa de sangre oculta en heces está disponible en todos los laboratorios clínicos de la red?",
+    "ground_truth": "No."
+  },
+  {
+    "id": "sino_020",
+    "categoria": "sino",
+    "pregunta": "¿el Hospital México cuenta con 19 endoscopistas capacitados, siendo el centro de salud con mayor cantidad de este recurso?",
+    "ground_truth": "Sí."
+  },
+  {
+    "id": "sino_021",
+    "categoria": "sino",
+    "pregunta": "¿el porcentaje de invitación para los programas de tamizaje de cáncer gástrico y colorrectal es del 40% en ambos casos?",
+    "ground_truth": "Sí."
+  },
+  {
+    "id": "sino_022",
+    "categoria": "sino",
+    "pregunta": "¿el número de salas de fluoroscopia necesarias para el año 2025 representa más del 60% de la disponibilidad actual de la CCSS?",
+    "ground_truth": "Sí."
+  },
+  {
+    "id": "sino_023",
+    "categoria": "sino",
+    "pregunta": "¿la atención de lesiones premalignas de cáncer de colon tiene un costo estimado del 9.0% respecto al de un cáncer en etapa avanzada?",
+    "ground_truth": "No."
+  },
+  {
+    "id": "sino_024",
+    "categoria": "sino",
+    "pregunta": "¿la implementación del SILC se limita únicamente a la red de laboratorios para la prueba de FIT y no abarca otras pruebas realizadas en los laboratorios clínicos?",
+    "ground_truth": "No."
+  },
+  {
+    "id": "sino_025",
+    "categoria": "sino",
+    "pregunta": "¿el CNDTCG eliminó el requisito de solicitudes de laboratorio para la prueba FIT y la Serie Gastroduodenal (SGD) con el fin de aumentar la captación y retención de participantes?",
+    "ground_truth": "Sí."
+  },
+  {
+    "id": "sino_026",
+    "categoria": "sino",
+    "pregunta": "¿el diseño e implementación de indicadores de gestión y desempeño es una actividad contemplada en la Etapa II del plan?",
+    "ground_truth": "Sí."
+  },
+  {
+    "id": "sino_027",
+    "categoria": "sino",
+    "pregunta": "¿la falta de normativa específica para los programas de tamizaje representa un riesgo con una valoración de 20 puntos?",
+    "ground_truth": "Sí."
+  },
+  {
+    "id": "sino_028",
+    "categoria": "sino",
+    "pregunta": "¿se sugiere la integración de soluciones de telemedicina para facilitar el acceso a consultas especializadas en regiones alejadas o con dificultades de acceso?",
+    "ground_truth": "Sí."
+  },
+  {
+    "id": "sino_029",
+    "categoria": "sino",
+    "pregunta": "¿se sugiere realizar convenios con entidades internacionales para el desarrollo de investigación en detección temprana, tratamiento y seguimiento del cáncer gástrico y colorrectal?",
+    "ground_truth": "Sí."
+  },
+  {
+    "id": "sino_030",
+    "categoria": "sino",
+    "pregunta": "¿El Centro Nacional de Detección Temprana de Cáncer Gastrointestinal fue creado oficialmente mediante el Acuerdo de Junta Directiva en la Sesión Ordinaria Nº 9414 del 5 de marzo de 2024?",
+    "ground_truth": "Sí."
+  },
+  {
+    "id": "sino_031",
+    "categoria": "sino",
+    "pregunta": "¿El CNDTCG cuenta con certificación internacional otorgada por la Sociedad Española de Endoscopia Digestiva (SEED) para la formación en sedación profunda?",
+    "ground_truth": "Sí."
+  },
+  {
+    "id": "sino_032",
+    "categoria": "sino",
+    "pregunta": "¿La población objetivo de los programas de tamizaje de cáncer gástrico y colorrectal son personas asintomáticas entre los 50 y 74 años?",
+    "ground_truth": "Sí."
+  },
+  {
+    "id": "sino_033",
+    "categoria": "sino",
+    "pregunta": "¿La metodología utilizada para la validación técnica del manual incluyó un proceso DELPHI modificado?",
+    "ground_truth": "Sí."
+  },
+  {
+    "id": "sino_034",
+    "categoria": "sino",
+    "pregunta": "¿El CNDTCG utiliza exclusivamente sus propias instalaciones para el Programa de Cirugía Mayor?",
+    "ground_truth": "No."
+  },
+  {
+    "id": "sino_035",
+    "categoria": "sino",
+    "pregunta": "¿El Programa de Cirugía Percutánea se realiza exclusivamente mediante cirugía abierta convencional?",
+    "ground_truth": "No."
+  },
+  {
+    "id": "sino_036",
+    "categoria": "sino",
+    "pregunta": "¿Los programas de tamizaje de cáncer gástrico y colorrectal comparten exactamente los mismos procesos de captación?",
+    "ground_truth": "No."
+  },
+  {
+    "id": "sino_037",
+    "categoria": "sino",
+    "pregunta": "¿La CCSS cuenta con 3 hospitales nacionales generales según el Manual de Gestión?",
+    "ground_truth": "Sí."
+  },
+  {
+    "id": "sino_038",
+    "categoria": "sino",
+    "pregunta": "¿El Decreto Ejecutivo de la norma colorrectal otorga un plazo de 6 meses para que los servicios de salud cuenten con manuales de procedimientos?",
+    "ground_truth": "Sí."
+  },
+  {
+    "id": "sino_039",
+    "categoria": "sino",
+    "pregunta": "¿La prueba inicial para el tamizaje de cáncer gástrico es la Prueba Inmunoquímica Fecal (FIT)?",
+    "ground_truth": "No."
+  },
+  {
+    "id": "sino_040",
+    "categoria": "sino",
+    "pregunta": "¿El CNDTCG cuenta con 45 personas en su equipo humano al momento de la elaboración del manual?",
+    "ground_truth": "Sí."
+  },
+  {
+    "id": "sino_041",
+    "categoria": "sino",
+    "pregunta": "¿El CNDTCG tiene un área de Planificación y Mejora Continua?",
+    "ground_truth": "Sí."
+  },
+  {
+    "id": "sino_042",
+    "categoria": "sino",
+    "pregunta": "¿El CNDTCG utiliza el Expediente Digital Único en Salud (EDUS) para el registro clínico de los pacientes?",
+    "ground_truth": "Sí."
+  },
+  {
+    "id": "sino_043",
+    "categoria": "sino",
+    "pregunta": "¿El Programa de Resección Submucosa Endoscópica (ESD) es una técnica que requiere cirugía abierta?",
+    "ground_truth": "No."
+  },
+  {
+    "id": "sino_044",
+    "categoria": "sino",
+    "pregunta": "¿La Unidad de Investigación en Salud (UIS) del CNDTCG tiene entre sus funciones la divulgación de resultados a través de revistas científicas?",
+    "ground_truth": "Sí."
+  },
+  {
+    "id": "sino_045",
+    "categoria": "sino",
+    "pregunta": "¿El CNDTCG atiende exclusivamente pacientes de la provincia de Cartago?",
+    "ground_truth": "No."
+  },
+  {
+    "id": "sino_046",
+    "categoria": "sino",
+    "pregunta": "¿El Programa de Ultrasonido Endoscópico permite realizar biopsias por aspiración con aguja fina?",
+    "ground_truth": "Sí."
+  },
+  {
+    "id": "sino_047",
+    "categoria": "sino",
+    "pregunta": "¿La Dirección General del CNDTCG es responsable de verificar el cumplimiento del Manual de Gestión?",
+    "ground_truth": "Sí."
+  },
+  {
+    "id": "sino_048",
+    "categoria": "sino",
+    "pregunta": "¿El CNDTCG utiliza el Sistema de Identificación Agendas y Citas (SIAC) para la programación de procedimientos?",
+    "ground_truth": "Sí."
+  },
+  {
+    "id": "sino_049",
+    "categoria": "sino",
+    "pregunta": "¿El CNDTCG utiliza el Sistema ARCA para el registro de procedimientos?",
+    "ground_truth": "No."
+  },
+  {
+    "id": "sino_050",
+    "categoria": "sino",
+    "pregunta": "¿El CNDTCG cuenta con equipos de tomografía computarizada (TAC) para estudios de estadificación oncológica?",
+    "ground_truth": "Sí."
+  },
+  {
+    "id": "sino_051",
+    "categoria": "sino",
+    "pregunta": "¿El análisis FODA del CNDTCG identifica como fortaleza la capacidad instalada en sedación profunda con aval internacional?",
+    "ground_truth": "Sí."
+  },
+  {
+    "id": "sino_052",
+    "categoria": "sino",
+    "pregunta": "¿La periodicidad de los indicadores del Programa de Tamizaje de Cáncer Gástrico es exclusivamente anual?",
+    "ground_truth": "No."
+  },
+  {
+    "id": "sino_053",
+    "categoria": "sino",
+    "pregunta": "¿El CNDTCG tiene capacidad para realizar procedimientos de cirugía percutánea guiada por imagen?",
+    "ground_truth": "Sí."
+  },
+  {
+    "id": "sino_054",
+    "categoria": "sino",
+    "pregunta": "¿El CNDTCG está adscrito jerárquicamente a la Dirección de Centros Especializados (DICE) de la Gerencia Médica?",
+    "ground_truth": "Sí."
+  },
+  {
+    "id": "sino_055",
+    "categoria": "sino",
+    "pregunta": "¿El proceso de tamizaje para cáncer gástrico comienza con la invitación a personas asintomáticas de 50 a 74 años?",
+    "ground_truth": "Sí"
+  },
+  {
+    "id": "sino_056",
+    "categoria": "sino",
+    "pregunta": "¿La Serie Gastroduodenal (SGD) es un estudio de fluoroscopia donde el paciente ingiere un medio de contraste?",
+    "ground_truth": "Sí"
+  },
+  {
+    "id": "sino_057",
+    "categoria": "sino",
+    "pregunta": "¿El radiólogo analiza las imágenes de la SGD para identificar anomalías?",
+    "ground_truth": "Sí"
+  },
+  {
+    "id": "sino_058",
+    "categoria": "sino",
+    "pregunta": "¿Durante la gastroscopia, el endoscopista puede tomar biopsias si es necesario?",
+    "ground_truth": "Sí"
+  },
+  {
+    "id": "sino_059",
+    "categoria": "sino",
+    "pregunta": "¿El técnico de endoscopia procesa las muestras de biopsia y las envía al patólogo?",
+    "ground_truth": "Sí"
+  },
+  {
+    "id": "sino_060",
+    "categoria": "sino",
+    "pregunta": "¿El proceso de tamizaje para cáncer colorrectal utiliza la prueba FIT para detectar sangre oculta en heces?",
+    "ground_truth": "Sí"
+  },
+  {
+    "id": "sino_061",
+    "categoria": "sino",
+    "pregunta": "¿El microbiólogo y el personal de apoyo participan en la realización y análisis de la prueba FIT?",
+    "ground_truth": "Sí"
+  },
+  {
+    "id": "sino_062",
+    "categoria": "sino",
+    "pregunta": "¿Si la colonoscopia revela adenomas, estos se remueven inmediatamente?",
+    "ground_truth": "Sí"
+  },
+  {
+    "id": "sino_063",
+    "categoria": "sino",
+    "pregunta": "¿La Dirección General del CNDTCG es responsable de la conducción estratégica, técnica y operativa del centro?",
+    "ground_truth": "Sí"
+  },
+  {
+    "id": "sino_064",
+    "categoria": "sino",
+    "pregunta": "¿Las Coordinaciones de Programa lideran la planificación técnica de los procesos asistenciales?",
+    "ground_truth": "Sí"
+  },
+  {
+    "id": "sino_065",
+    "categoria": "sino",
+    "pregunta": "¿El Área Clínica Asistencial integra la ejecución de procedimientos de tamizaje y diagnóstico?",
+    "ground_truth": "Sí"
+  },
+  {
+    "id": "sino_066",
+    "categoria": "sino",
+    "pregunta": "¿El Área de Enfermería brinda atención pre, intra y postprocedimiento?",
+    "ground_truth": "Sí"
+  },
+  {
+    "id": "sino_067",
+    "categoria": "sino",
+    "pregunta": "¿El Área de Planificación y Mejora Continua se encarga del costeo de servicios?",
+    "ground_truth": "Sí"
+  },
+  {
+    "id": "sino_068",
+    "categoria": "sino",
+    "pregunta": "¿La Unidad de Investigación en Salud desarrolla investigación aplicada en salud gastrointestinal?",
+    "ground_truth": "Sí"
+  },
+  {
+    "id": "sino_069",
+    "categoria": "sino",
+    "pregunta": "¿El Manual de Gestión del CNDTCG se elaboró utilizando el método DELPHI modificada para su validación?",
+    "ground_truth": "Sí"
+  },
+  {
+    "id": "sino_070",
+    "categoria": "sino",
+    "pregunta": "¿El CNDTCG actúa como ente ejecutor directo de actividades asistenciales especializadas?",
+    "ground_truth": "Sí"
+  },
+  {
+    "id": "sino_071",
+    "categoria": "sino",
+    "pregunta": "¿El área de Planificación y Mejora Continua implementa herramientas de Big Data y Minería de Datos?",
+    "ground_truth": "Sí"
+  },
+  {
+    "id": "sino_072",
+    "categoria": "sino",
+    "pregunta": "¿La Resección Submucosa Endoscópica (ESD) es una técnica que evita cirugías mayores?",
+    "ground_truth": "Sí"
+  },
+  {
+    "id": "sino_073",
+    "categoria": "sino",
+    "pregunta": "¿La ESD requiere alta especialización y equipamiento específico para su ejecución?",
+    "ground_truth": "Sí"
+  },
+  {
+    "id": "sino_074",
+    "categoria": "sino",
+    "pregunta": "¿La cirugía percutánea utiliza técnicas guiadas por imagen como ecografía, TAC o fluoroscopía?",
+    "ground_truth": "Sí"
+  },
+  {
+    "id": "sino_075",
+    "categoria": "sino",
+    "pregunta": "¿La cirugía percutánea reduce el tiempo de recuperación del paciente?",
+    "ground_truth": "Sí"
+  },
+  {
+    "id": "sino_076",
+    "categoria": "sino",
+    "pregunta": "¿El fundamento legal del CNDTCG se basa en el Acuerdo de Junta Directiva Nº 9414 del 5 de marzo de 2024?",
+    "ground_truth": "Sí"
+  },
+  {
+    "id": "sino_077",
+    "categoria": "sino",
+    "pregunta": "¿El CNDTCG fue creado en 1995 como proyecto piloto mediante convenio CCSS-UCR-JICA?",
+    "ground_truth": "Sí"
+  },
+  {
+    "id": "sino_078",
+    "categoria": "sino",
+    "pregunta": "¿El ultrasonido endoscópico permite la estadificación loco-regional de tumores?",
+    "ground_truth": "Sí"
+  },
+  {
+    "id": "sino_079",
+    "categoria": "sino",
+    "pregunta": "¿El Programa de Patología Biliar incluye la colangiopancreatografía retrógrada endoscópica (CPRE)?",
+    "ground_truth": "Sí"
+  },
+  {
+    "id": "sino_080",
+    "categoria": "sino",
+    "pregunta": "¿El cáncer colorrectal es el tercer tipo de cáncer más común en todo el mundo según la IARC?",
+    "ground_truth": "Sí"
+  },
+  {
+    "id": "sino_081",
+    "categoria": "sino",
+    "pregunta": "¿La prueba SOHi cualitativa debe tener un punto de corte no mayor a 30 ng/ml?",
+    "ground_truth": "Sí"
+  },
+  {
+    "id": "sino_082",
+    "categoria": "sino",
+    "pregunta": "¿La prueba SOHi cuantitativa y automatizada recomienda un punto de corte de 100 ng/ml?",
+    "ground_truth": "Sí"
+  },
+  {
+    "id": "sino_083",
+    "categoria": "sino",
+    "pregunta": "¿El tiempo de retirada en una colonoscopia de calidad no debe ser menor a 6 minutos?",
+    "ground_truth": "Sí"
+  },
+  {
+    "id": "sino_084",
+    "categoria": "sino",
+    "pregunta": "¿La tasa de intubación cecal en un programa de tamizaje debe ser del 95%?",
+    "ground_truth": "Sí"
+  },
+  {
+    "id": "sino_085",
+    "categoria": "sino",
+    "pregunta": "¿La tasa de detección de adenomas (ADR) en tamizaje de dos fases debe ser de 45% en hombres y 35% en mujeres?",
+    "ground_truth": "Sí"
+  },
+  {
+    "id": "sino_086",
+    "categoria": "sino",
+    "pregunta": "¿La colonoscopia para pacientes con SOHi positiva debe realizarse en un plazo no mayor a seis meses?",
+    "ground_truth": "Sí"
+  },
+  {
+    "id": "sino_087",
+    "categoria": "sino",
+    "pregunta": "¿La Clasificación JNET tipo 1 corresponde a pólipo hiperplásico?",
+    "ground_truth": "Sí"
+  },
+  {
+    "id": "sino_088",
+    "categoria": "sino",
+    "pregunta": "¿La Clasificación NICE tipo 3 describe una lesión con invasión submucosa profunda o cáncer avanzado?",
+    "ground_truth": "Sí"
+  },
+  {
+    "id": "sino_089",
+    "categoria": "sino",
+    "pregunta": "¿La preparación intestinal debe evaluarse mediante la Escala de Preparación Intestinal de Boston?",
+    "ground_truth": "Sí"
+  },
+  {
+    "id": "sino_090",
+    "categoria": "sino",
+    "pregunta": "¿El informe de colonoscopia debe incluir el número total de pólipos extirpados y recuperados?",
+    "ground_truth": "Sí"
+  },
+  {
+    "id": "sino_091",
+    "categoria": "sino",
+    "pregunta": "¿El informe de anatomía patológica debe incluir el grado de displasia de cada pólipo?",
+    "ground_truth": "Sí"
+  },
+  {
+    "id": "sino_092",
+    "categoria": "sino",
+    "pregunta": "¿Los pólipos serrados mayores de 10 mm o con displasia requieren colonoscopia de vigilancia?",
+    "ground_truth": "Sí"
+  },
+  {
+    "id": "sino_093",
+    "categoria": "sino",
+    "pregunta": "¿La persona con colonoscopia normal posterior a SOHi positivo debe enviarse a control endoscópico a los 10 años?",
+    "ground_truth": "No"
+  },
+  {
+    "id": "sino_094",
+    "categoria": "sino",
+    "pregunta": "¿Las personas con antecedentes familiares de CCR en padres, madres, hijos o hermanos menores de 50 años tienen riesgo aumentado?",
+    "ground_truth": "Sí"
+  },
+  {
+    "id": "sino_095",
+    "categoria": "sino",
+    "pregunta": "¿La anemia ferropénica (Hb < 10 g/dl en mujeres y Hb < 11 g/dl en hombres) con SOHi positiva es criterio de sospecha de CCR?",
+    "ground_truth": "Sí"
+  },
+  {
+    "id": "sino_096",
+    "categoria": "sino",
+    "pregunta": "¿El Ministerio de Salud debe publicar los resultados de los indicadores de la norma cada 5 años?",
+    "ground_truth": "Sí"
+  },
+  {
+    "id": "sino_097",
+    "categoria": "sino",
+    "pregunta": "¿El Plan de Abordaje Integral contempla la creación de una unidad móvil de endoscopia?",
+    "ground_truth": "Sí"
+  },
+  {
+    "id": "sino_098",
+    "categoria": "sino",
+    "pregunta": "¿El CNDTCG tiene convenio con el CICICA para realización de endoscopias?",
+    "ground_truth": "Sí"
+  },
+  {
+    "id": "sino_099",
+    "categoria": "sino",
+    "pregunta": "¿El Ministerio de Salud debe ejecutar la vigilancia de los indicadores de la norma colorrectal?",
+    "ground_truth": "Sí"
+  },
+  {
+    "id": "sino_100",
+    "categoria": "sino",
+    "pregunta": "¿la colonoscopia de vigilancia posterior a la resección curativa de CCR está relacionada con la detección de cáncer colorrectal metacrónico y recurrente?",
+    "ground_truth": "Sí"
+  },
+  {
+    "id": "corta_001",
+    "categoria": "corta",
+    "pregunta": "¿Cuáles son las dos principales causas de carga de enfermedad y mortalidad en cáncer gastrointestinal abordadas por los programas de tamizaje del CNDTCG?",
+    "ground_truth": "Cáncer gástrico y cáncer colorrectal."
+  },
+  {
+    "id": "corta_002",
+    "categoria": "corta",
+    "pregunta": "¿Qué siglas se utilizan para el Centro Nacional de Detección Temprana de Cáncer Gastrointestinal y la Dirección de Centros Especializados?",
+    "ground_truth": "CNDTCG y DICE."
+  },
+  {
+    "id": "corta_003",
+    "categoria": "corta",
+    "pregunta": "¿Qué método estructurado de consenso entre expertos institucionales se utilizó para la validación final del Manual de Gestión en el año 2025?",
+    "ground_truth": "El método DELPHI modificada."
+  },
+  {
+    "id": "corta_004",
+    "categoria": "corta",
+    "pregunta": "¿Cuántas plazas de Analistas en Sistemas 4 se requieren para la implementación del SILC-EDUS según el oficio GM-DDSS-0529-2025?",
+    "ground_truth": "5 plazas."
+  },
+  {
+    "id": "corta_005",
+    "categoria": "corta",
+    "pregunta": "¿Cuál es el objetivo general del Plan de Abordaje Integral para el Tamizaje de Cáncer de Estómago y Colorrectal?",
+    "ground_truth": "Implementar el plan integral para reducir la incidencia y mortalidad del cáncer gástrico y colorrectal."
+  },
+  {
+    "id": "corta_006",
+    "categoria": "corta",
+    "pregunta": "¿Qué estructura cantonal utiliza el plan para sus proyecciones, y por qué?",
+    "ground_truth": "Los 81 cantones originales previos a 2019, por distorsión por nuevos cantones."
+  },
+  {
+    "id": "corta_007",
+    "categoria": "corta",
+    "pregunta": "Según la matriz metodológica del plan, ¿qué herramientas se utilizan para analizar la población adscrita por provincia, cantón, sexo y edad?",
+    "ground_truth": "Análisis demográfico, herramientas GIS y MS-Excel."
+  },
+  {
+    "id": "corta_008",
+    "categoria": "corta",
+    "pregunta": "¿Cuál es la incidencia media por cada 100,000 personas para el cáncer de estómago en Costa Rica durante el periodo 2017-2022?",
+    "ground_truth": "11.66 casos."
+  },
+  {
+    "id": "corta_009",
+    "categoria": "corta",
+    "pregunta": "De acuerdo con el Cuadro No. 2 del Plan de Abordaje Integral, ¿cuál es la incidencia total combinada de cáncer de estómago, colon y recto en el grupo de 70 a 74 años?",
+    "ground_truth": "181.71 casos."
+  },
+  {
+    "id": "corta_010",
+    "categoria": "corta",
+    "pregunta": "Según el Cuadro No. 4 del Plan de Abordaje Integral, ¿cuál es la incidencia combinada del cantón de Alvarado en Cartago?",
+    "ground_truth": "35.79 casos."
+  },
+  {
+    "id": "corta_011",
+    "categoria": "corta",
+    "pregunta": "De acuerdo con el Cuadro No. 9 del Plan de Abordaje Integral, ¿cuál es la mortalidad total combinada por cáncer de estómago, colon y recto en la población objetivo (50-74 años)?",
+    "ground_truth": "56.82 casos."
+  },
+  {
+    "id": "corta_012",
+    "categoria": "corta",
+    "pregunta": "De acuerdo con el Cuadro No. 10 del Plan de Abordaje Integral, ¿cuál es la tasa de mortalidad combinada del cantón de San Mateo en Alajuela?",
+    "ground_truth": "44.58 casos."
+  },
+  {
+    "id": "corta_013",
+    "categoria": "corta",
+    "pregunta": "De acuerdo con el Cuadro No. 15 del Plan de Abordaje Integral, ¿cuál es la media de años de vida potencialmente perdidos (YPLL) para las mujeres debido a cáncer de estómago, colon y recto?",
+    "ground_truth": "16.49 años."
+  },
+  {
+    "id": "corta_014",
+    "categoria": "corta",
+    "pregunta": "De acuerdo con el análisis de población del Plan de Abordaje Integral, ¿cuál es la población proyectada para Costa Rica en el año 2034?",
+    "ground_truth": "5.7 millones."
+  },
+  {
+    "id": "corta_015",
+    "categoria": "corta",
+    "pregunta": "De acuerdo con el Cuadro No. 16 del Plan de Abordaje Integral, ¿cuál es la población objetivo total proyectada para el año 2025?",
+    "ground_truth": "1,203,483 personas."
+  },
+  {
+    "id": "corta_016",
+    "categoria": "corta",
+    "pregunta": "Según el Cuadro No. 19 del Plan de Abordaje Integral, ¿cuál es la población objetivo proyectada para el cantón de San José en el año 2025 para tamizaje de cáncer colorrectal?",
+    "ground_truth": "91,605 personas."
+  },
+  {
+    "id": "corta_017",
+    "categoria": "corta",
+    "pregunta": "¿cuántos radiólogos capacitados en la interpretación de la Serie Gastroduodenal (SGD) hay en la CCSS?",
+    "ground_truth": "98.5 radiólogos."
+  },
+  {
+    "id": "corta_018",
+    "categoria": "corta",
+    "pregunta": "De acuerdo con el inventario de recursos del Plan de Abordaje Integral, ¿cuántos laboratorios clínicos tiene la CCSS a nivel nacional?",
+    "ground_truth": "110 laboratorios."
+  },
+  {
+    "id": "corta_019",
+    "categoria": "corta",
+    "pregunta": "¿cuántos endoscopistas capacitados en detección temprana de cáncer tiene la CCSS?",
+    "ground_truth": "87 endoscopistas."
+  },
+  {
+    "id": "corta_020",
+    "categoria": "corta",
+    "pregunta": "¿cuántas salas de endoscopia tiene el Hospital San Juan de Dios?",
+    "ground_truth": "5 salas."
+  },
+  {
+    "id": "corta_021",
+    "categoria": "corta",
+    "pregunta": "¿cuál es la población objetivo total proyectada para el tamizaje de cáncer gástrico en Costa Rica para el año 2025?",
+    "ground_truth": "464,339 personas."
+  },
+  {
+    "id": "corta_022",
+    "categoria": "corta",
+    "pregunta": "De acuerdo con el Cuadro No. 29 del Plan de Abordaje Integral, ¿cuántos equipos de fluoroscopia se requieren teóricamente para la Región Central Sur en el año 2025?",
+    "ground_truth": "5.02 equipos"
+  },
+  {
+    "id": "corta_023",
+    "categoria": "corta",
+    "pregunta": "¿cuál es el costo unitario de las pruebas FIT cuantitativas según el contrato vigente del Hospital Dr. Maximiliano Peralta Jiménez?",
+    "ground_truth": "₡1,413."
+  },
+  {
+    "id": "corta_024",
+    "categoria": "corta",
+    "pregunta": "¿cuántas personas se llamarían en el año 2025 para realizarse una prueba de sangre oculta en heces (FIT)?",
+    "ground_truth": "67,136 personas."
+  },
+  {
+    "id": "corta_025",
+    "categoria": "corta",
+    "pregunta": "¿en qué año se creó el CNDTCG bajo un convenio de cooperación entre la CCSS, JICA y la UCR?",
+    "ground_truth": "1995"
+  },
+  {
+    "id": "corta_026",
+    "categoria": "corta",
+    "pregunta": "¿en qué año está programada la puesta en marcha de los programas de tamizaje para la detección temprana de cáncer gástrico y colorrectal?",
+    "ground_truth": "2027"
+  },
+  {
+    "id": "corta_027",
+    "categoria": "corta",
+    "pregunta": "¿cuántos cantones presentan una incidencia superior a la media nacional para cáncer gástrico?",
+    "ground_truth": "35 cantones."
+  },
+  {
+    "id": "corta_028",
+    "categoria": "corta",
+    "pregunta": "¿con cuántas salas de endoscopia contaría la unidad móvil de endoscopía propuesta?",
+    "ground_truth": "2 salas de endoscopia."
+  },
+  {
+    "id": "corta_029",
+    "categoria": "corta",
+    "pregunta": "¿qué porcentaje de los laboratorios clínicos de la CCSS contaban con el Sistema Integrado de Laboratorios Clínicos (SILC) implementado al momento de la elaboración del documento?",
+    "ground_truth": "16%"
+  },
+  {
+    "id": "corta_030",
+    "categoria": "corta",
+    "pregunta": "¿Cuál es el número de Unidad Programática del Centro Nacional de Detección Temprana de Cáncer Gastrointestinal?",
+    "ground_truth": "La Unidad Programática del CNDTCG tiene el número 2806."
+  },
+  {
+    "id": "corta_031",
+    "categoria": "corta",
+    "pregunta": "¿Cuántas salas de endoscopia tiene el CNDTCG según el inventario de recursos?",
+    "ground_truth": "El CNDTCG dispone de salas de endoscopía alta y baja, pero el inventario nacional de la CCSS es de 52 salas de endoscopia en total."
+  },
+  {
+    "id": "corta_032",
+    "categoria": "corta",
+    "pregunta": "De acuerdo con la Norma Nacional para la Atención del Cáncer Colorrectal, ¿cuál es la periodicidad recomendada para la revisión y actualización de la norma?",
+    "ground_truth": "Cada 5 años"
+  },
+  {
+    "id": "corta_033",
+    "categoria": "corta",
+    "pregunta": "¿Cuántas personas conforman el equipo humano del CNDTCG al momento de la elaboración del manual?",
+    "ground_truth": "El equipo humano del CNDTCG está conformado por 45 personas al momento de la elaboración del manual."
+  },
+  {
+    "id": "corta_034",
+    "categoria": "corta",
+    "pregunta": "¿Cuál es el rango de edad de la población objetivo para los programas de tamizaje?",
+    "ground_truth": "El rango de edad de la población objetivo para los programas de tamizaje es de 50 a 74 años."
+  },
+  {
+    "id": "corta_035",
+    "categoria": "corta",
+    "pregunta": "¿Cuántos hospitales regionales tiene la CCSS según el Manual de Gestión?",
+    "ground_truth": "8 hospitales regionales"
+  },
+  {
+    "id": "corta_036",
+    "categoria": "corta",
+    "pregunta": "¿Cuántos hospitales periféricos tiene la CCSS?",
+    "ground_truth": "12 hospitales periféricos"
+  },
+  {
+    "id": "corta_037",
+    "categoria": "corta",
+    "pregunta": "¿Qué porcentaje de los gastroenterólogos están capacitados en detección temprana de lesiones premalignas?",
+    "ground_truth": "El 88% de los gastroenterólogos (56 de 63.5) están capacitados en detección temprana de lesiones premalignas y malignas."
+  },
+  {
+    "id": "corta_038",
+    "categoria": "corta",
+    "pregunta": "¿Cuántas salas de fluoroscopia tiene la CCSS a nivel nacional?",
+    "ground_truth": "La CCSS cuenta con 19 salas de fluoroscopia disponibles a nivel nacional."
+  },
+  {
+    "id": "corta_039",
+    "categoria": "corta",
+    "pregunta": "¿Cuál es la población objetivo proyectada para el año 2025 según el Plan de Abordaje?",
+    "ground_truth": "La población objetivo proyectada para el año 2025 es de 1,203,483 personas."
+  },
+  {
+    "id": "corta_040",
+    "categoria": "corta",
+    "pregunta": "¿Cuál es el plazo máximo para que la Gerencia de Logística realice la licitación nacional de la Prueba Inmunológica Fecal?",
+    "ground_truth": "1 año"
+  },
+  {
+    "id": "corta_041",
+    "categoria": "corta",
+    "pregunta": "¿Cuál es el plazo máximo para que la Gerencia Médica y Administrativa definan la estructura organizacional del CNDTCG?",
+    "ground_truth": "1 mes"
+  },
+  {
+    "id": "corta_042",
+    "categoria": "corta",
+    "pregunta": "¿Cuál es la tasa de mortalidad combinada de cáncer de estómago en la población objetivo?",
+    "ground_truth": "La tasa de mortalidad combinada de cáncer de estómago en la población objetivo es de 28.92 por cada 100,000 habitantes."
+  },
+  {
+    "id": "corta_043",
+    "categoria": "corta",
+    "pregunta": "¿Cuál es el plazo máximo para que la Dirección de TIC realice las gestiones en el EDUS?",
+    "ground_truth": "6 meses"
+  },
+  {
+    "id": "corta_044",
+    "categoria": "corta",
+    "pregunta": "¿Cuántas regiones DRIPSS tiene la CCSS?",
+    "ground_truth": "La CCSS tiene 7 regiones DRIPSS: Central Norte, Central Sur, Chorotega, Huetar Atlántica, Huetar Norte, Brunca y Pacífico Central."
+  },
+  {
+    "id": "corta_045",
+    "categoria": "corta",
+    "pregunta": "Según el análisis FODA del CNDTCG incluido en el Manual de Gestión, ¿cuántas debilidades se identifican en el centro?",
+    "ground_truth": "7 debilidades"
+  },
+  {
+    "id": "corta_046",
+    "categoria": "corta",
+    "pregunta": "¿Cuántas plazas de MQC2 se requieren para la implementación del SILC?",
+    "ground_truth": "Se requieren 2 plazas de MQC2 para la implementación del SILC."
+  },
+  {
+    "id": "corta_047",
+    "categoria": "corta",
+    "pregunta": "¿Cuál es el porcentaje de invitación para los programas de tamizaje?",
+    "ground_truth": "El porcentaje de invitación para los programas de tamizaje es del 40%."
+  },
+  {
+    "id": "corta_048",
+    "categoria": "corta",
+    "pregunta": "¿Cuántas gastroscopías se realizan diariamente por sala según el plan?",
+    "ground_truth": "Se realizan 12 gastroscopías diarias por sala según las estimaciones del plan."
+  },
+  {
+    "id": "corta_049",
+    "categoria": "corta",
+    "pregunta": "¿Cuántas colonoscopías se realizan diariamente por sala?",
+    "ground_truth": "Se realizan 6 colonoscopías diarias por sala según las estimaciones del plan."
+  },
+  {
+    "id": "corta_050",
+    "categoria": "corta",
+    "pregunta": "¿Cuál es el costo estimado de una torre de endoscopia?",
+    "ground_truth": "El costo estimado de una torre de endoscopia es de ₡102,322,211."
+  },
+  {
+    "id": "corta_051",
+    "categoria": "corta",
+    "pregunta": "¿Cuántas plazas de MQC3 se requieren para la implementación del SILC?",
+    "ground_truth": "Se requiere 1 plaza de MQC3 para la implementación del SILC."
+  },
+  {
+    "id": "corta_052",
+    "categoria": "corta",
+    "pregunta": "¿Cuál es el porcentaje de tamizaje esperado para los programas?",
+    "ground_truth": "El porcentaje de tamizaje esperado es del 65% de la población invitada."
+  },
+  {
+    "id": "corta_053",
+    "categoria": "corta",
+    "pregunta": "¿Cuántas salas de endoscopia se proyectan necesarias para el año 2025?",
+    "ground_truth": "Se proyectan aproximadamente 3 equipos de endoscopia para gastroscopias en el primer año."
+  },
+  {
+    "id": "corta_054",
+    "categoria": "corta",
+    "pregunta": "¿Cuál es la periodicidad del tamizaje para ambos tipos de cáncer?",
+    "ground_truth": "La periodicidad del tamizaje para ambos tipos de cáncer es bienal (cada dos años)"
+  },
+  {
+    "id": "corta_055",
+    "categoria": "corta",
+    "pregunta": "¿Cuál es el porcentaje de reducción de mortalidad proyectado con el programa nacional?",
+    "ground_truth": "35%"
+  },
+  {
+    "id": "corta_056",
+    "categoria": "corta",
+    "pregunta": "¿Qué prueba de tamizaje se utiliza para el cáncer gástrico?",
+    "ground_truth": "Serie Gastroduodenal (SGD)"
+  },
+  {
+    "id": "corta_057",
+    "categoria": "corta",
+    "pregunta": "¿Qué prueba de tamizaje se utiliza para el cáncer colorrectal?",
+    "ground_truth": "Prueba FIT (Test Inmunológico Fecal)"
+  },
+  {
+    "id": "corta_058",
+    "categoria": "corta",
+    "pregunta": "¿Qué profesional administra el medio de contraste y realiza las imágenes fluoroscópicas en la SGD?",
+    "ground_truth": "Imagenólogo"
+  },
+  {
+    "id": "corta_059",
+    "categoria": "corta",
+    "pregunta": "¿Qué profesional analiza las imágenes de la SGD para identificar anomalías?",
+    "ground_truth": "Radiólogo"
+  },
+  {
+    "id": "corta_060",
+    "categoria": "corta",
+    "pregunta": "¿Qué profesional realiza la gastroscopia?",
+    "ground_truth": "Endoscopista"
+  },
+  {
+    "id": "corta_061",
+    "categoria": "corta",
+    "pregunta": "¿Qué profesional asiste al endoscopista durante la gastroscopia?",
+    "ground_truth": "Técnico de endoscopia"
+  },
+  {
+    "id": "corta_062",
+    "categoria": "corta",
+    "pregunta": "¿Qué profesional analiza las biopsias para determinar si hay células cancerosas?",
+    "ground_truth": "Patólogo"
+  },
+  {
+    "id": "corta_063",
+    "categoria": "corta",
+    "pregunta": "¿Qué prueba se realiza en el laboratorio clínico para el tamizaje de cáncer colorrectal?",
+    "ground_truth": "FIT (Prueba Inmunológica Fecal)"
+  },
+  {
+    "id": "corta_064",
+    "categoria": "corta",
+    "pregunta": "¿Qué profesional desempeña un papel crucial en la realización y análisis de la prueba FIT?",
+    "ground_truth": "Microbiólogo"
+  },
+  {
+    "id": "corta_065",
+    "categoria": "corta",
+    "pregunta": "¿Qué área funcional del CNDTCG es responsable de la conducción estratégica del centro?",
+    "ground_truth": "Dirección General"
+  },
+  {
+    "id": "corta_066",
+    "categoria": "corta",
+    "pregunta": "¿Qué área funcional lidera la planificación técnica de los programas de tamizaje?",
+    "ground_truth": "Coordinaciones de Programa"
+  },
+  {
+    "id": "corta_067",
+    "categoria": "corta",
+    "pregunta": "¿Qué área funcional se encarga de la planificación operativa y monitoreo de indicadores?",
+    "ground_truth": "Área de Planificación y Mejora Continua"
+  },
+  {
+    "id": "corta_068",
+    "categoria": "corta",
+    "pregunta": "¿Qué área funcional gestiona los recursos físicos, materiales, financieros y de talento humano?",
+    "ground_truth": "Área Administrativa"
+  },
+  {
+    "id": "corta_069",
+    "categoria": "corta",
+    "pregunta": "¿Qué método de validación técnica se utilizó para el Manual de Gestión del CNDTCG?",
+    "ground_truth": "DELPHI modificada"
+  },
+  {
+    "id": "corta_070",
+    "categoria": "corta",
+    "pregunta": "¿Qué tipo de técnicas endoscópicas avanzadas permite la Resección Submucosa Endoscópica?",
+    "ground_truth": "Resección en bloque de lesiones gastrointestinales"
+  },
+  {
+    "id": "corta_071",
+    "categoria": "corta",
+    "pregunta": "¿Qué tipo de abordaje quirúrgico utiliza la cirugía percutánea?",
+    "ground_truth": "Mínimamente invasivo guiado por imagen"
+  },
+  {
+    "id": "corta_072",
+    "categoria": "corta",
+    "pregunta": "¿En qué año fue adscrito formalmente el CNDTCG como servicio del Hospital Dr. Maximiliano Peralta Jiménez?",
+    "ground_truth": "2008"
+  },
+  {
+    "id": "corta_073",
+    "categoria": "corta",
+    "pregunta": "¿Qué tipo de cáncer corresponde al código C16 de la clasificación CIE-10?",
+    "ground_truth": "Cáncer de estómago"
+  },
+  {
+    "id": "corta_074",
+    "categoria": "corta",
+    "pregunta": "¿Qué tipo de cáncer corresponde al código C18 de la clasificación CIE-10?",
+    "ground_truth": "Cáncer colorrectal"
+  },
+  {
+    "id": "corta_075",
+    "categoria": "corta",
+    "pregunta": "¿Qué procedimiento del Programa de Patología Biliar permite visualizar y tratar patologías del sistema biliar?",
+    "ground_truth": "CPRE (Colangiopancreatografía Retrógrada Endoscópica)"
+  },
+  {
+    "id": "corta_076",
+    "categoria": "corta",
+    "pregunta": "¿Qué sistema de información se utiliza para la programación de procedimientos en el CNDTCG?",
+    "ground_truth": "SIAC (Sistema de Identificación Agendas y Citas)"
+  },
+  {
+    "id": "corta_077",
+    "categoria": "corta",
+    "pregunta": "¿Qué sistema de información se utiliza para el registro y análisis de datos en el CNDTCG?",
+    "ground_truth": "SIES (Sistema de Información de Estadísticas en Salud)"
+  },
+  {
+    "id": "corta_078",
+    "categoria": "corta",
+    "pregunta": "¿Qué tipo de lesiones se pueden resecar mediante la técnica de ESD?",
+    "ground_truth": "Lesiones precancerosas o neoplasias superficiales"
+  },
+  {
+    "id": "corta_079",
+    "categoria": "corta",
+    "pregunta": "¿Qué tipo de apoyo brinda el médico general asistente durante los procedimientos?",
+    "ground_truth": "Apoyo clínico directo y monitorización de signos vitales"
+  },
+  {
+    "id": "corta_080",
+    "categoria": "corta",
+    "pregunta": "¿Qué tipo de prueba se recomienda utilizar en un programa de tamizaje organizado para cáncer colorrectal?",
+    "ground_truth": "Prueba cuantitativa y automatizada (SOHi cuantitativa)"
+  },
+  {
+    "id": "corta_081",
+    "categoria": "corta",
+    "pregunta": "¿Cuál es el plazo máximo para la realización de una colonoscopia tras una prueba SOHi positiva?",
+    "ground_truth": "6 meses"
+  },
+  {
+    "id": "corta_082",
+    "categoria": "corta",
+    "pregunta": "¿Cuál es el tiempo de retirada mínimo recomendado en una colonoscopia de calidad?",
+    "ground_truth": "6 minutos"
+  },
+  {
+    "id": "corta_083",
+    "categoria": "corta",
+    "pregunta": "¿Qué tasa de intubación cecal se requiere en un programa de tamizaje?",
+    "ground_truth": "95%"
+  },
+  {
+    "id": "corta_084",
+    "categoria": "corta",
+    "pregunta": "¿Cuál es la ADR recomendada en hombres para tamizaje de dos fases?",
+    "ground_truth": "45%"
+  },
+  {
+    "id": "corta_085",
+    "categoria": "corta",
+    "pregunta": "¿Cuál es la ADR recomendada en mujeres para tamizaje de dos fases?",
+    "ground_truth": "35%"
+  },
+  {
+    "id": "corta_086",
+    "categoria": "corta",
+    "pregunta": "¿Qué clasificación endoscópica requiere magnificación y cromoendoscopia para caracterización de pólipos?",
+    "ground_truth": "Clasificación KUDO"
+  },
+  {
+    "id": "corta_087",
+    "categoria": "corta",
+    "pregunta": "¿Qué escala se utiliza para evaluar la calidad de la preparación intestinal?",
+    "ground_truth": "Escala de Preparación Intestinal de Boston"
+  },
+  {
+    "id": "corta_088",
+    "categoria": "corta",
+    "pregunta": "¿A qué edad debe iniciarse el tamizaje por colonoscopia directa en personas con parientes de primer grado con CCR diagnosticado a los 50 años o menos?",
+    "ground_truth": "40 años o 10 años antes del familiar afectado más joven"
+  },
+  {
+    "id": "corta_089",
+    "categoria": "corta",
+    "pregunta": "¿Cuál es el plazo máximo para la entrega de resultados de biopsia tras una colonoscopia con neoplasia?",
+    "ground_truth": "30 días naturales"
+  },
+  {
+    "id": "corta_090",
+    "categoria": "corta",
+    "pregunta": "¿Qué tipo de tomografía se debe realizar para estadificación del cáncer colorrectal?",
+    "ground_truth": "Tomografía tóracoabdominopélvica con medio de contraste"
+  },
+  {
+    "id": "corta_091",
+    "categoria": "corta",
+    "pregunta": "¿Qué estudios de imagen se requieren adicionalmente para el estadiaje del cáncer de recto?",
+    "ground_truth": "Ultrasonido endoscópico o Resonancia Magnética Nuclear"
+  },
+  {
+    "id": "corta_092",
+    "categoria": "corta",
+    "pregunta": "¿Cuál es el ahorro económico anual proyectado en colones?",
+    "ground_truth": "₡3,563,250,779"
+  },
+  {
+    "id": "corta_093",
+    "categoria": "corta",
+    "pregunta": "¿Cuántas muertes se proyectan evitar por año?",
+    "ground_truth": "82 muertes"
+  },
+  {
+    "id": "corta_094",
+    "categoria": "corta",
+    "pregunta": "¿Cuál es el porcentaje del costo de atención de lesiones premalignas de colon respecto a cáncer avanzado?",
+    "ground_truth": "3.30%"
+  },
+  {
+    "id": "corta_095",
+    "categoria": "corta",
+    "pregunta": "¿Qué tipo de técnica endoscópica permite resecar lesiones gastrointestinales en bloque evitando cirugías mayores?",
+    "ground_truth": "Resección Submucosa Endoscópica (ESD)"
+  },
+  {
+    "id": "corta_096",
+    "categoria": "corta",
+    "pregunta": "¿Cuál es el porcentaje del costo de atención temprana de recto respecto a cáncer avanzado?",
+    "ground_truth": "8.30%"
+  },
+  {
+    "id": "corta_097",
+    "categoria": "corta",
+    "pregunta": "¿Cuántas salas de endoscopia tiene la CCSS en total?",
+    "ground_truth": "52 salas"
+  },
+  {
+    "id": "corta_098",
+    "categoria": "corta",
+    "pregunta": "¿Cuál es la periodicidad del tamizaje por cáncer colorrectal en población de riesgo promedio?",
+    "ground_truth": "Cada dos años (bienal)"
+  },
+  {
+    "id": "corta_099",
+    "categoria": "corta",
+    "pregunta": "¿Qué sistema de información recopila y publica las estadísticas de incidencia por cáncer en Costa Rica?",
+    "ground_truth": "SIRNAT (Sistema de Información Registro Nacional de Tumores)"
+  },
+  {
+    "id": "corta_100",
+    "categoria": "corta",
+    "pregunta": "¿Cuántos años deben custodiar los formularios de declaración de intereses según el Manual de Gestión del CNDTCG?",
+    "ground_truth": "5 años"
+  },
+  {
+    "id": "abierta_001",
+    "categoria": "abierta",
+    "pregunta": "Explique el impacto social y epidemiológico que se proyecta lograr a nivel nacional en un período de 10 años con la implementación del Programa Nacional del CNDTCG, contrastando el escenario con y sin programa.",
+    "ground_truth": "De acuerdo con el documento de Creación de la Unidad Programática, sin la implementación del Programa Nacional (bajo la evolución natural de la enfermedad), se proyecta una mortalidad de 234 muertes anuales. Con el programa nacional propuesto, se proyecta una disminución del 35% en la mortalidad de la población objetivo, logrando evitar 82 muertes anuales de forma específica en cáncer colorrectal. Asimismo, se alcanzará una tasa de detección de más del 40% al 50% de los casos de cáncer en etapas tempranas. Este logro clínico acarrea un impacto socioeconómico estimado de un ahorro de ₡3,563,250,779 anuales."
+  },
+  {
+    "id": "abierta_002",
+    "categoria": "abierta",
+    "pregunta": "Analice las limitaciones y riesgos de seguridad informática relacionados con la privacidad de datos sensibles de los pacientes bajo el sistema EDUS, de acuerdo con la legislación costarricense (Ley del EDUS y Ley 8968) citada en los documentos.",
+    "ground_truth": "El Plan de Abordaje señala las normativas de seguridad que protegen el EDUS. De acuerdo con el artículo 11 de la Ley del EDUS, toda la información en el expediente se cataloga como privada y contiene datos sensibles. En el artículo 19 del reglamento del EDUS, se determina que el acceso no autorizado a datos de pacientes se rige por el secreto profesional (bajo el artículo 203 del Código Penal), acarreando sanciones disciplinarias, administrativas, civiles y penales, un deber de confidencialidad que se mantiene aún después de finalizar la relación con el EDUS. Por otro lado, el artículo 58 del reglamento restringe el acceso de terceros a los datos y exige la presentación de una autorización escrita y expresa del titular, debiendo resguardarse la solicitud junto con la autorización por un plazo de 10 años, de acuerdo con la Ley de Protección de la Persona Frente al Tratamiento de sus Datos Personales (Ley 8968). El artículo 14 de esta misma ley general exige que toda transferencia de datos en bases de datos sea expresa y válidamente autorizada por el titular."
+  },
+  {
+    "id": "abierta_003",
+    "categoria": "abierta",
+    "pregunta": "Describa los principales componentes de la ruta de atención clínica y coordinación funcional en red de servicios de salud que se requiere entre el primer, segundo y tercer nivel de atención para el Programa de Tamizaje de Cáncer Colorrectal.",
+    "ground_truth": "El programa requiere una coordinación interdependiente en red. El primer nivel (EBAIS, Áreas de Salud) se encarga de la captación estructurada de personas asintomáticas entre 50 y 74 años mediante la adscripción, la coordinación de cupos y programación de usuarios para la entrega de muestras biológicas de FIT, y el suministro de materiales promocionales y campañas de concientización. El segundo nivel (hospitales periféricos y regionales) se encarga de la red de laboratorios clínicos que procesan las muestras FIT, priorizar y programar colonoscopias para aquellos casos con resultados alterados, realizar procedimientos terapéuticos (polipectomías) y dar seguimiento activo a los resultados histopatológicos (biopsias) de anatomía patológica, estadiaje de imágenes, cirugías oncológicas generales y administración de quimioterapia complementaria. Finalmente, el tercer nivel (hospitales nacionales) resuelve casos oncológicos avanzados o complejos mediante técnicas altamente especializadas de mínima invasión (como la Resección Submucosa Endoscópica - ESD) para pacientes de toda la red, realiza estadiajes completos y tratamientos oncológicos específicos, audita los procesos de referencia y contrarreferencia para evitar que los pacientes queden desatendidos, y brinda acompañamiento técnico y capacitación especializada en endoscopía al personal asistencial de la red nacional."
+  },
+  {
+    "id": "abierta_004",
+    "categoria": "abierta",
+    "pregunta": "Explique cuáles son las principales etapas del Plan de Abordaje Integral para el Tamizaje de Cáncer de Estómago y Colorrectal y qué actividades clave se contemplan en cada una de ellas.",
+    "ground_truth": "El Plan de Abordaje Integral consta de cuatro etapas principales: la Etapa I (2024-2025) incluye la elaboración de normativa institucional, el establecimiento de mecanismos de acceso a datos de población adscrita en EDUS, la implementación de un modelo de captación e invitación de participantes y la propuesta para implementar programas de tamizaje en zonas de alta incidencia; la Etapa II (2025-2026) contempla la implementación nacional de la prueba cuantitativa FIT, campañas de comunicación y sensibilización, la dotación de recurso humano técnico para el SILC y el plan de formación y dotación de personal; la Etapa III (2026-2028) incluye las modificaciones necesarias en el EDUS, el análisis de desafíos operativos para la implementación nacional del CNDTCG, el diseño de modelos predictivos con inteligencia artificial, la entrega de equipamiento e infraestructura, la dotación de especialistas y personal técnico, y la puesta en marcha de los programas de tamizaje; finalmente, la Etapa IV (2028-2029) contempla la evaluación del plan por parte de la Auditoría Interna y los ajustes necesarios al plan basados en los resultados obtenidos."
+  },
+  {
+    "id": "abierta_005",
+    "categoria": "abierta",
+    "pregunta": "Explique detalladamente cuáles son las principales limitaciones que enfrenta el plan en cuanto a la disponibilidad de información sobre la capacidad instalada y los datos clínicos necesarios.",
+    "ground_truth": "Las principales limitaciones identificadas son la falta de información técnica sobre capacidad instalada, ya que aunque se cuenta con un inventario de recursos, todos están actualmente en uso para otros procedimientos, lo que impide determinar la capacidad adicional necesaria para el programa de tamizaje; además, no existen datos sobre cuántos pacientes requieren estudios complementarios como ultrasonidos, vigilancia hemodinámica en gastroscopias, sedación por anestesiólogo, ni cuántos estudios endoscópicos requieren biopsia, lo que limita la planificación solo a los estudios básicos; tampoco se cuenta con guías de seguimiento endoscópico del Ministerio de Salud, por lo que no es posible estimar la demanda de procedimientos de control; la creación de nuevos cantones ha distorsionado los datos históricos, por lo que el plan se ve forzado a utilizar la estructura de los 81 cantones originales, asumiendo un error aproximado del 1% en las proyecciones; finalmente, el plan se basa en proyecciones poblacionales del INEC del año 2013, lo que podría introducir variaciones futuras."
+  },
+  {
+    "id": "abierta_006",
+    "categoria": "abierta",
+    "pregunta": "Explique cuáles son los alcances del plan en cuanto a las pruebas de tamizaje, los procedimientos endoscópicos derivados y el rol del CNDTCG en la coordinación del proceso.",
+    "ground_truth": "El plan busca establecer a nivel nacional el modelo del CNDTCG, enfocado en cáncer de estómago, colon y recto, para lo cual incrementará la disponibilidad de la Serie Gastroduodenal como prueba de tamizaje para cáncer gástrico y de la prueba inmunológica fecal para cáncer colorrectal; cuando estas pruebas iniciales detecten alteraciones, los pacientes serán derivados a procedimientos endoscópicos específicos, gastroscopia para cáncer gástrico y colonoscopia para cáncer colorrectal, y se garantizará la expansión de laboratorios clínicos, laboratorios de patología e infraestructura de endoscopia, así como el tratamiento integral con seguimiento continuo para todos los pacientes diagnosticados; el éxito del plan depende de la capacidad del CNDTCG para articular y coordinar a todos los responsables involucrados, asegurando que los pacientes con lesiones malignas sean derivados adecuadamente a los centros de salud correspondientes, y además contempla la capacitación continua del personal, la adquisición y mantenimiento de equipamiento, la implementación de un sistema de información de salud integrado con interoperabilidad en EDUS, el fomento de la investigación científica con universidades y el desarrollo de campañas de concientización y participación comunitaria."
+  },
+  {
+    "id": "abierta_007",
+    "categoria": "abierta",
+    "pregunta": "Explique cuáles son los principales supuestos que se consideran esenciales para la implementación exitosa del plan.",
+    "ground_truth": "El plan se fundamenta en una serie de supuestos clave que deben cumplirse para asegurar su éxito, entre los que se incluyen la colaboración efectiva entre CCSS, universidades estatales, centros de investigación y otras instituciones; los ajustes necesarios al EDUS para interoperabilidad y seguimiento eficaz de pacientes; la participación activa de la población en los programas de tamizaje y campañas educativas; un fuerte apoyo político e institucional para políticas y normativas; la garantía de acceso equitativo a los servicios de salud en todas las regiones, especialmente en áreas con mayor necesidad; la disponibilidad de datos epidemiológicos y de capacidad instalada precisos y actualizados para la toma de decisiones informadas; la capacidad del CNDTCG para coordinar eficientemente a todos los actores sin interrupciones; un enfoque constante en la innovación y adaptabilidad para ajustar el plan a avances tecnológicos y nuevas evidencias; la resiliencia y sostenibilidad del plan a largo plazo con estrategias para enfrentar desafíos; y finalmente, que los participantes de los programas sean personas usuarias que cuenten con modalidad de aseguramiento."
+  },
+  {
+    "id": "abierta_008",
+    "categoria": "abierta",
+    "pregunta": "Explique cómo se comportó la incidencia nacional de los cánceres de estómago, colon y recto en Costa Rica durante el periodo 2017-2022, y qué diferencias se observan entre sexos.",
+    "ground_truth": "Durante el periodo 2017-2022, la incidencia del cáncer de estómago mostró una ligera disminución hacia el final del periodo, pasando de alrededor de 12-13 casos por cada 100,000 habitantes a aproximadamente 10 casos en 2022, mientras que la incidencia del cáncer de colon se mantuvo relativamente estable entre 11 y 12 casos por cada 100,000 habitantes, y la del cáncer de recto se mantuvo constante entre 6 y 7 casos; la incidencia total combinada de los tres tipos de cáncer mostró una leve disminución desde 30.60 casos en 2017 hasta 27.91 casos en 2022, y en cuanto a la diferencia por sexo, la incidencia en hombres fue consistentemente mayor que en mujeres a lo largo del periodo, con un subtotal que osciló entre 32.78 y 30.19 casos por cada 100,000 habitantes en hombres, frente a 28.68 y 27.15 casos en mujeres, lo que subraya la necesidad de estrategias de prevención y tratamiento adaptadas a cada grupo."
+  },
+  {
+    "id": "abierta_009",
+    "categoria": "abierta",
+    "pregunta": "Con base en el análisis de incidencia por grupo etario presentado en el Plan de Abordaje Integral, explique cómo varía la incidencia combinada de cáncer de estómago, colon y recto según los grupos de edad, y qué implicaciones tiene esto para los programas de tamizaje.",
+    "ground_truth": "Según el análisis del Plan de Abordaje Integral, la incidencia combinada de cáncer de estómago, colon y recto muestra un incremento exponencial y progresivo con la edad: comienza en 41.74 casos por cada 100,000 habitantes en el grupo de 50 a 54 años, aumenta a 63.46 en el grupo de 55 a 59 años, alcanza 85.90 en el grupo de 60 a 64 años, 123.21 en el grupo de 65 a 69 años, y llega a 181.71 casos en el grupo de 70 a 74 años, siendo la tasa más alta de 229.46 casos en los mayores de 75 años, mientras que la incidencia en la población general es de solo 29.91 casos; este patrón de aumento con la edad subraya la vulnerabilidad de la población mayor dentro del rango de 50 a 74 años, por lo que los programas de tamizaje deben priorizar a estos grupos de mayor edad dado su mayor riesgo, y el enfoque en la población de 50 a 74 años es crucial para la detección temprana y la intervención efectiva."
+  },
+  {
+    "id": "abierta_010",
+    "categoria": "abierta",
+    "pregunta": "¿por qué se combinan los cánceres de colon y recto en el análisis de incidencia para el tamizaje?",
+    "ground_truth": "Según el Plan de Abordaje Integral, los cánceres de colon y recto se combinan en el análisis de incidencia porque el modelo de tamizaje para ambos tipos de cáncer es el mismo, utilizando la prueba FIT (Test Inmunológico Fecal), y además los programas de tamizaje y las estrategias de intervención serán idénticos para ambos tipos de cáncer, lo que hace que esta unificación sea práctica y relevante; en contraste, el cáncer de estómago se tamiza mediante la Serie Gastroduodenal (SGD), requiriendo un enfoque diferente en términos de metodología de tamizaje."
+  },
+  {
+    "id": "abierta_011",
+    "categoria": "abierta",
+    "pregunta": "Con base en el análisis de mortalidad del Plan de Abordaje Integral, explique por qué la mortalidad del cáncer de estómago es proporcionalmente más alta que la de los cánceres colorrectales, a pesar de que su incidencia es menor.",
+    "ground_truth": "Según el Plan de Abordaje Integral, aunque la incidencia del cáncer colorrectal (colon y recto combinados) es mayor que la del cáncer de estómago (29.91 casos frente a 11.66 para estómago), la mortalidad del cáncer de estómago es proporcionalmente más alta, ya que su tasa de mortalidad total es de 12.68 muertes por cada 100,000 habitantes, frente a 9.28 para colon y 3.25 para recto, lo que sugiere que el cáncer de estómago podría ser más letal o diagnosticarse en etapas más avanzadas; además, al comparar la población general con la población objetivo (50-74 años), la mortalidad en este último grupo es mucho mayor (56.82 total combinado, con 28.92 para estómago) que en la población general (25.21 total), lo que subraya la vulnerabilidad de este grupo etario y la necesidad de enfoques más eficaces en la detección temprana, especialmente para el cáncer de estómago."
+  },
+  {
+    "id": "abierta_012",
+    "categoria": "abierta",
+    "pregunta": "Con base en el análisis del Plan de Abordaje Integral, explique la relación entre el aumento de la esperanza de vida en Costa Rica y la incidencia del cáncer, y qué implicaciones tiene esto para los programas de tamizaje.",
+    "ground_truth": "Según el Plan de Abordaje Integral, la esperanza de vida en Costa Rica ha aumentado significativamente a lo largo de los años, alcanzando aproximadamente los 80 años en la actualidad, y este incremento implica que una mayor proporción de la población llega a edades donde el riesgo de desarrollar cáncer es más alto, ya que la incidencia de cáncer de estómago, colon y recto está estrechamente relacionada con la edad; por lo tanto, el envejecimiento de la población costarricense ha llevado a un aumento en el número de casos de estos tipos de cáncer, lo que significa que la alta incidencia en una población envejecida hace que los programas de tamizaje y detección temprana sean esenciales para reducir la mortalidad, y la implementación de pruebas como la FIT para el cáncer colorrectal y la Serie Gastroduodenal para el cáncer de estómago puede mejorar significativamente la detección temprana y, por ende, las tasas de supervivencia."
+  },
+  {
+    "id": "abierta_013",
+    "categoria": "abierta",
+    "pregunta": "Explique qué significa que \"mueren más hombres por estos tipos de cáncer, no obstante, mueren de forma más prematura las mujeres\".",
+    "ground_truth": "Según el Plan de Abordaje Integral, el análisis de los años de vida potencialmente perdidos (YPLL) revela que, aunque mueren más hombres por cáncer de estómago, colon y recto (40,104 años perdidos en hombres frente a 31,933 en mujeres, con un 47% más de hombres fallecidos), las mujeres pierden en promedio más años de vida que los hombres, ya que la media de YPLL para las mujeres es de 16.49 años, significativamente mayor que la de los hombres que es de 14.10 años, y además los intervalos de confianza muestran que las mujeres tienen un límite superior de 17.00 años frente a 14.47 en hombres; esto significa que las mujeres que fallecen por estos tipos de cáncer lo hacen a edades más tempranas que los hombres, lo que representa una mayor pérdida de productividad y bienestar social, y resalta la importancia de implementar intervenciones efectivas de salud pública, incluyendo programas de tamizaje y detección temprana, que permitan reducir tanto la incidencia como la mortalidad, minimizando así los YPLL."
+  },
+  {
+    "id": "abierta_014",
+    "categoria": "abierta",
+    "pregunta": "explique cómo el desplazamiento de la pirámide poblacional hacia grupos de mayor edad afecta la epidemiología del cáncer gástrico y colorrectal, y qué implicaciones tiene para la planificación de salud pública.",
+    "ground_truth": "Según el Plan de Abordaje Integral, el análisis de las pirámides poblacionales muestra un desplazamiento de la población hacia los grupos de mayor edad (35-74 años), con una base más estrecha que refleja un proceso de envejecimiento poblacional, donde una mayor proporción de la población está compuesta por personas de mediana y tercera edad y la población de 75 años y más también muestra un incremento notable que indica una mayor longevidad; este desplazamiento tiene importantes implicaciones para la epidemiología del cáncer gástrico y colorrectal, ya que el aumento de la población general implica un incremento en el número de personas en los grupos de edad más vulnerables a estos tipos de cáncer, y además la carga sobre los recursos de salud también aumentará, por lo que es esencial que los programas de tamizaje, prevención y tratamiento se expandan y adapten para satisfacer esta demanda creciente, subrayando la necesidad de una planificación proactiva para asegurar que la infraestructura sanitaria, incluyendo laboratorios clínicos, servicios de endoscopia y recursos humanos especializados, esté adecuadamente preparada para manejar el incremento proyectado en la demanda de servicios."
+  },
+  {
+    "id": "abierta_015",
+    "categoria": "abierta",
+    "pregunta": "Con base en el Cuadro No. 17 del Plan de Abordaje Integral, explique por qué es relevante identificar los cantones coincidentes con altas incidencias en ambos tipos de cáncer (gástrico y colorrectal) y qué ventajas ofrece para la implementación de los programas de tamizaje.",
+    "ground_truth": "Según el Plan de Abordaje Integral, la identificación de cantones coincidentes con altas incidencias en ambos tipos de cáncer, como San José (1° en estómago, 2° en colorrectal), Pérez Zeledón (2° en estómago, 9° en colorrectal) y otros como Tilarán, Bagaces, San Isidro y Coto Brus que aparecen en los primeros lugares de ambos tipos, es relevante porque permite focalizar los esfuerzos de tamizaje en estas áreas de manera eficiente, ya que la población objetivo es la misma para ambos programas de tamizaje (personas de 50 a 74 años); esta coincidencia ofrece la ventaja de implementar programas de tamizaje integrados que puedan abordar tanto el cáncer de estómago como el colorrectal simultáneamente, lo que subraya la eficiencia y efectividad de la asignación de recursos y permite un enfoque más preciso en las áreas con mayor necesidad de intervención."
+  },
+  {
+    "id": "abierta_016",
+    "categoria": "abierta",
+    "pregunta": "Explique el rol del CNDTCG en la coordinación de los programas de tamizaje y su articulación con los niveles de atención.",
+    "ground_truth": "El CNDTCG coordina la captación en primer nivel, la realización de pruebas y procedimientos en segundo nivel, y la resolución de casos complejos en tercer nivel, supervisando referencias y contrarreferencias para asegurar la continuidad del cuidado."
+  },
+  {
+    "id": "abierta_017",
+    "categoria": "abierta",
+    "pregunta": "Con base en el inventario de recursos de fluoroscopia del Plan de Abordaje Integral, explique la distribución de los recursos humanos y tecnológicos según las DRIPSS y qué implicaciones tiene esta distribución para la implementación del tamizaje de cáncer gástrico.",
+    "ground_truth": "Según el inventario del Plan de Abordaje Integral, la CCSS cuenta a nivel nacional con 108.5 radiólogos (de los cuales 98.5 están capacitados en SGD), 384 personas en personal de imagenología (273 capacitados en fluoroscopia y solo 139 en SGD) y 19 salas de fluoroscopia; sin embargo, la distribución regional es desigual, ya que la región Brunca tiene la tasa más alta de personal de imagenología (14.81) y la región Pacífico Central tiene 7.53, mientras que Chorotega (3.13) y Central Sur (3.78) tienen las tasas más bajas, y en cuanto a salas de fluoroscopia, las regiones Brunca y Huetar Atlántica tienen las tasas más altas (0.52 y 0.84) frente a Central Norte (0.21) y Chorotega (0.35); esta distribución desigual implica que, aunque la alta proporción de radiólogos capacitados en SGD es una fortaleza, todos estos recursos están actualmente dedicados al diagnóstico con listas de espera importantes, lo que limita seriamente su uso para el tamizaje de cáncer gástrico, por lo que identificar estas disparidades es crucial para una planificación efectiva y una asignación de recursos que garantice un acceso equitativo."
+  },
+  {
+    "id": "abierta_018",
+    "categoria": "abierta",
+    "pregunta": "explique por qué la red de laboratorios clínicos representa una fortaleza para el programa de tamizaje de cáncer colorrectal y qué diferencia existe entre la prueba de sangre oculta en heces cualitativa y la cuantitativa.",
+    "ground_truth": "Según el Plan de Abordaje Integral, la Institución cuenta con 110 laboratorios clínicos distribuidos en hospitales nacionales, regionales, periféricos y áreas de salud, con una alta concentración en provincias como San José (8 en el cantón central), Alajuela (17 totales con 6 en San Carlos), Puntarenas (19 totales con 8 en el cantón central) y Heredia (9 totales con 3 en la cabecera); esta amplia red representa una fortaleza significativa para el tamizaje de cáncer colorrectal, ya que proporciona una infraestructura robusta para la realización de pruebas FIT, aunque la capacidad depende de la complejidad de la prueba: la prueba cualitativa está disponible en todos los laboratorios bajo compra centralizada y tiene resultados homologados bajo un mismo código de digitalización, mientras que la prueba cuantitativa solo está disponible en dos laboratorios y requiere equipos automatizados, por lo que su implementación masiva necesitaría establecer una red de laboratorios que centralicen el análisis y realizar una compra nacional que incluya el equipamiento necesario."
+  },
+  {
+    "id": "abierta_019",
+    "categoria": "abierta",
+    "pregunta": "Explique la situación actual de los recursos humanos para endoscopia en la CCSS y qué oportunidad de mejora se identifica.",
+    "ground_truth": "Según el inventario del Plan de Abordaje Integral, la CCSS cuenta con 63.5 gastroenterólogos, de los cuales 56 (88%) están capacitados en detección temprana de lesiones premalignas y malignas, lo que refleja una alta especialización, y también tiene 139 cirujanos generales, de los cuales solo 31 (22%) están capacitados en detección temprana, lo que revela una brecha significativa en la capacitación de este grupo; además, se dispone de 45.5 técnicos en gastroenterología y 52 salas de endoscopia a nivel nacional, pero todos estos recursos, a excepción de los del CNDTCG, están prácticamente dedicados en su totalidad a procedimientos de diagnóstico para consulta externa, hospitalización y emergencias, no para tamizaje, por lo que la oportunidad de mejora identificada es fortalecer la formación de los cirujanos generales en detección temprana de cáncer para aumentar la capacidad de endoscopistas capacitados (actualmente 87 en total), lo que permitiría ampliar la disponibilidad de personal para los programas de tamizaje."
+  },
+  {
+    "id": "abierta_020",
+    "categoria": "abierta",
+    "pregunta": "Explique cómo se identifica la demanda para los programas de tamizaje de cáncer gástrico y colorrectal, y qué criterio se utiliza para priorizar los cantones.",
+    "ground_truth": "Según el Plan de Abordaje Integral, la identificación de la demanda para los programas de tamizaje se basa en la tasa de incidencia media por cada 100,000 habitantes durante el periodo 2017-2022, que fue de 11.66 para cáncer gástrico y de 18.25 para cáncer colorrectal; para priorizar los cantones, se consideran aquellos que se encuentran por encima de la media nacional respectiva, lo que resulta en 35 cantones con incidencia superior a 11.66 para cáncer gástrico y 36 cantones con incidencia superior a 18.25 para cáncer colorrectal, y en los Anexos No. 8 y No. 9 se detalla la población total por cantón que debe abordarse en los tamizajes para cada enfermedad."
+  },
+  {
+    "id": "abierta_021",
+    "categoria": "abierta",
+    "pregunta": "Con base en los criterios para la cobertura establecidos en el Plan de Abordaje Integral, explique cuáles son las metas para los programas de tamizaje de cáncer gástrico y colorrectal, y qué porcentaje de endoscopias se estima para cada tipo de cáncer.",
+    "ground_truth": "Según el Plan de Abordaje Integral, los criterios para la cobertura establecen que para ambos tipos de cáncer el porcentaje de invitación es del 40% (se espera contactar a esa proporción de la población objetivo), el porcentaje de tamizaje es del 65% (se espera que los invitados participen efectivamente en el programa), y la periodicidad del tamizaje es bienal (cada dos años); en cuanto al porcentaje de endoscopias, basado en la evidencia empírica del CNDTCG, para el cáncer gástrico el 15% de los tamizados requieren una gastroscopia derivado de las series gastroduodenales alteradas, mientras que para el cáncer colorrectal el 12% de los tamizados necesitan una colonoscopia basado en las pruebas de sangre oculta en heces positivas, lo que además permite la detección de lesiones premalignas crucial para la prevención o tratamiento temprano."
+  },
+  {
+    "id": "abierta_022",
+    "categoria": "abierta",
+    "pregunta": "explique cómo se calcula el número de salas de fluoroscopia necesarias para la cobertura del programa de tamizaje de cáncer gástrico, utilizando la ecuación E1, y qué implicación tiene el resultado obtenido.",
+    "ground_truth": "Según el Plan de Abordaje Integral, para calcular el número de salas de fluoroscopia necesarias se utiliza la ecuación E1 = (PO × PI × PP) / (PS × DH), donde PO es la población objetivo, PI el porcentaje de invitación (40%), PP el porcentaje de participación (65%), PS el número de pacientes diarios por sala (20) y DH los días hábiles al año (255); como ejemplo, para la Región Central Sur en 2025 con una población objetivo de 197,089 personas, se calcula (197,089 × 0.20 × 0.65) / (20 × 255) = 5.02 salas, lo que extrapolado a las siete regiones da aproximadamente 12 salas de fluoroscopia para 2025, pero esto no es factible porque representa más del 60% de la disponibilidad actual de 19 salas, las cuales ya están dedicadas a diagnóstico con listas de espera importantes, por lo que el plan debe replantear sus metas en el horizonte temporal basado en la dotación futura de infraestructura, equipamiento y personal capacitado."
+  },
+  {
+    "id": "abierta_023",
+    "categoria": "abierta",
+    "pregunta": "explique la metodología utilizada para estimar los costos de atención según el tipo de lesión y qué conclusiones se desprenden de este análisis.",
+    "ground_truth": "Según el Plan de Abordaje Integral, la metodología para estimar los costos consistió en identificar las atenciones empleadas para cada tipo de lesión en un horizonte de 5 años, estimar la frecuencia más probable para cada atención, asignar el costo según el modelo tarifario de la CCSS, identificar el tipo de medicamento oncológico con su frecuencia y costo para cada tipo de cáncer, y estimar el costo total para cada tipo de lesión; de este ejercicio se desprende que la detección y tratamiento en etapas tempranas es significativamente menos costoso que en etapas avanzadas, ya que para el cáncer gástrico la atención temprana mediante ESD (Disección Submucosa Endoscópica) equivale al 8.3% del costo de un cáncer avanzado y la intervención quirúrgica al 23.3%, mientras que para el cáncer de colon las lesiones premalignas cuestan el 3.3% y la etapa temprana el 9.0% del costo de un cáncer avanzado, y para el cáncer de recto las lesiones premalignas cuestan el 3.0% y la etapa temprana el 8.3%, lo que resalta la importancia económica de implementar y fortalecer los programas de tamizaje."
+  },
+  {
+    "id": "abierta_024",
+    "categoria": "abierta",
+    "pregunta": "explique las condiciones especiales que deben cumplirse para garantizar la captación y el seguimiento efectivo de los pacientes en los programas de tamizaje, incluyendo los desafíos que enfrenta el proceso.",
+    "ground_truth": "Según el Plan de Abordaje Integral, la captación de pacientes es crítica y será responsabilidad del CNDTCG, requiriendo acceso a datos de la población adscrita (nombre, teléfonos, correo, ubicación y área de salud) bajo la Ley de Protección de Datos Personales No. 8968, y se realiza mediante invitación telefónica a través de un centro de llamadas especializado, pero enfrenta desafíos como que para lograr la participación de una cierta cantidad de personas se debe contactar al menos al triple, y si no son localizados se debe llamar en al menos dos ocasiones más; en cuanto al seguimiento, el EDUS es la fuente oficial de información pero no fue diseñado para programas de tamizaje, por lo que se requieren acciones especiales como el acceso a imágenes de SGD a través de Soluciones Tecnológicas Definidas para Imágenes Médicas (ya que no todos los equipos están conectados) y el acceso a resultados de FIT mediante la implementación del SILC en laboratorios clínicos (actualmente solo en el 16% de los laboratorios, limitado a Áreas de Salud), lo que es prioritario ya que las pruebas FIT deben realizarse en centros hospitalarios de nivel II y III."
+  },
+  {
+    "id": "abierta_025",
+    "categoria": "abierta",
+    "pregunta": "explique las condiciones especiales necesarias para garantizar el seguimiento de los pacientes en los programas de tamizaje, y qué papel juega la normativa institucional en este proceso.",
+    "ground_truth": "Según el Plan de Abordaje Integral, para garantizar el seguimiento efectivo de los pacientes se requieren varias condiciones especiales: acceso a procedimientos programados a través del módulo SIAC del EDUS para conocer si un paciente con examen alterado recibió una endoscopía, cuándo y dónde, y si se presentó; acceso masivo a resultados de biopsias mediante ARCA-Patología para tomar acciones oportunas y medir el desempeño de los programas en detección de lesiones premalignas; y acceso a resultados de FIT a través del SILC, cuya implementación requiere un equipo especializado de 1 MQC3, 2 MQC2 y 5 Analistas de Sistemas 4, ubicado en el Área de Regulación y Sistematización de la DDSS, ya que actualmente el EDUS no fue diseñado para programas de tamizaje y la falta de interoperabilidad entre módulos impide la trazabilidad; además, la CCSS no cuenta con una normativa específica que obligue a los diferentes niveles de atención a participar en los programas de tamizaje, por lo que es necesario establecer políticas claras que definan las responsabilidades de laboratorios clínicos, servicios de radiología y gastroenterología para garantizar una cobertura uniforme y efectiva."
+  },
+  {
+    "id": "abierta_026",
+    "categoria": "abierta",
+    "pregunta": "explique la importancia de la colaboración con la academia (UCR/CICICA y TEC) para los programas de tamizaje, y qué implicaciones tiene la desvinculación administrativa del CNDTCG del Hospital Max Peralta.",
+    "ground_truth": "Según el Plan de Abordaje Integral, la colaboración con la academia es crucial para mejorar los programas de tamizaje: con la UCR y el CICICA se busca utilizar sus instalaciones (dos salas de endoscopia equipadas) y desarrollar inteligencia artificial para priorizar la interpretación de SGD's, permitiendo que el radiólogo interprete primero las imágenes que el algoritmo identifica con alteraciones; con el TEC se busca desarrollar modelos predictivos para identificar pacientes y grupos poblacionales con mayor probabilidad de desarrollar cáncer, además de colaborar en la identificación de requerimientos para el EDUS que mejoren el flujo de información y faciliten la gobernanza del CNDTCG sobre las DRIPSS; en cuanto a la desvinculación administrativa, el CNDTCG ha estado ubicado en el Hospital Max Peralta por 29 años, generando una codependencia en recursos financieros, humanos, equipamiento, infraestructura y procesos, por lo que debe realizarse un proceso ordenado de desvinculación que considere el traslado de recursos y el establecimiento de un nuevo modelo de coexistencia, ya que el CNDTCG no cuenta aún con estructura administrativa completa para absorber procesos como mantenimiento, vigilancia, aseo y tecnologías de información."
+  },
+  {
+    "id": "abierta_027",
+    "categoria": "abierta",
+    "pregunta": "explique la metodología utilizada para evaluar los riesgos, identifique cuáles son los riesgos con valoración más alta (20 puntos) y mencione las medidas mitigantes propuestas para los más críticos.",
+    "ground_truth": "Según el Plan de Abordaje Integral, la metodología de valoración de riesgos consiste en evaluar cada ítem en función de su probabilidad de ocurrencia (escala 1-5) y su impacto en los objetivos del plan (escala 1-5), calculando la valoración de riesgo como el producto de ambos factores (P x I), lo que permite priorizar las medidas mitigantes; los riesgos con valoración más alta (20 puntos) incluyen la Normativa (desarrollo y aprobación de normativa específica), la Formación y dotación de especialistas y personal técnico, la Disponibilidad y Adquisición de Equipamiento Médico, y el Acceso Equitativo a los Servicios de Salud; para mitigar el riesgo de normativa se propone gestión de apoyo político, involucramiento de actores clave y comunicación efectiva; para equipamiento médico se proponen contratos de mantenimiento, actualización de equipos y reservas de emergencia; para acceso equitativo se proponen estrategias de distribución de recursos e infraestructura adecuada; y para formación y dotación de personal se propone alinear los planes de formación y asignación de especialidades según las zonas de mayor incidencia."
+  },
+  {
+    "id": "abierta_028",
+    "categoria": "abierta",
+    "pregunta": "explique cuáles son las principales áreas críticas identificadas que deben ser abordadas para mejorar la prevención, detección temprana, tratamiento y seguimiento del cáncer gástrico y colorrectal en Costa Rica.",
+    "ground_truth": "Según las conclusiones del Plan de Abordaje Integral, las principales áreas críticas identificadas incluyen: la alta incidencia y mortalidad de cáncer gástrico y colorrectal en Costa Rica, que requieren intervenciones efectivas urgentes; las significativas desigualdades geográficas, con provincias como San José, Cartago, Heredia y Alajuela mostrando tasas más elevadas, lo que subraya la necesidad de enfoques regionalizados; las limitaciones en la disponibilidad de recursos humanos y tecnológicos, particularmente en radiología y endoscopia, que afectan la capacidad de diagnósticos tempranos; la capacidad diagnóstica insuficiente de laboratorios clínicos y servicios de endoscopia para manejar la demanda proyectada; la falta de normativas específicas que obliguen a los diferentes niveles de atención a participar en los programas de tamizaje; la necesidad de fortalecer la Unidad de Investigación en Salud (UIS) del CNDTCG para liderar la investigación continua; la necesidad de innovación tecnológica integrando inteligencia artificial y modelos predictivos; la dependencia de un fuerte apoyo político e institucional; los desafíos en la coordinación logística para muestras, pruebas y seguimiento; la importancia de la colaboración interinstitucional con universidades y centros de investigación; y la necesidad de establecer mecanismos efectivos de monitoreo y evaluación continua para ajustar las estrategias del plan."
+  },
+  {
+    "id": "abierta_029",
+    "categoria": "abierta",
+    "pregunta": "explique cuáles son las principales sugerencias propuestas para fortalecer la implementación y efectividad del plan, más allá de las estrategias ya delineadas.",
+    "ground_truth": "Según el Plan de Abordaje Integral, las recomendaciones adicionales para fortalecer la implementación del plan incluyen: realizar una evaluación de viabilidad para implementar tamizaje de cáncer gástrico mediante EGD directa en zonas prioritarias con recursos disponibles, ya que es más preciso que la SGD; estandarizar las tasas de incidencia y mortalidad por edad para evitar que las diferencias en la distribución etaria entre cantones afecten la priorización de pacientes; crear una unidad móvil de endoscopia con dos salas para desplazarse a zonas de alta incidencia y baja capacidad de recursos, operada por especialistas mediante servicio social o contratos de retribución, mejorando la equidad en el acceso; establecer una red de voluntarios entrenados (estudiantes de medicina, enfermería y comunidad) para apoyar campañas de concientización y logística; integrar soluciones de telemedicina para consultas especializadas y seguimientos en regiones alejadas; forjar alianzas con el sector privado para apoyo financiero, logístico y tecnológico, incluyendo donación de equipos; implementar programas educativos sobre estilos de vida saludables como medida preventiva; invertir en investigación genética y desarrollo de biomarcadores para identificar individuos con mayor riesgo; y realizar convenios con entidades nacionales e internacionales para investigación en detección temprana, tratamiento y seguimiento, facilitando la transferencia de tecnología y capacitación especializada."
+  },
+  {
+    "id": "abierta_030",
+    "categoria": "abierta",
+    "pregunta": "Explique el proceso de tamizaje para el cáncer gástrico según el modelo del CNDTCG.",
+    "ground_truth": "El proceso de tamizaje para el cáncer gástrico según el modelo del CNDTCG comienza con la invitación a participar en el programa a individuos que cumplen con los criterios de inclusión, principalmente personas asintomáticas de 50 a 74 años. Una vez aceptada la invitación, el paciente se somete a una Serie Gastroduodenal (SGD), un estudio de fluoroscopia donde el paciente ingiere un medio de contraste para visualizar el esófago, estómago y duodeno, y el imagenólogo administra el medio de contraste y realiza las imágenes fluoroscópicas necesarias. Los resultados de la SGD determinan si el paciente requiere una gastroscopia, donde el radiólogo analiza las imágenes para identificar anomalías. Si la SGD indica la necesidad, el paciente se somete a una gastroscopia, procedimiento endoscópico que permite la visualización directa del estómago y la toma de biopsias si es necesario, realizada por el endoscopista asistido por el técnico de endoscopia. Durante la gastroscopia, se evalúa si el paciente requiere biopsia para detectar células cancerosas; si se requiere, el endoscopista toma la muestra, la procesa el técnico y la envía al patólogo para análisis. Los resultados determinan si el paciente vuelve al programa de tamizaje o es referido para recibir tratamiento en caso de resultado positivo."
+  },
+  {
+    "id": "abierta_031",
+    "categoria": "abierta",
+    "pregunta": "Describa el proceso de tamizaje para el cáncer colorrectal según el modelo del CNDTCG.",
+    "ground_truth": "El proceso de tamizaje para el cáncer colorrectal según el modelo del CNDTCG comienza con la invitación estructurada a la población objetivo de personas asintomáticas entre 50 y 74 años. Una vez aceptada la invitación, el paciente se somete a una prueba FIT (Test Inmunológico Fecal) en un laboratorio clínico para detectar sangre oculta en las heces, donde el microbiólogo y el personal de apoyo juegan un papel crucial en la realización y análisis. Los resultados de la prueba FIT determinan si el paciente requiere una colonoscopia; en caso positivo, el paciente se somete al procedimiento, que permite la visualización directa del colon y la toma de biopsias si es necesario, realizado por el endoscopista asistido por el técnico de endoscopia. Durante la colonoscopia, el endoscopista evalúa si existe alguna lesión; si no se encuentra, el paciente vuelve al programa de tamizaje. Si se revela alguna anomalía, se toma biopsia y se envía a patología; además, si se identifican adenomas, se remueven inmediatamente. Los resultados de la biopsia determinan si se ha detectado cáncer o adenoma; si no hay cáncer ni adenoma, el paciente vuelve al programa de tamizaje; si se detecta cáncer, el paciente es referido para recibir tratamiento."
+  },
+  {
+    "id": "abierta_032",
+    "categoria": "abierta",
+    "pregunta": "Explique la organización funcional del CNDTCG y sus principales áreas.",
+    "ground_truth": "La organización funcional del CNDTCG está estructurada bajo un modelo integrado y programático, compuesto por varias áreas funcionales: la Dirección General es responsable de la conducción estratégica, técnica y operativa del centro, coordinando y supervisando todas las unidades; las Coordinaciones de Programa lideran la planificación técnica y el seguimiento operativo de los procesos asistenciales para Tamizaje de Cáncer Gástrico y Colorrectal, Patología Biliar, Cirugía Percutánea, Disección Submucosa Endoscópica, Ultrasonido Endoscópico, Cirugía Mayor y Endoscopía Diagnóstica y Terapéutica; el Área Clínica Asistencial integra la ejecución de procedimientos de tamizaje, diagnóstico, tratamiento endoscópico, quirúrgico y percutáneo, así como el seguimiento clínico; el Área de Enfermería brinda atención pre, intra y postprocedimiento y lidera la gestión de insumos médicos; el Área de Planificación y Mejora Continua se encarga de la planificación operativa, monitoreo de indicadores, costeo de servicios y análisis de datos; el Área Administrativa gestiona los recursos físicos, materiales, financieros y de talento humano; y la Unidad de Investigación en Salud desarrolla investigación aplicada en salud gastrointestinal para generar evidencia técnica que oriente la toma de decisiones clínicas y de gestión."
+  },
+  {
+    "id": "abierta_033",
+    "categoria": "abierta",
+    "pregunta": "Describa la metodología utilizada para la elaboración del Manual de Gestión del CNDTCG.",
+    "ground_truth": "La metodología utilizada para la elaboración del Manual de Gestión del CNDTCG se realizó conforme a las indicaciones establecidas en el \"Manual Metodológico para la Construcción de un Manual de Gestión en la Dirección de Desarrollo de Servicios de Salud\", versión vigente, para asegurar la estandarización, coherencia técnica y alineación con la normativa institucional de la CCSS. El proceso se desarrolló bajo un enfoque participativo y técnico que incluyó: revisión documental de antecedentes institucionales del CNDTCG, incluyendo normativa vigente, manuales organizacionales, planes estratégicos, modelos de atención y documentos de planificación institucional; análisis de estructura organizativa propuesta para el centro, incluyendo sus áreas funcionales, programas clínicos y servicios de soporte; consulta con actores clave mediante sesiones técnicas de trabajo con personal del CNDTCG y otras áreas involucradas; síntesis y sistematización técnica para organizar la información bajo los apartados requeridos; validación técnica preliminar con revisión por parte de las instancias responsables; y como etapa final, el manual fue sometido a una validación técnica utilizando el método DELPHI modificada, un método estructurado de consenso entre expertos institucionales para garantizar la pertinencia, aplicabilidad y solidez técnica del documento."
+  },
+  {
+    "id": "abierta_034",
+    "categoria": "abierta",
+    "pregunta": "Explique el rol del CNDTCG como coordinador nacional de los programas de tamizaje.",
+    "ground_truth": "El rol del CNDTCG como coordinador nacional de los programas de tamizaje de cáncer gástrico y colorrectal implica una doble función: como ente ejecutor directo de actividades asistenciales especializadas y como ente coordinador de la red institucional. En este rol, el CNDTCG debe integrar y articular progresivamente la red de servicios de salud de la CCSS, asegurando la implementación estandarizada de estrategias de captación, diagnóstico, tratamiento y seguimiento en todo el país. Esta función incluye: la captación estructurada de la población objetivo utilizando mecanismos de invitación establecidos y haciendo uso de la adscripción generada desde el primer nivel de atención; la coordinación de cupos con servicios de Diagnóstico por Imágenes y Laboratorios Clínicos para la realización de pruebas diagnósticas; la programación de usuarios para exámenes diagnósticos conforme a la capacidad instalada; la coordinación de campañas de promoción con la Dirección de Comunicación Organizacional; el monitoreo periódico de indicadores clave del primer y segundo nivel de atención para asegurar la adherencia al protocolo y la calidad del proceso; y la supervisión de procesos de referencia y contra-referencia para asegurar la continuidad del cuidado en todos los niveles de atención."
+  },
+  {
+    "id": "abierta_035",
+    "categoria": "abierta",
+    "pregunta": "Describa las funciones del área de Planificación y Mejora Continua en el CNDTCG.",
+    "ground_truth": "El área de Planificación y Mejora Continua en el CNDTCG tiene como función principal liderar los procesos de planificación operativa, seguimiento de resultados, evaluación del desempeño de los programas y promoción de la calidad. Entre sus funciones específicas se encuentran: la elaboración, revisión y actualización del Plan Anual Operativo, así como el acompañamiento técnico a las distintas unidades funcionales y programas para garantizar la formulación de metas claras, medibles y pertinentes; el seguimiento sistemático de los indicadores clínicos, administrativos e institucionales; la elaboración de informes técnicos que respaldan la toma de decisiones; el liderazgo de procesos de mejora continua mediante metodologías de gestión de la calidad, análisis de brechas, auditorías técnicas y formulación de acciones correctivas; la implementación de herramientas de análisis avanzado de datos incluyendo Big Data, Minería de Datos e Inteligencia de Negocios (BI) para detectar patrones, predecir comportamientos y fortalecer la toma de decisiones estratégicas; la coordinación de procesos de costeo de servicios para sustentar decisiones presupuestarias; el monitoreo continuo de la demanda de servicios para identificar necesidades emergentes y cuellos de botella; y la formulación de requerimientos técnicos para la gestión oportuna de recursos humanos, materiales, tecnológicos y de infraestructura."
+  },
+  {
+    "id": "abierta_036",
+    "categoria": "abierta",
+    "pregunta": "Explique qué es la Resección Submucosa Endoscópica (ESD) y su importancia en el tratamiento del cáncer gastrointestinal.",
+    "ground_truth": "La Resección Submucosa Endoscópica (ESD) es una técnica endoscópica avanzada que permite resecar lesiones gastrointestinales en bloque con precisión, evitando cirugías mayores y constituyendo una alternativa terapéutica mínimamente invasiva para el tratamiento de lesiones precancerosas o neoplasias superficiales del tracto gastrointestinal, especialmente aquellas localizadas en el estómago o el colon. Este procedimiento permite la resección en bloque de lesiones que por su localización, tamaño o características histológicas no pueden ser tratadas mediante técnicas convencionales de polipectomía. Su ejecución requiere alta especialización, equipamiento específico y una articulación estrecha entre el equipo de endoscopía, anestesiología, enfermería y recuperación. La ESD representa una herramienta clave dentro del modelo de atención del CNDTCG al permitir tratar lesiones tempranas de manera menos invasiva, con menor tiempo de recuperación y alto impacto en la calidad de vida de las personas usuarias, al tiempo que reduce la necesidad de intervenciones quirúrgicas mayores. La población atendida corresponde a personas evaluadas previamente en los programas de tamizaje que presentan lesiones seleccionadas como candidatas a tratamiento mediante esta técnica avanzada."
+  },
+  {
+    "id": "abierta_037",
+    "categoria": "abierta",
+    "pregunta": "Describa el Programa de Cirugía Percutánea y sus beneficios para los pacientes.",
+    "ground_truth": "El Programa de Cirugía Percutánea del CNDTCG ofrece una alternativa terapéutica mínimamente invasiva para el abordaje de diversas patologías, mediante técnicas quirúrgicas realizadas a través de pequeñas incisiones y guiadas por imagen como ecografía, TAC o fluoroscopía. Este enfoque permite resolver condiciones clínicas de manera más segura, rápida y con menor impacto para la persona usuaria, al reducir el riesgo quirúrgico, el tiempo de recuperación y la necesidad de hospitalización. Aunque inicialmente su aplicación en el CNDTCG ha estado vinculada a patologías del tracto gastrointestinal y del sistema biliar, su alcance es mucho más amplio, permitiendo intervenir una variedad de condiciones clínicas que requieren drenajes, accesos terapéuticos, control de colecciones, biopsias u otras intervenciones guiadas por imagen, incluso fuera del sistema digestivo. Los beneficios para los pacientes incluyen: menor agresión quirúrgica, reducción de complicaciones, recuperación más rápida, menor estancia hospitalaria, menos dolor postoperatorio, cicatrices mínimas y posibilidad de realizarse en pacientes con alto riesgo quirúrgico que no serían candidatos a cirugía convencional. Las intervenciones son planificadas de forma interdisciplinaria y ejecutadas bajo protocolos estandarizados que garantizan la seguridad del procedimiento."
+  },
+  {
+    "id": "abierta_038",
+    "categoria": "abierta",
+    "pregunta": "Explique el fundamento legal y la evolución histórica del CNDTCG.",
+    "ground_truth": "El fundamento legal del CNDTCG se basa en los acuerdos y disposiciones adoptados por la Junta Directiva de la CCSS, particularmente el Acuerdo de Junta Directiva adoptado en firme en la Sesión Ordinaria Nº 9414 del 5 de marzo de 2024, que autorizó la conformación del Centro Nacional de Detección Temprana de Cáncer Gastrointestinal como unidad funcional especializada de alcance nacional. La decisión se sustenta en consideraciones técnicas y epidemiológicas que demuestran la alta carga de la enfermedad asociada al cáncer gástrico y colorrectal en Costa Rica. En cuanto a su evolución histórica, el centro tiene sus raíces en 1995, cuando fue creado como proyecto piloto mediante convenio de cooperación entre la CCSS, la UCR y la JICA. En 2008 fue adscrito formalmente como servicio hospitalario del Hospital Dr. Maximiliano Peralta Jiménez. En 2017 se avalaron programas técnicos clave como el Tamizaje de Cáncer Colorrectal. Entre 2019 y 2021 se implementaron mejoras organizativas que reforzaron la detección temprana. A partir de 2021 se inició el traslado institucional hacia la Dirección de Centros Especializados, culminando en marzo de 2024 con la creación oficial del CNDTCG como centro nacional con unidad programática propia y estructura funcional avalada."
+  },
+  {
+    "id": "abierta_039",
+    "categoria": "abierta",
+    "pregunta": "Describa los diagnósticos nosológicos que atiende el CNDTCG según la clasificación CIE-10.",
+    "ground_truth": "El CNDTCG brinda atención clínica y diagnóstica orientada a la detección, tratamiento y seguimiento de patologías del tracto gastrointestinal, basada en la clasificación técnica CIE-10. Los principales diagnósticos incluyen: cáncer de estómago (C16.0-C16.9) que abarca tumores malignos de los cardias, fundus gástrico, cuerpo del estómago, antro pilórico, piloro, curvaturas menor y mayor y sitios contiguos; cáncer colorrectal (C18.0-C18.9) que incluye tumores del ciego, apéndice, colon ascendente, ángulo hepático, colon transverso, ángulo esplénico, colon descendente, colon sigmoide y sitios contiguos; cáncer de la unión rectosigmoidea (C19) y de recto (C20); lesiones gástricas precancerosas (D00.2); adenomas colorrectales avanzados (D12.6); pólipos gástricos (D13.1); tumores subepiteliales del tracto digestivo (D13.2); sospecha de tumores pancreáticos (D13.6); gastritis crónica atrófica (K29.4); abscesos hepáticos (K75.0); coledocolitiasis (K80.5); colecistitis (K81.0); colangitis (K83.0); sangrado digestivo (K92.2); y recurrencias postquirúrgicas digestivas (T81.4). Estos diagnósticos constituyen la base clínica sobre la cual operan los distintos programas técnicos del centro."
+  },
+  {
+    "id": "abierta_040",
+    "categoria": "abierta",
+    "pregunta": "Explique la importancia del ultrasonido endoscópico en el diagnóstico del cáncer gastrointestinal.",
+    "ground_truth": "El ultrasonido endoscópico (USE) constituye una herramienta diagnóstica y terapéutica de alta especialización que combina la tecnología de la endoscopía con la ecografía de alta resolución, permitiendo visualizar y evaluar en profundidad las capas de la pared gastrointestinal y las estructuras adyacentes desde el interior del tracto digestivo. Su importancia en el diagnóstico del cáncer gastrointestinal radica en que permite: la estadificación loco-regional de tumores determinando la profundidad de invasión tumoral (estadio T) y la afectación de ganglios linfáticos regionales (estadio N); la evaluación de lesiones subepiteliales identificando su capa de origen y características que sugieren malignidad; la visualización del sistema pancreatobiliar para detectar neoplasias, litiasis o estenosis; la guía de procedimientos diagnósticos como biopsias por aspiración con aguja fina para obtener muestras de lesiones sospechosas; y la planificación de abordajes quirúrgicos y terapéuticos complejos. El programa está dirigido a personas con lesiones sospechosas detectadas en los programas de tamizaje u otras rutas clínicas que requieren evaluación precisa de la extensión, localización y características de dichas lesiones, y se realiza bajo sedación o anestesia en condiciones controladas."
+  },
+  {
+    "id": "abierta_041",
+    "categoria": "abierta",
+    "pregunta": "Describa el Programa de Patología Biliar y los procedimientos que incluye.",
+    "ground_truth": "El Programa de Patología Biliar del CNDTCG tiene como propósito brindar un abordaje integral, oportuno y resolutivo a pacientes con enfermedades complejas del árbol biliar, mediante una combinación de herramientas clínicas, diagnósticas, quirúrgicas y endoscópicas. Los procedimientos que incluye son: la colangiopancreatografía retrógrada endoscópica (CPRE), que permite visualizar y tratar patologías del sistema biliar; drenajes biliares para aliviar obstrucciones; extracción de cálculos biliares; colocación de prótesis biliares; esfinterotomías; y otras intervenciones endoscópicas y quirúrgicas del sistema biliar. La población atendida es priorizada con base en criterios clínicos, hallazgos previos y derivaciones desde los distintos niveles de atención, especialmente en casos que requieren abordaje especializado y multidisciplinario. El programa opera bajo un enfoque integral mediante procesos estandarizados y rutas clínicas definidas para la valoración, confirmación diagnóstica y tratamiento. Se articula con áreas como consulta externa, imagenología, endoscopía, sala de operaciones y recuperación. El flujo incluye valoración médica especializada, estudios complementarios, procedimientos terapéuticos y seguimiento clínico según evolución del paciente, permitiendo resolver con oportunidad casos complejos."
+  },
+  {
+    "id": "abierta_042",
+    "categoria": "abierta",
+    "pregunta": "Explique la relación del CNDTCG con el mapa de procesos institucional de la CCSS.",
+    "ground_truth": "La operación del CNDTCG se encuentra alineada con el Mapa de Procesos Institucional de la CCSS, contribuyendo al cumplimiento de sus macroprocesos estratégicos, sustantivos y de apoyo. En su quehacer principal, el CNDTCG se inserta dentro del Macroproceso Sustantivo de Atención de la Salud, particularmente en las áreas de promoción de la salud, prevención secundaria, recuperación y rehabilitación, mediante la implementación de programas de tamizaje, diagnóstico temprano, tratamiento quirúrgico y seguimiento clínico. Además, mantiene articulación funcional con los Macroprocesos Estratégicos en aspectos de gestión de salud, planificación estratégica, aseguramiento de la calidad asistencial y fortalecimiento de la investigación en salud. Para el soporte de su operación, el CNDTCG depende de los Macroprocesos de Apoyo en áreas de gestión de talento humano, abastecimiento de insumos médicos y materiales, mantenimiento y gestión de infraestructura hospitalaria, soporte tecnológico e informático (expediente digital, imagenología, bases de datos), y apoyo administrativo y financiero. Esta interrelación asegura la integración del CNDTCG dentro de la Red de Servicios de Salud, facilitando la continuidad del cuidado y la optimización de recursos."
+  },
+  {
+    "id": "abierta_043",
+    "categoria": "abierta",
+    "pregunta": "Describa la oferta de servicios del CNDTCG más allá de los programas de tamizaje.",
+    "ground_truth": "La oferta de servicios del CNDTCG más allá de los programas de tamizaje incluye una gama de servicios clínicos, diagnósticos, quirúrgicos, técnicos, de formación y apoyo, enfocados en la detección temprana, tratamiento oportuno y seguimiento de patologías del tracto gastrointestinal. Estos servicios incluyen: el Programa de Patología Biliar, que brinda abordaje integral a enfermedades complejas del árbol biliar mediante CPRE, drenajes biliares y extracción de cálculos; el Programa de Resección Submucosa Endoscópica (ESD), que permite la resección en bloque de lesiones precancerosas o neoplasias superficiales; el Programa de Cirugía Mayor, que ofrece tratamiento quirúrgico especializado a personas con lesiones que requieren intervención quirúrgica mayor; el Programa de Cirugía Percutánea, que ofrece alternativa terapéutica mínimamente invasiva mediante técnicas guiadas por imagen; el Programa de Ultrasonido Endoscópico, para evaluación avanzada de lesiones y estadificación; y el Programa de Endoscopía Diagnóstica y de Control, para confirmación diagnóstica y seguimiento de lesiones. Además, el CNDTCG ofrece servicios de docencia y formación continua, investigación científica y apoyo técnico a la red institucional."
+  },
+  {
+    "id": "abierta_044",
+    "categoria": "abierta",
+    "pregunta": "Explique el rol del Anestesiólogo en los procedimientos del CNDTCG.",
+    "ground_truth": "El Anestesiólogo en el CNDTCG es responsable de la evaluación, administración y monitoreo de la anestesia en los procedimientos diagnósticos y terapéuticos, garantizando la seguridad, estabilidad clínica y bienestar de las personas usuarias. Su intervención es esencial en procedimientos de endoscopía de alta complejidad, cirugía ambulatoria, resección submucosa endoscópica (ESD), cirugía percutánea, cirugía mayor y colangiopancreatografía retrógrada endoscópica (CPRE), los cuales requieren sedación profunda o anestesia general según el tipo de abordaje y condiciones clínicas del paciente. Durante la CPRE, el Anestesiólogo cumple un rol determinante en el manejo de la vía aérea, el control hemodinámico y la sedación sostenida del paciente, dado que se trata de un procedimiento prolongado con potencial de complicaciones que demanda vigilancia continua y toma de decisiones rápida ante eventos adversos. El Anestesiólogo también contribuye en procesos de capacitación del personal asistencial sobre técnicas de sedación segura, uso de equipos de monitoreo, control de eventos adversos y estándares de seguridad anestésica, y participa en proyectos de investigación clínica relacionados con anestesia ambulatoria, recuperación acelerada y optimización de tiempos quirúrgicos."
+  },
+  {
+    "id": "abierta_045",
+    "categoria": "abierta",
+    "pregunta": "Describa las funciones del Técnico en Endoscopía en el CNDTCG.",
+    "ground_truth": "El Técnico en Gastroenterología del CNDTCG es el encargado de brindar soporte técnico especializado en la realización de procedimientos endoscópicos diagnósticos y terapéuticos, en coordinación con el personal médico y de enfermería. Su rol es esencial para el funcionamiento fluido de las unidades de endoscopía alta, baja y avanzada, donde se llevan a cabo procedimientos clave como gastroscopías, colonoscopías, polipectomías, ESD, colocación de prótesis, dilataciones, extracción de cuerpos extraños y CPRE. Entre sus funciones se encuentra la preparación, verificación y mantenimiento del equipamiento endoscópico, asegurando que los equipos, accesorios y sistemas de video estén en óptimas condiciones para cada procedimiento. Asiste directamente al endoscopista durante la realización de los estudios, colaborando en el manejo del equipo, la toma de muestras, la succión, irrigación, aplicación de instrumentos auxiliares y el monitoreo básico del paciente. Es responsable también de la limpieza, desinfección de alto nivel y resguardo del instrumental según protocolos de control de infecciones. Participa en la gestión de insumos técnicos, elaboración de listas de verificación y mantenimiento preventivo de los equipos, y orienta al usuario sobre el proceso al que será sometido con un enfoque respetuoso y centrado en el bienestar del paciente."
+  },
+  {
+    "id": "abierta_046",
+    "categoria": "abierta",
+    "pregunta": "Explique la importancia de la Unidad de Investigación en Salud (UIS) para el CNDTCG.",
+    "ground_truth": "La Unidad de Investigación en Salud (UIS) del CNDTCG es responsable de liderar el diseño, ejecución y gestión de los procesos de investigación científica desarrollados en el centro, con el fin de generar evidencia útil para fortalecer la toma de decisiones clínicas, administrativas y estratégicas. La importancia de la UIS radica en que formula líneas de investigación orientadas a los principales ejes de acción del centro como el tamizaje poblacional, el diagnóstico temprano, la calidad del proceso asistencial, la eficiencia en el uso de recursos y los desenlaces clínicos de las intervenciones. La UIS elabora protocolos, obtiene avales institucionales y éticos, gestiona bases de datos y asegura la calidad de la información recolectada. Coordina con servicios clínicos y administrativos para facilitar el desarrollo de estudios, así como con instancias externas como universidades, centros de investigación y redes internacionales. También es responsable de fomentar la cultura investigativa mediante actividades de capacitación, asesoría metodológica, generación de publicaciones científicas y divulgación de resultados. Actúa en estrecha colaboración con las áreas de Planificación y Mejora Continua, Dirección General y Programas Técnicos, promoviendo que la investigación sea una herramienta clave para el aprendizaje institucional y la innovación en salud."
+  },
+  {
+    "id": "abierta_047",
+    "categoria": "abierta",
+    "pregunta": "Describa el equipamiento tecnológico con que cuenta el CNDTCG para sus procedimientos.",
+    "ground_truth": "El CNDTCG dispone de un conjunto de equipos médicos y tecnológicos de alta especialización que respaldan la ejecución de procedimientos diagnósticos, terapéuticos y quirúrgicos con altos estándares de seguridad y calidad técnica. Entre los principales equipos se incluyen: torres de endoscopía de alta definición para procedimientos digestivos altos y bajos, con sistemas de visualización, iluminación, documentación y grabación digital; equipamiento para Resección Submucosa Endoscópica (ESD) que incluye cuchillos endoscópicos, inyectores submucosos, clips hemostáticos y unidades electroquirúrgicas; equipo de ultrasonido endoscópico (USE) para estadificación loco-regional, evaluación de lesiones subepiteliales y localización de estructuras profundas; equipo para Colangiopancreatografía Retrógrada Endoscópica (CPRE), incluyendo accesorios para drenaje biliar, esfinterotomías, extracción de cálculos y colocación de prótesis; fluoroscopio de alta resolución para procedimientos intervencionistas; equipo de tomografía (TAC) para estudios de estadificación oncológica y planificación quirúrgica; ultrasonido convencional para valoraciones clínicas y procedimientos guiados; monitores multiparámetros y bombas de infusión para sedación y recuperación; instrumental quirúrgico especializado para laparotomía, laparoscopía y cirugía percutánea; equipos de apoyo en recuperación y anestesia; y estaciones de trabajo y sistemas informáticos clínicos articulados con los sistemas institucionales de la CCSS."
+  },
+  {
+    "id": "abierta_048",
+    "categoria": "abierta",
+    "pregunta": "Explique los indicadores de cobertura de población objetivo en los programas de tamizaje.",
+    "ground_truth": "Los indicadores de cobertura de población objetivo en los programas de tamizaje del CNDTCG miden el porcentaje de personas entre 50-74 años tamizadas respecto a la población estimada, calculado como (Número de personas tamizadas / Población objetivo entre 50-74 años) × 100. Estos indicadores se obtienen de fuentes como SIAC, SIES y Plataforma de Tamizaje, con periodicidad trimestral, y son responsabilidad de la Coordinación de Programa y el Área de Planificación. La importancia de estos indicadores radica en que permiten evaluar el alcance de los programas de tamizaje, identificar brechas en la cobertura poblacional, orientar estrategias para aumentar la participación de la población objetivo, y monitorear el progreso hacia las metas institucionales. La cobertura de población objetivo es especialmente relevante porque los programas de tamizaje están diseñados para detectar tempranamente lesiones premalignas y neoplasias, y una baja cobertura limita el impacto potencial de la estrategia en la reducción de la incidencia y mortalidad por cáncer gástrico y colorrectal. El seguimiento trimestral permite realizar ajustes oportunos en las estrategias de captación y promoción."
+  },
+  {
+    "id": "abierta_049",
+    "categoria": "abierta",
+    "pregunta": "Describa la función del área de gestión de bases de datos en el CNDTCG.",
+    "ground_truth": "El área de gestión de bases de datos en el CNDTCG es responsable del diseño, mantenimiento, consolidación y análisis de los sistemas de información que contienen datos clínicos, administrativos y operativos generados por el centro. Su función es esencial para asegurar la disponibilidad, calidad y seguridad de la información que sustenta los procesos de toma de decisiones, evaluación de desempeño de los programas, planificación y mejora continua. Entre sus funciones se encuentra la creación y mantenimiento de bases de datos estructuradas que permitan almacenar y procesar la información recolectada en los distintos servicios como tamizaje, endoscopía, consulta externa, procedimientos diagnósticos y quirúrgicos, recuperación y seguimiento clínico. Asegura que los sistemas utilizados estén alineados con las necesidades técnicas del centro y con los estándares de interoperabilidad institucional. Es responsable de la validación, depuración y actualización de los datos ingresados, así como de la implementación de mecanismos de control de calidad de la información. Genera reportes periódicos e informes analíticos utilizados por la Dirección y otras unidades técnicas para monitorear indicadores clave y tomar decisiones estratégicas. Vela por la confidencialidad, seguridad y resguardo de la información, garantizando el cumplimiento de las normas institucionales y legales sobre protección de datos sensibles."
+  },
+  {
+    "id": "abierta_050",
+    "categoria": "abierta",
+    "pregunta": "Explique el análisis FODA del CNDTCG y sus principales hallazgos.",
+    "ground_truth": "El análisis FODA del CNDTCG identifica como principales fortalezas: ser un centro especializado con enfoque nacional autorizado por la Junta Directiva, modelo clínico basado en tamizaje poblacional, personal altamente calificado en técnicas avanzadas, coordinación nacional de programas de tamizaje, capacidad instalada en sedación profunda con aval internacional SEED, integración funcional con servicios de apoyo y manual de gestión estructurado. Las debilidades incluyen: dependencia operativa de infraestructura ajena, limitada capacidad instalada para expansión simultánea, ausencia de tecnología para trazabilidad integral del paciente, carga operativa concentrada en pocos especialistas, procesos de referencia no estandarizados, limitado soporte administrativo especializado y falta de sistematización uniforme de protocolos. Las oportunidades son: inclusión en la Política Nacional de Cáncer, potencial de expansión a nuevos programas, alianzas académicas, implementación de sistemas de información robustos e interés creciente en tamizaje poblacional. Las amenazas incluyen: desigualdad regional en acceso a procedimientos, saturación de hospitales de referencia, dificultades presupuestarias, posibles fallos de articulación entre niveles de atención, resistencia al cambio organizacional y rotación de personal clave sin relevo oportuno."
+  },
+  {
+    "id": "abierta_051",
+    "categoria": "abierta",
+    "pregunta": "Describa cómo se realiza la captación de pacientes en los programas de tamizaje.",
+    "ground_truth": "La captación de pacientes en los programas de tamizaje del CNDTCG es un proceso crítico para asegurar el éxito de los programas organizados. El CNDTCG es responsable de la captación estructurada de la población objetivo, para lo cual requiere acceso a los datos de la población adscrita con variables como nombre, apellidos, teléfonos, correo electrónico, provincia, cantón y distrito de residencia, así como el Área de Salud de adscripción, considerando la Ley de Protección de Datos Personales. La captación se realiza para invitar a los pacientes a realizarse un FIT y/o una SGD, y se repite cada dos años para asegurar seguimiento continuo. Se realiza por medio de invitación telefónica a través de centros de llamadas especializados, dado el volumen considerable de personas y los controles estrictos requeridos. Existen pérdidas en el proceso: no todas las personas pueden ser localizadas por diversas razones, y para lograr la participación de una cierta cantidad de personas se debe contactar al menos al triple de ellas, con al menos dos llamadas adicionales si no son localizados. Por ejemplo, para 67,136 personas en 2025, se requieren más de 200,000 gestiones, reflejando la criticidad de esta etapa."
+  },
+  {
+    "id": "abierta_052",
+    "categoria": "abierta",
+    "pregunta": "Explique el rol del médico general asistente en los procedimientos del CNDTCG.",
+    "ground_truth": "El médico general asistente en el CNDTCG brinda apoyo clínico directo durante la realización de procedimientos endoscópicos diagnósticos y terapéuticos, así como en intervenciones quirúrgicas, en coordinación con el personal médico especialista, anestesiológico y de enfermería. Su rol es esencial en la atención segura de personas usuarias sometidas a procedimientos como gastroscopías, colonoscopías, CPRE, ESD, cirugía percutánea y cirugía mayor. Durante estas intervenciones, monitorea continuamente signos vitales y parámetros clínicos, asegurando estabilidad hemodinámica y ventilatoria. Está capacitado para manejar sedación por vía aérea, especialmente en casos que requieren sedación profunda. También evalúa la condición clínica previa del paciente, colabora en la preparación para el procedimiento, revisa antecedentes y verifica el consentimiento informado. Su participación continúa en la unidad de recuperación apoyando en la vigilancia clínica postoperatoria. Adicionalmente, coordina la programación de estudios de TAC, gestiona el flujo de biopsias, cumple funciones como gestor de referencias y participa en la presentación de indicadores de desempeño."
+  },
+  {
+    "id": "abierta_053",
+    "categoria": "abierta",
+    "pregunta": "Describa los sistemas de información institucionales que utiliza el CNDTCG.",
+    "ground_truth": "El CNDTCG utiliza múltiples sistemas de información institucionales para su operación: el Expediente Digital Único en Salud (EDUS) como fuente oficial y legal de la información de las atenciones en salud de los pacientes; el Sistema de Identificación Agendas y Citas (SIAC) para la programación de procedimientos; el Sistema de Información de Estadísticas en Salud (SIES) para el registro y análisis de datos; el Sistema ARCA para el registro de procedimientos y resultados de laboratorio y patología; y bases de datos internas como FileMaker para gestión específica de programas. Estos sistemas permiten registrar, monitorear y analizar la información clínica, administrativa y operativa necesaria para la toma de decisiones y evaluación del desempeño. El acceso a estos sistemas debe garantizar la interoperabilidad entre módulos para asegurar la trazabilidad efectiva de los pacientes. La integración de estos sistemas es fundamental para el seguimiento de pacientes desde la invitación inicial hasta el tratamiento y seguimiento, permitiendo medir indicadores de desempeño, ausentismo, tiempos de espera y resultados clínicos."
+  },
+  {
+    "id": "abierta_054",
+    "categoria": "abierta",
+    "pregunta": "Explique las herramientas de aplicabilidad del Manual de Gestión del CNDTCG.",
+    "ground_truth": "Las herramientas de aplicabilidad del Manual de Gestión del CNDTCG son instrumentos que facilitan la implementación práctica de las funciones, responsabilidades y procesos descritos. Estas incluyen: protocolos y procedimientos normalizados que definen el \"cómo hacer\" en cada programa, brindando instrucciones claras para la ejecución estandarizada de tareas críticas; documentos técnicos normativos complementarios como protocolos, criterios técnicos y manuales de procedimientos que operacionalizan la gestión; sistemas de información institucionales como SIES, SIAC, ARCA y FileMaker que permiten registrar, monitorear y analizar información; matrices de indicadores e instrumentos de evaluación que actúan como herramientas operativas de control y seguimiento; instancias de coordinación y supervisión como equipos de coordinación de programas y reuniones clínicas multidisciplinarias; y capacitación y formación interna que utiliza el manual como insumo base para actividades de inducción y actualización. Estas herramientas serán desarrolladas progresivamente conforme se consoliden procesos y se valide la experiencia operativa, fortaleciendo la estandarización, trazabilidad, eficiencia y calidad de las actividades del CNDTCG."
+  },
+  {
+    "id": "abierta_055",
+    "categoria": "abierta",
+    "pregunta": "Describa los principales factores de riesgo modificables para cáncer colorrectal según la norma.",
+    "ground_truth": "Consumo de carnes rojas procesadas, dieta baja en fibra, obesidad, tabaco y alcohol."
+  },
+  {
+    "id": "abierta_056",
+    "categoria": "abierta",
+    "pregunta": "Explique paso a paso el proceso de tamizaje para el cáncer colorrectal según el modelo del CNDTCG.",
+    "ground_truth": "El proceso de tamizaje para el cáncer colorrectal comienza con la invitación estructurada a la población objetivo de 50 a 74 años. El paciente se somete a una prueba FIT en un laboratorio clínico para detectar sangre oculta en heces, donde el microbiólogo y personal de apoyo realizan el análisis. Si el resultado es positivo, el paciente se somete a una colonoscopia, donde el endoscopista visualiza el colon y toma biopsias si es necesario, asistido por el técnico de endoscopia. Si se encuentran adenomas, se remueven inmediatamente. Los resultados de la biopsia determinan si se ha detectado cáncer o adenoma; en caso positivo, el paciente es referido para tratamiento."
+  },
+  {
+    "id": "abierta_057",
+    "categoria": "abierta",
+    "pregunta": "Explique la importancia de la Unidad de Investigación en Salud (UIS) para el CNDTCG.",
+    "ground_truth": "La UIS lidera la investigación científica, formula líneas de investigación, gestiona bases de datos, coordina con universidades y fomenta la cultura investigativa para generar evidencia que oriente la toma de decisiones clínicas y de gestión."
+  },
+  {
+    "id": "abierta_058",
+    "categoria": "abierta",
+    "pregunta": "Explique la metodología utilizada para la elaboración del Manual de Gestión del CNDTCG.",
+    "ground_truth": "La metodología para el Manual de Gestión se realizó conforme al \"Manual Metodológico para la Construcción de un Manual de Gestión en la Dirección de Desarrollo de Servicios de Salud\". Incluyó revisión documental de antecedentes institucionales, análisis de estructura organizativa, consulta con actores clave mediante sesiones técnicas, síntesis y sistematización técnica, validación técnica preliminar, y como etapa final, validación mediante método DELPHI modificada, un proceso estructurado de consenso entre expertos institucionales para garantizar pertinencia y solidez técnica."
+  },
+  {
+    "id": "abierta_059",
+    "categoria": "abierta",
+    "pregunta": "Explique los antecedentes históricos del CNDTCG desde su creación en 1995 hasta su formalización como centro nacional en 2024, destacando los hitos más relevantes en cada período.",
+    "ground_truth": "El CNDTCG tiene sus raíces en 1995, cuando fue creado como un proyecto piloto mediante un convenio de cooperación entre la CCSS, la Universidad de Costa Rica (UCR) y la Agencia Japonesa de Cooperación Internacional (JICA), bajo el nombre de CDTC (Centro de Detección Temprana de Cáncer). En 2005, por acuerdo de Junta Directiva, el CDTC pasó a ser un servicio del Hospital Dr. Maximiliano Peralta Jiménez. En 2017 se dio la aprobación oficial del proyecto de Tamizaje de Cáncer Colorrectal, marcando un hito en la expansión de los programas. Entre 2019 y 2021 se implementaron mejoras organizativas que reforzaron la detección temprana y ampliaron el acceso diagnóstico. A partir de 2021 se inició el proceso de traslado institucional hacia la Dirección de Centros Especializados. Finalmente, en marzo de 2024, la Junta Directiva de la CCSS aprobó oficialmente la conformación del CNDTCG como centro nacional, dotándolo de la Unidad Programática 2806 y avalando su estructura funcional y operativa, consolidando así un modelo de atención integral para el cáncer gastrointestinal en Costa Rica."
+  },
+  {
+    "id": "abierta_060",
+    "categoria": "abierta",
+    "pregunta": "Explique las funciones del área de Planificación y Mejora Continua en el CNDTCG.",
+    "ground_truth": "El área de Planificación y Mejora Continua lidera la planificación operativa, seguimiento de resultados y promoción de la calidad. Funciones específicas: elaboración del Plan Anual Operativo, seguimiento de indicadores, elaboración de informes técnicos, liderazgo de procesos de mejora continua con metodologías de gestión de calidad, implementación de herramientas de Big Data, Minería de Datos e Inteligencia de Negocios, coordinación de costeo de servicios, monitoreo de demanda de servicios y formulación de requerimientos técnicos para gestión de recursos humanos, materiales, tecnológicos e infraestructura."
+  },
+  {
+    "id": "abierta_061",
+    "categoria": "abierta",
+    "pregunta": "Describa la técnica de Resección Submucosa Endoscópica (ESD) y sus beneficios.",
+    "ground_truth": "La Resección Submucosa Endoscópica (ESD) es una técnica endoscópica avanzada que permite resecar lesiones gastrointestinales en bloque con precisión, evitando cirugías mayores. Es una alternativa terapéutica mínimamente invasiva para lesiones precancerosas o neoplasias superficiales del tracto gastrointestinal, especialmente en estómago y colon. Permite resecar lesiones que no pueden tratarse con polipectomía convencional. Requiere alta especialización y equipamiento específico. Reduce el tiempo de recuperación y mejora la calidad de vida, disminuyendo la necesidad de cirugías mayores."
+  },
+  {
+    "id": "abierta_062",
+    "categoria": "abierta",
+    "pregunta": "Explique en qué consiste el Programa de Cirugía Percutánea y sus ventajas para los pacientes.",
+    "ground_truth": "El Programa de Cirugía Percutánea ofrece una alternativa terapéutica mínimamente invasiva mediante técnicas quirúrgicas a través de pequeñas incisiones guiadas por imagen (ecografía, TAC o fluoroscopía). Permite resolver condiciones clínicas de manera más segura, rápida y con menor impacto. Sus beneficios incluyen menor agresión quirúrgica, reducción de complicaciones, recuperación más rápida, menor estancia hospitalaria, menos dolor postoperatorio, cicatrices mínimas, y posibilidad de realizarse en pacientes con alto riesgo quirúrgico. Las intervenciones son planificadas interdisciplinariamente y ejecutadas bajo protocolos estandarizados."
+  },
+  {
+    "id": "abierta_063",
+    "categoria": "abierta",
+    "pregunta": "Describa el fundamento legal y la evolución histórica del CNDTCG.",
+    "ground_truth": "El fundamento legal del CNDTCG se basa en el Acuerdo de Junta Directiva Nº 9414 del 5 de marzo de 2024. Evolución histórica: 1995 creación como proyecto piloto CCSS-UCR-JICA; 2008 adscripción al Hospital Dr. Maximiliano Peralta Jiménez; 2017 aval del Tamizaje de Cáncer Colorrectal; 2019-2021 mejoras organizativas; 2021 inicio de traslado a Dirección de Centros Especializados; marzo 2024 creación oficial como centro nacional con unidad programática propia y estructura funcional avalada."
+  },
+  {
+    "id": "abierta_064",
+    "categoria": "abierta",
+    "pregunta": "Explique los principales diagnósticos nosológicos que atiende el CNDTCG según la clasificación CIE-10.",
+    "ground_truth": "El CNDTCG atiende diagnósticos basados en CIE-10: cáncer de estómago (C16.0-C16.9), cáncer colorrectal (C18.0-C18.9), cáncer de unión rectosigmoidea (C19) y recto (C20), lesiones gástricas precancerosas (D00.2), adenomas colorrectales avanzados (D12.6), pólipos gástricos (D13.1), tumores subepiteliales (D13.2), sospecha de tumores pancreáticos (D13.6), gastritis crónica atrófica (K29.4), abscesos hepáticos (K75.0), coledocolitiasis (K80.5), colecistitis (K81.0), colangitis (K83.0), sangrado digestivo (K92.2) y recurrencias postquirúrgicas (T81.4)."
+  },
+  {
+    "id": "abierta_065",
+    "categoria": "abierta",
+    "pregunta": "Describa la importancia del ultrasonido endoscópico en el diagnóstico del cáncer gastrointestinal.",
+    "ground_truth": "El ultrasonido endoscópico (USE) combina endoscopia con ecografía de alta resolución para evaluar capas de la pared gastrointestinal y estructuras adyacentes. Permite: estadificación loco-regional de tumores (estadios T y N), evaluación de lesiones subepiteliales, visualización del sistema pancreatobiliar, guía para biopsias por aspiración con aguja fina, y planificación de abordajes quirúrgicos. Está dirigido a personas con lesiones sospechosas detectadas en tamizaje u otras rutas clínicas, y se realiza bajo sedación o anestesia."
+  },
+  {
+    "id": "abierta_066",
+    "categoria": "abierta",
+    "pregunta": "Explique el Programa de Patología Biliar y los procedimientos que incluye.",
+    "ground_truth": "El Programa de Patología Biliar brinda abordaje integral a enfermedades del árbol biliar mediante herramientas clínicas, diagnósticas, quirúrgicas y endoscópicas. Incluye: CPRE para visualizar y tratar patologías biliares, drenajes biliares, extracción de cálculos, colocación de prótesis, esfinterotomías y otras intervenciones. La población es priorizada según criterios clínicos y derivaciones. Opera bajo enfoque integral con procesos estandarizados, articulándose con consulta externa, imagenología, endoscopia, sala de operaciones y recuperación."
+  },
+  {
+    "id": "abierta_067",
+    "categoria": "abierta",
+    "pregunta": "Describa cómo se alinea la operación del CNDTCG con el Mapa de Procesos Institucional de la CCSS.",
+    "ground_truth": "La operación del CNDTCG está alineada con el Mapa de Procesos Institucional de la CCSS. Se inserta en el Macroproceso Sustantivo de Atención de la Salud en áreas de promoción, prevención secundaria, recuperación y rehabilitación. Mantiene articulación con Macroprocesos Estratégicos en gestión de salud, planificación estratégica, calidad asistencial e investigación. Depende de Macroprocesos de Apoyo en gestión de talento humano, abastecimiento, mantenimiento, soporte tecnológico y apoyo administrativo-financiero."
+  },
+  {
+    "id": "abierta_068",
+    "categoria": "abierta",
+    "pregunta": "Explique la oferta de servicios del CNDTCG más allá de los programas de tamizaje.",
+    "ground_truth": "La oferta de servicios del CNDTCG incluye: Programa de Patología Biliar (CPRE, drenajes); Programa de ESD (resección en bloque); Programa de Cirugía Mayor (quirúrgico especializado); Programa de Cirugía Percutánea (mínimamente invasivo guiado por imagen); Programa de Ultrasonido Endoscópico (evaluación avanzada y estadificación); Programa de Endoscopia Diagnóstica y de Control (confirmación y seguimiento); además de docencia, formación continua, investigación científica y apoyo técnico a la red institucional."
+  },
+  {
+    "id": "abierta_069",
+    "categoria": "abierta",
+    "pregunta": "Describa el cambio de paradigma en la atención del cáncer gástrico y colorrectal que propone el Plan de Abordaje Integral, contrastando el modelo actual con el modelo propuesto.",
+    "ground_truth": "El Plan de Abordaje Integral propone un cambio de paradigma en la atención del cáncer gástrico y colorrectal. En el modelo actual, el paciente con síntomas gastrointestinales debe solicitar cita en EBAIS o Emergencias, pasar a endoscopía en lista de espera, biopsia, diagnóstico de cáncer, cirugía, estadio, hospitalización, quimio/radioterapia y control, lo que generalmente resulta en diagnósticos en etapas avanzadas. En contraste, el paradigma propuesto se basa en la identificación proactiva de la población objetivo (personas sanas entre 50 y 74 años) considerando zona geográfica, incidencia y edad; la implementación de campañas de tamizaje organizadas; la aplicación de pruebas de tamizaje (SGD para cáncer gástrico y FIT para cáncer colorrectal) cada dos años; la realización de endoscopias (gastroscopia o colonoscopia) solo a personas con pruebas alteradas; la detección de lesiones premalignas y malignas en etapas tempranas; procedimientos mínimamente invasivos (como ESD o cirugía percutánea) en lugar de cirugías mayores; y un control y seguimiento continuo. Este nuevo paradigma permite la detección de más del 40-50% de los casos en etapas tempranas, una reducción del 35% en la mortalidad y un ahorro económico significativo al tratar lesiones en fases iniciales."
+  },
+  {
+    "id": "abierta_070",
+    "categoria": "abierta",
+    "pregunta": "Explique las funciones del Técnico en Gastroenterología en el CNDTCG.",
+    "ground_truth": "El Técnico en Gastroenterología brinda soporte técnico en procedimientos endoscópicos. Prepara, verifica y mantiene el equipamiento endoscópico. Asiste al endoscopista durante los estudios (manejo del equipo, toma de muestras, succión, irrigación). Es responsable de la limpieza, desinfección de alto nivel y resguardo del instrumental según protocolos de control de infecciones. Participa en gestión de insumos, listas de verificación, mantenimiento preventivo y orienta al usuario sobre el proceso con enfoque respetuoso."
+  },
+  {
+    "id": "abierta_071",
+    "categoria": "abierta",
+    "pregunta": "Explique la diferencia entre costos tangibles e intangibles en el contexto del impacto económico del cáncer según el Plan de Abordaje Integral, y cómo esta distinción justifica la implementación de programas de tamizaje.",
+    "ground_truth": "Según el Plan de Abordaje Integral, los costos tangibles son los más evidentes y se relacionan directamente con la detección y los tratamientos médicos, incluyendo pruebas diagnósticas, procedimientos endoscópicos, cirugías, hospitalización, medicamentos oncológicos, consultas especializadas y otros servicios médicos directos. Estos costos son fácilmente cuantificables y suelen ser los que se consideran en la planificación presupuestaria. En contraste, los costos intangibles están ocultos, son indirectos y a menudo subestimados o ignorados; incluyen el impacto emocional y psicológico en los pacientes y sus familias, la pérdida de productividad laboral, el transporte y alimentación para recibir tratamiento, el hospedaje en centros especializados, los cuidados continuos por parte de familiares, el apoyo psicológico requerido, el pago de incapacidades y las secuelas a largo plazo de los tratamientos. El plan señala que los costos intangibles podrían representar un mayor costo social que los tangibles. Esta distinción justifica la implementación de programas de tamizaje porque la detección y tratamiento en etapas tempranas no solo reduce los costos tangibles (ejemplo: lesiones premalignas de colon cuestan solo el 3.3% de un cáncer avanzado), sino que también minimiza los costos intangibles al evitar tratamientos prolongados y complejos, reducir el sufrimiento emocional y permitir que los pacientes mantengan su productividad y calidad de vida."
+  },
+  {
+    "id": "abierta_072",
+    "categoria": "abierta",
+    "pregunta": "Explique qué es la Clasificación JNET para pólipos colorrectales.",
+    "ground_truth": "Es una clasificación endoscópica que divide los pólipos en cuatro subtipos según el riesgo de malignidad: JNET 1 (hiperplásico), JNET 2A (neoplasia de bajo grado), JNET 2B (neoplasia de alto grado o invasión superficial), JNET 3 (cáncer invasor profundo)."
+  },
+  {
+    "id": "abierta_073",
+    "categoria": "abierta",
+    "pregunta": "Describa los indicadores de cobertura de población objetivo y su importancia.",
+    "ground_truth": "Los indicadores de cobertura de población objetivo miden el porcentaje de personas entre 50-74 años tamizadas respecto a la población estimada: (Número de personas tamizadas / Población objetivo) × 100. Se obtienen de SIAC, SIES y Plataforma de Tamizaje con periodicidad trimestral. Permiten evaluar el alcance de los programas, identificar brechas, orientar estrategias para aumentar participación y monitorear el progreso hacia metas institucionales."
+  },
+  {
+    "id": "abierta_074",
+    "categoria": "abierta",
+    "pregunta": "Explique las funciones del área de gestión de bases de datos en el CNDTCG.",
+    "ground_truth": "El área de gestión de bases de datos diseña, mantiene, consolida y analiza sistemas de información con datos clínicos, administrativos y operativos. Crea y mantiene bases de datos estructuradas, asegura alineación con necesidades técnicas y estándares de interoperabilidad. Valida, depura y actualiza datos, implementa controles de calidad. Genera reportes e informes analíticos. Vela por confidencialidad, seguridad y resguardo de información, garantizando cumplimiento de normas de protección de datos sensibles."
+  },
+  {
+    "id": "abierta_075",
+    "categoria": "abierta",
+    "pregunta": "Explique la metodología utilizada para la elaboración del Manual de Gestión del CNDTCG.",
+    "ground_truth": "Se realizó conforme al Manual Metodológico institucional, con enfoque participativo que incluyó revisión documental, análisis de estructura organizativa, consulta a actores clave, síntesis técnica, validación preliminar y validación final con el método DELPHI modificada para garantizar consenso entre expertos."
+  },
+  {
+    "id": "abierta_076",
+    "categoria": "abierta",
+    "pregunta": "Explique cómo se realiza la captación de pacientes en los programas de tamizaje.",
+    "ground_truth": "La captación de pacientes es crítica para el éxito de los programas. El CNDTCG es responsable de la captación estructurada de la población objetivo, requiriendo acceso a datos como nombre, teléfonos, correo, ubicación y área de salud, considerando la Ley de Protección de Datos. Se realiza por invitación telefónica a través de centros de llamadas especializados. Existen pérdidas en el proceso: se debe contactar al menos al triple de las personas para lograr la participación deseada, con al menos dos llamadas adicionales si no son localizados."
+  },
+  {
+    "id": "abierta_077",
+    "categoria": "abierta",
+    "pregunta": "Describa el rol del médico general asistente durante los procedimientos.",
+    "ground_truth": "El médico general asistente brinda apoyo clínico directo durante procedimientos endoscópicos y quirúrgicos. Monitorea signos vitales y parámetros clínicos, asegurando estabilidad hemodinámica y ventilatoria. Maneja sedación por vía aérea en casos que requieren sedación profunda. Evalúa condición clínica previa, revisa antecedentes y verifica consentimiento informado. Participa en recuperación postoperatoria. Coordina programación de TAC, gestiona flujo de biopsias, cumple funciones como gestor de referencias y participa en indicadores de desempeño."
+  },
+  {
+    "id": "abierta_078",
+    "categoria": "abierta",
+    "pregunta": "Explique los sistemas de información institucionales que utiliza el CNDTCG.",
+    "ground_truth": "El CNDTCG utiliza: EDUS (expediente digital), SIAC (programación de procedimientos), SIES (registro y análisis de datos), ARCA (registro de procedimientos y resultados), y bases internas como FileMaker. Estos sistemas permiten registrar, monitorear y analizar información clínica, administrativa y operativa. La interoperabilidad entre módulos es fundamental para asegurar la trazabilidad efectiva de los pacientes desde la invitación inicial hasta el tratamiento y seguimiento."
+  },
+  {
+    "id": "abierta_079",
+    "categoria": "abierta",
+    "pregunta": "Describa las herramientas de aplicabilidad del Manual de Gestión del CNDTCG.",
+    "ground_truth": "Las herramientas de aplicabilidad incluyen: protocolos y procedimientos normalizados que definen el \"cómo hacer\"; documentos técnicos normativos complementarios; sistemas de información institucionales (SIES, SIAC, ARCA, FileMaker); matrices de indicadores e instrumentos de evaluación; instancias de coordinación y supervisión; y capacitación y formación interna. Estas herramientas se desarrollarán progresivamente para fortalecer la estandarización, trazabilidad, eficiencia y calidad de las actividades del CNDTCG."
+  },
+  {
+    "id": "abierta_080",
+    "categoria": "abierta",
+    "pregunta": "Explique los factores de riesgo para cáncer colorrectal según la norma, clasificándolos en estilo de vida, patológicos y familiares.",
+    "ground_truth": "Los factores de riesgo para cáncer colorrectal se clasifican en tres categorías: estilo de vida, que incluye consumo de carnes rojas procesadas (embutidos, salchichas, jamón, tocino), dieta baja en fibra, obesidad, tabaco y alcohol; factores patológicos que incluyen personas con antecedentes de irradiación abdominal, enfermedad inflamatoria intestinal (enfermedad de Crohn y colitis ulcerativa), antecedentes de pólipos intestinales y antecedente de cáncer colorrectal; y factores familiares que incluyen antecedentes de familiares (padre, madre, hijos y hermanos) menores de 50 años con cáncer colorrectal, así como síndromes hereditarios como Síndrome de Lynch, Poliposis adenomatosa familiar, Poliposis adenomatosa familiar atenuada, Poliposis asociada a MUTYH, Síndrome de Peutz-Jeghers, Síndrome de poliposis juvenil y Síndrome de Cowden."
+  },
+  {
+    "id": "abierta_081",
+    "categoria": "abierta",
+    "pregunta": "Describa los requisitos mínimos de calidad que debe cumplir una colonoscopia de tamizaje según la norma.",
+    "ground_truth": "Los requisitos mínimos de calidad para una colonoscopia de tamizaje incluyen: para la ejecución, inspección completa del colon y el recto con visualización y documentación adecuadas del ciego, la válvula ileocecal y el orificio apendicular, con fotografía al respecto; tiempo de retirada no menor a 6 minutos; calidad de la limpieza colónica adecuada evaluada mediante la Escala de Preparación Intestinal de Boston; el informe debe incluir número total de pólipos extirpados y recuperados, tamaño de cada pólipo, localización, morfología mediante clasificación de Paris, caracterización mediante JNET, NICE y Kudo, método de extirpación, evaluación de la integridad de la resección, e indicación si la resección es en bloque o fragmentada; y el informe anatomopatológico debe incluir número total de adenomas y pólipos serrados, diagnóstico histopatológico, presencia de componente velloso y grado de displasia."
+  },
+  {
+    "id": "abierta_082",
+    "categoria": "abierta",
+    "pregunta": "Explique qué información debe incluir el informe de colonoscopia según la norma.",
+    "ground_truth": "El informe de colonoscopia debe incluir: número total de pólipos extirpados y recuperados; tamaño de cada pólipo en milímetros; localización de cada pólipo en el colon; morfología de las lesiones mediante el uso de clasificaciones endoscópicas validadas como la Clasificación de Paris; caracterización de cada pólipo utilizando clasificaciones como JNET (Japan NBI Expert Team), NICE (Narrow Band Imaging International Colorectal Endoscopic) y Kudo; método de extirpación de cada pólipo (resección en bloque o fragmentada); evaluación de la integridad de la resección; e indicación si la resección es en bloque o fragmentada (piece meal)."
+  },
+  {
+    "id": "abierta_083",
+    "categoria": "abierta",
+    "pregunta": "Describa qué información debe incluir el informe de anatomía patológica según la norma.",
+    "ground_truth": "El informe de anatomía patológica debe incluir: el número total de adenomas y de pólipos serrados encontrados; el diagnóstico histopatológico de cada pólipo, especificando su tipo; la presencia de componente velloso en cada pólipo; y el grado de displasia de cada pólipo, indicando si es de bajo o alto grado. Esta información es fundamental para determinar el riesgo de progresión a cáncer y la necesidad de vigilancia endoscópica posterior."
+  },
+  {
+    "id": "abierta_084",
+    "categoria": "abierta",
+    "pregunta": "Explique las clasificaciones endoscópicas JNET, NICE y Kudo para pólipos colorrectales.",
+    "ground_truth": "La Clasificación JNET (Japan NBI Expert Team) divide los pólipos en cuatro subtipos: JNET 1 (pólipo hiperplásico), JNET 2A (neoplasia intramucosa de bajo grado), JNET 2B (neoplasia intramucosa de alto grado o invasión superficial de submucosa) y JNET 3 (cáncer invasor en submucosa profunda). La Clasificación NICE (Narrow Band Imaging International Colorectal Endoscopic) tiene tres subtipos: NICE 1 (pólipo hiperplásico), NICE 2 (pólipo adenomatoso) y NICE 3 (lesión con invasión submucosa profunda o cáncer avanzado). La Clasificación KUDO requiere magnificación y cromoendoscopia: los patrones I y II son hiperplásicos, los patrones III-L, III-S y IV corresponden a adenomas, y los patrones V-a y V-n describen neoplasia con invasión profunda."
+  },
+  {
+    "id": "abierta_085",
+    "categoria": "abierta",
+    "pregunta": "Describa los criterios que determinan el riesgo aumentado para cáncer colorrectal.",
+    "ground_truth": "Las condiciones que determinan el riesgo aumentado para cáncer colorrectal se dividen en historia personal: adenoma o síndrome de poliposis serrada, antecedente de CCR, enfermedad inflamatoria intestinal (enfermedad de Crohn o colitis ulcerativa) y fibrosis quística; e historia familiar: historia familiar positiva (padre, madre, hijos, hermanos) a una edad de 50 años o menos, y síndromes hereditarios asociados al cáncer colorrectal como el Síndrome de Lynch, Poliposis adenomatosa familiar, Poliposis adenomatosa familiar atenuada, Poliposis asociada a MUTYH, Síndrome de Peutz-Jeghers, Síndrome de poliposis juvenil y Síndrome de Cowden."
+  },
+  {
+    "id": "abierta_086",
+    "categoria": "abierta",
+    "pregunta": "Explique el manejo de los hallazgos de colonoscopia de tamizaje según la norma.",
+    "ground_truth": "El manejo de los hallazgos de colonoscopia de tamizaje incluye: si no se detectan pólipos, se recomienda control a los 10 años; si se detectan adenomas sin DAG de 1-4 y <10 mm, se retorna al tamizaje poblacional; si se detectan pólipos que requieren vigilancia (adenoma ≥10 mm, adenoma con DAG, ≥5 adenomas en colonoscopia basal, pólipos serrados mayores de 10 mm o con displasia), se programa colonoscopia de vigilancia; para resección en piece meal de pólipos ≥20 mm, repetir colonoscopia en un año; si en la primera colonoscopia de vigilancia no se detectan pólipos que requieran seguimiento, segunda vigilancia a los 5 años; si en la segunda no se detectan, retorno al tamizaje poblacional cada 2 años; si se detectan pólipos que requieran seguimiento, vigilancia a los 3 años."
+  },
+  {
+    "id": "abierta_087",
+    "categoria": "abierta",
+    "pregunta": "Describa las recomendaciones de vigilancia endoscópica según los hallazgos de pólipos.",
+    "ground_truth": "Las recomendaciones de vigilancia endoscópica según hallazgos de pólipos establecen que para casos con al menos un adenoma ≥10 mm, adenoma con Displasia de Alto Grado (DAG), hallazgo de ≥5 adenomas en colonoscopia basal, o pólipos serrados mayores de 10 mm o con displasia, se requiere colonoscopia de vigilancia. Para casos con uno a cuatro adenomas <10 mm sin DAG, o pólipos serrados <10 mm sin displasia, no requieren vigilancia y regresan a tamizaje poblacional. Tras resección en piece meal de pólipos ≥20 mm, repetir colonoscopia en un año; si en la primera colonoscopia de vigilancia no se detectan pólipos que requieran seguimiento, segunda colonoscopia de vigilancia a los 5 años; si en la segunda no se detectan, retorno al tamizaje poblacional; si se detectan pólipos, vigilancia a los 3 años."
+  },
+  {
+    "id": "abierta_088",
+    "categoria": "abierta",
+    "pregunta": "Explique los criterios clínicos que indican mayor sospecha de cáncer colorrectal en atención primaria.",
+    "ground_truth": "Los criterios clínicos que indican mayor sospecha de cáncer colorrectal en atención primaria incluyen, en orden de valor predictivo positivo: masa abdominal o rectal palpable (valor predictivo positivo <15%); rectorragia y pérdida de peso (13%); anemia por déficit de hierro (11%); sangre mezclada con heces (11%); rectorragia con ausencia de síntomas perianales (10.8%); rectorragia y cambio en el hábito intestinal (10.5%); sangre oscura (9.7%); rectorragia y diarrea (9%); rectorragia y 60-65 años (8.6%); rectorragia y 70-75 años (7.9%); cambio en el hábito intestinal y diarrea (7.5%); rectorragia en hombres (7.5%); rectorragia y 50-55 años (5.9%); rectorragia sin especificar edad (5.3%); rectorragia y dolor abdominal (5.1%); y primer episodio de rectorragia (5%)."
+  },
+  {
+    "id": "abierta_089",
+    "categoria": "abierta",
+    "pregunta": "Describa los tratamientos quirúrgicos para el cáncer colorrectal según la norma.",
+    "ground_truth": "Los tratamientos quirúrgicos para el cáncer colorrectal dependen de la localización de la lesión y su extensión local, regional y a distancia. Incluyen procedimientos como colostomías, resección anterior baja (extirpación del recto y parte del colon sigmoide preservando el esfínter anal), resección abdominoperineal (extirpación del ano, recto y parte del colon sigmoide con colostomía permanente), y resección de metástasis (metastasectomía). Es importante que los tratamientos quirúrgicos se acompañen de una disección linfática adecuada. Algunas personas pueden requerir ileostomías o colostomías permanentes o temporales como parte de su tratamiento."
+  },
+  {
+    "id": "abierta_090",
+    "categoria": "abierta",
+    "pregunta": "Explique el manejo posterior a un tratamiento curativo de CCR, incluyendo la vigilancia endoscópica.",
+    "ground_truth": "El manejo posterior a un tratamiento curativo de CCR incluye vigilancia clínica con control bioquímico y de imágenes, y colonoscopia de vigilancia para detección de CCR metacrónico y recurrente. La colonoscopia de vigilancia se realiza según los hallazgos: si no hay adenomas, se recomienda vigilancia a los 10 años; si se detectan adenomas, se siguen las indicaciones establecidas en la Figura 2 de la norma. En caso de que la colonoscopia de vigilancia presente adenomas, se deben seguir las indicaciones de manejo según hallazgos. Esta vigilancia permite detectar recurrencias tempranas y mejorar los resultados oncológicos."
+  },
+  {
+    "id": "abierta_091",
+    "categoria": "abierta",
+    "pregunta": "Describa las obligaciones de los establecimientos del sistema de salud según la norma.",
+    "ground_truth": "Los establecimientos del sistema de salud deben contar con un manual de procedimientos, guía, protocolo u otro instrumento para la prevención y detección de cáncer colorrectal que incluya: la información básica de la consejería, el reporte obligatorio de la enfermedad a través de la boleta de notificación obligatoria al Ministerio de Salud según corresponda, y los mecanismos de referencia a servicios especializados. Cuando los servicios se extiendan a la atención comunitaria, debe incluirse una planificación anual de acciones preventivas y de promoción de la salud acorde al perfil poblacional definido. También deben disponer de estrategias de sensibilización y capacitación permanente al personal de salud basada en evidencia científica."
+  },
+  {
+    "id": "abierta_092",
+    "categoria": "abierta",
+    "pregunta": "Explique los indicadores oficializados para evaluar el cumplimiento de la norma.",
+    "ground_truth": "Los indicadores oficializados para evaluar el cumplimiento de la norma son: tasa de incidencia de cáncer colorrectal, porcentaje de diferentes estadios del cáncer colorrectal en el momento del diagnóstico, y tasa de mortalidad por cáncer colorrectal. Estos indicadores serán publicados cada 5 años por el Ministerio de Salud, que ejecutará la vigilancia de los mismos para contar con información estadística actualizada y de calidad. Adicionalmente, se pueden utilizar otros indicadores que se estimen pertinentes según criterio técnico del ente rector."
+  },
+  {
+    "id": "abierta_093",
+    "categoria": "abierta",
+    "pregunta": "Describa los antecedentes y fundamento legal del CNDTCG según el Manual de Gestión.",
+    "ground_truth": "El CNDTCG tiene sus raíces en 1995 cuando fue creado como proyecto piloto mediante convenio de cooperación entre la CCSS, la UCR y la JICA. En 2008 fue adscrito formalmente como servicio hospitalario del Hospital Dr. Maximiliano Peralta Jiménez. En 2017 se avalaron programas técnicos clave como el Tamizaje de Cáncer Colorrectal. Entre 2019 y 2021 se implementaron mejoras organizativas. A partir de 2021 se inició el traslado institucional hacia la Dirección de Centros Especializados. El fundamento legal se basa en el Acuerdo de Junta Directiva Nº 9414 del 5 de marzo de 2024, que autorizó la conformación del CNDTCG como unidad funcional especializada de alcance nacional con número de Unidad Programática 2806, bajo la Dirección de Centros Especializados de la Gerencia Médica."
+  },
+  {
+    "id": "abierta_094",
+    "categoria": "abierta",
+    "pregunta": "Describa la relación del CNDTCG con el mapa de procesos institucional de la CCSS.",
+    "ground_truth": "El CNDTCG se alinea con el Macroproceso Sustantivo de Atención de la Salud en promoción, prevención, recuperación y rehabilitación, y depende de Macroprocesos de Apoyo como gestión de talento humano, abastecimiento, mantenimiento y soporte tecnológico."
+  },
+  {
+    "id": "abierta_095",
+    "categoria": "abierta",
+    "pregunta": "Describa la oferta de servicios del CNDTCG más allá de los programas de tamizaje.",
+    "ground_truth": "La oferta de servicios del CNDTCG más allá de los programas de tamizaje incluye: el Programa de Patología Biliar, que brinda abordaje integral a enfermedades del árbol biliar mediante CPRE, drenajes biliares y extracción de cálculos; el Programa de Resección Submucosa Endoscópica (ESD), que permite la resección en bloque de lesiones precancerosas o neoplasias superficiales; el Programa de Cirugía Mayor, que ofrece tratamiento quirúrgico especializado a personas con lesiones que requieren intervención quirúrgica mayor; el Programa de Cirugía Percutánea, que ofrece alternativa terapéutica mínimamente invasiva mediante técnicas guiadas por imagen; el Programa de Ultrasonido Endoscópico, para evaluación avanzada de lesiones y estadificación; y el Programa de Endoscopía Diagnóstica y de Control, para confirmación diagnóstica y seguimiento de lesiones. Además, ofrece servicios de docencia, formación continua, investigación científica y apoyo técnico a la red institucional."
+  },
+  {
+    "id": "abierta_096",
+    "categoria": "abierta",
+    "pregunta": "Explique la importancia de la interoperabilidad de los sistemas de información (SIAC, SIES, ARCA, SILC, Imágenes Médicas y SIFA) para la trazabilidad de los pacientes en los programas de tamizaje, y cómo su falta de integración afecta la operatividad del Plan de Abordaje Integral.",
+    "ground_truth": "Según el Plan de Abordaje Integral, la interoperabilidad de los sistemas de información es fundamental para lograr la trazabilidad permanente de los participantes en los programas de tamizaje. Cada sistema cumple una función específica: SIAC (Sistema de Identificación, Agendas y Citas) gestiona la programación de procedimientos; SIES (Sistema de Información de Estadísticas en Salud) registra y analiza datos clínicos; ARCA registra procedimientos y resultados de laboratorio y patología; SILC (Sistema Integrado de Laboratorios Clínicos) centraliza los resultados de laboratorio; Imágenes Médicas gestiona estudios de diagnóstico por imagen; y SIFA gestiona aspectos financieros y administrativos. La interoperabilidad entre estos sistemas permite que la información fluya desde la captación del paciente (datos de población adscrita), pasando por la programación de pruebas de tamizaje (SGD y FIT), la obtención de resultados (imágenes de SGD a través de Soluciones Tecnológicas Definidas para Imágenes Médicas, resultados FIT a través del SILC), la programación de endoscopias confirmatorias (SIAC), los resultados de biopsias (ARCA-Patología), hasta el seguimiento y tratamiento completo del paciente. Sin embargo, el plan identifica que actualmente existe una falta de interoperabilidad: no todos los equipos de fluoroscopia están conectados a las Soluciones Tecnológicas Definidas para Imágenes Médicas; el SILC solo alcanza el 16% de los laboratorios clínicos; y el EDUS no fue diseñado específicamente para programas de tamizaje. Esta falta de integración impide la trazabilidad efectiva, dificulta el monitoreo de indicadores de desempeño (como ausentismo, tiempos de espera y tasas de detección), limita la toma de decisiones basada en datos y compromete la eficiencia y efectividad de los programas. Por ello, el plan establece como prioritaria la implementación de modificaciones en el EDUS y la integración plena de estos sistemas para garantizar la trazabilidad completa del paciente desde la captación hasta el tratamiento y seguimiento postratamiento."
+  },
+  {
+    "id": "abierta_097",
+    "categoria": "abierta",
+    "pregunta": "Describa el equipamiento tecnológico con que cuenta el CNDTCG para sus procedimientos.",
+    "ground_truth": "El equipamiento del CNDTCG incluye: torres de endoscopía de alta definición para procedimientos digestivos altos y bajos; equipamiento para ESD (cuchillos endoscópicos, inyectores submucosos, clips hemostáticos y unidades electroquirúrgicas); equipo de ultrasonido endoscópico (USE) para estadificación loco-regional y evaluación de lesiones; equipo para CPRE con accesorios para drenaje biliar, esfinterotomías, extracción de cálculos y colocación de prótesis; fluoroscopio de alta resolución para procedimientos intervencionistas; equipo de tomografía (TAC) para estudios de estadificación oncológica; ultrasonido convencional para valoraciones clínicas; monitores multiparámetros y bombas de infusión para sedación; instrumental quirúrgico especializado para laparotomía, laparoscopía y cirugía percutánea; equipos de apoyo en recuperación; y estaciones de trabajo informáticas articuladas con sistemas institucionales como EDUS."
+  },
+  {
+    "id": "abierta_098",
+    "categoria": "abierta",
+    "pregunta": "Describa los indicadores de cobertura de población objetivo en los programas de tamizaje.",
+    "ground_truth": "Miden el porcentaje de personas entre 50-74 años tamizadas, calculado como (Número de tamizados / Población objetivo) × 100, con periodicidad trimestral y fuentes SIAC, SIES y Plataforma de Tamizaje, permitiendo evaluar el alcance de los programas y orientar estrategias de captación."
+  },
+  {
+    "id": "abierta_099",
+    "categoria": "abierta",
+    "pregunta": "Describa la oferta de servicios del CNDTCG más allá de los programas de tamizaje.",
+    "ground_truth": "Incluye Patología Biliar (CPRE, drenajes, extracción de cálculos), Resección Submucosa Endoscópica (ESD), Cirugía Mayor (gastrectomías, colectomías), Cirugía Percutánea (procedimientos guiados por imagen), Ultrasonido Endoscópico (estadificación y biopsias) y Endoscopía Diagnóstica y de Control (seguimiento de lesiones), además de docencia, investigación y apoyo técnico a la red institucional."
+  },
+  {
+    "id": "abierta_100",
+    "categoria": "abierta",
+    "pregunta": "Explique el rol del Anestesiólogo en los procedimientos del CNDTCG y su importancia en la seguridad del paciente.",
+    "ground_truth": "El Anestesiólogo en el CNDTCG es responsable de la evaluación, administración y monitoreo de la anestesia en procedimientos diagnósticos y terapéuticos, garantizando la seguridad, estabilidad clínica y bienestar de las personas usuarias. Su intervención es esencial en procedimientos de endoscopía de alta complejidad (gastroscopías, colonoscopías, CPRE, ESD), cirugía ambulatoria, cirugía percutánea y cirugía mayor, los cuales requieren sedación profunda o anestesia general según el tipo de abordaje y condiciones del paciente. Durante la CPRE, el Anestesiólogo cumple un rol determinante en el manejo de la vía aérea, el control hemodinámico y la sedación sostenida, dado que es un procedimiento prolongado con potencial de complicaciones que demanda vigilancia continua y toma de decisiones rápida. Además, realiza la valoración preanestésica, define el esquema anestésico más adecuado, supervisa la recuperación y maneja el dolor postoperatorio. También contribuye en la capacitación del personal sobre sedación segura, uso de monitores, control de eventos adversos y estándares de seguridad anestésica, y participa en investigación clínica sobre anestesia ambulatoria y recuperación acelerada, fortaleciendo así la seguridad del paciente y la eficiencia del centro."
+  }
+]
