@@ -11,6 +11,7 @@
 
 set -euo pipefail
 
+module load miniconda/3
 conda activate llm-env
 
 export HF_HOME=/data/$USER/huggingface_cache
