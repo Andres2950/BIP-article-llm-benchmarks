@@ -75,10 +75,10 @@ conda create -n llm-env python=3.10 -y
 Active el entorno:
 
 ```bash
-source activate llm-env
+conda activate llm-env
 ```
 
-**Nota:** En los nodos de cómputo (dentro de scripts SLURM) se debe usar `source activate llm-env`, ya que `conda activate` puede fallar sin la inicialización completa del shell.
+**Nota:** En Kabré el entorno se activa con `conda activate llm-env`. `source activate` no funciona.
 
 ---
 
@@ -160,7 +160,7 @@ Contenido:
 set -euo pipefail
 
 module load miniconda/3
-source activate llm-env
+conda activate llm-env
 
 export HF_HOME=/data/$USER/huggingface_cache
 export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
@@ -199,7 +199,7 @@ Contenido:
 set -euo pipefail
 
 module load miniconda/3
-source activate llm-env
+conda activate llm-env
 
 export HF_HOME=/data/$USER/huggingface_cache
 export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
@@ -301,11 +301,11 @@ scancel -u usuario
 
 ## Notas importantes
 
-- **Módulo de Miniconda:** Siempre cargue `module load miniconda/3` antes de usar `conda` o `source activate`. Puede agregar esta línea a su `~/.bashrc` para que se cargue automáticamente al iniciar sesión.
-- **Uso de `source activate`:** Dentro de los scripts SLURM, utilice `source activate llm-env` en lugar de `conda activate`, ya que el entorno de ejecución de los nodos no siempre tiene inicializado el shell para `conda activate`.
+- **Módulo de Miniconda:** Siempre cargue `module load miniconda/3` antes de usar `conda`. Puede agregar esta línea a su `~/.bashrc` para que se cargue automáticamente al iniciar sesión.
+- **Activar el entorno:** Use `conda activate llm-env`. En Kabré `source activate` no funciona.
 - **Nodos excluidos:** El script `benchmark_full.slurm` excluye `nukwa-00` a `nukwa-03` debido a que esos nodos son muy pequeños. 
 - **Cache de Hugging Face:** Se almacena en `/data/$USER/huggingface_cache`. Verifique el espacio disponible con `df -h /data`.
-- **Al cambiar de nodo de login:** Recuerde volver a cargar el módulo y activar el entorno: `module load miniconda/3` y `source activate llm-env`.
+- **Al cambiar de nodo de login:** Recuerde volver a cargar el módulo y activar el entorno: `module load miniconda/3` y `conda activate llm-env`.
 
 ---
 
@@ -314,8 +314,8 @@ scancel -u usuario
 | Problema | Causa probable | Solución |
 |----------|---------------|----------|
 | `conda: command not found` | El módulo de Miniconda no está cargado | Ejecutar `module load miniconda/3` |
-| `source activate: No such file or directory` | El módulo no está cargado o el entorno no existe | Cargar el módulo y verificar la existencia del entorno |
-| `conda: error: invalid choice 'activate'` | Se usó `conda activate` en un script SLURM sin inicialización previa | Reemplazar por `source activate llm-env` |
+| `conda activate` no encuentra el entorno | El módulo no está cargado o el entorno no existe | Ejecutar `module load miniconda/3` y verificar que `llm-env` exista |
+| `source activate: No such file or directory` | Kabré no usa `source activate` | Reemplazar por `conda activate llm-env` |
 | `ModuleNotFoundError` | Falta alguna dependencia de Python | Instalar con `pip install -r requirements.txt` y verificar `llama-cpp-python` |
 | `CUDA out of memory` | El modelo es demasiado grande para la GPU disponible | Reducir `gpu_layers` o usar una cuantización más agresiva |
 | Trabajo en estado `PD` (pending) | No hay recursos disponibles en la cola | Esperar; si persiste, probar con menos CPUs o memoria |

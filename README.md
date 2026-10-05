@@ -92,7 +92,7 @@ conda create -n llm-env python=3.11 -y
 conda activate llm-env
 ```
 
-El punto y el espacio del primer comando son obligatorios. Dentro de un job de SLURM use `source activate llm-env`. `conda activate` falla si el shell del nodo no inicializó conda.
+El punto y el espacio del primer comando son obligatorios. Dentro de un job de SLURM use `conda activate llm-env`.
 
 ### 3. Instalar dependencias
 
@@ -139,6 +139,7 @@ Prueba de una pregunta (`--question_id 54`), en la cola de depuración de Nukwa 
 
 set -euo pipefail
 
+. /opt/Modules/3.2.10/init/sh
 module load miniconda/3
 conda activate llm-env
 
@@ -168,6 +169,7 @@ Benchmark completo, cola `nukwa` (máximo 24 horas). Se excluyen `nukwa-00` a `n
 
 set -euo pipefail
 
+. /opt/Modules/3.2.10/init/sh
 module load miniconda/3
 conda activate llm-env
 
