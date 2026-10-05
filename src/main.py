@@ -2,6 +2,7 @@ import argparse
 from pathlib import Path
 import pandas as pd
 import random
+import secrets
 from datetime import datetime
 import gc
 import torch
@@ -14,14 +15,17 @@ from wrappers import load_model_from_config, unload_model
 from model_config import MODELS
 
 
-TYPES_RANGES = {
-    "yes_no": (1, 100),
-    "short_answer": (101, 200),
-    "open_ended": (201, 300)
+# El CSV usa "yes/no"; el resto del pipeline (prompt, métricas) usa "yes_no".
+TYPE_ALIASES = {
+    "yes/no": "yes_no",
+    "yes_no": "yes_no",
+    "short_answer": "short_answer",
+    "open_ended": "open_ended",
 }
 
-BAG_SIZE_PER_TYPE = 100 # 3 * 100 = 300 preguntas por bag completa
-NUM_BAGS = 3 # 3 bags por modelo 300 * 3 = 900 preguntas por modelo
+BAG_SIZE_PER_TYPE = 100 # 100 preguntas de cada tipo por bag
+NUM_BAGS = 3 # 3 bags por modelo
+SEED = None # None genera una semilla; un entero fija el muestreo de las bags
 
 
 RECORD_COLUMNS = [
@@ -37,11 +41,11 @@ RECORD_COLUMNS = [
 GGUF_BASE_PATH = "/data/edelgado/models"
 
 
-def get_question_type(q_id):
-    for tipo, (inicio, fin) in TYPES_RANGES.items():
-        if inicio <= q_id <= fin:
-            return tipo
-    return 'unknown'
+def normalize_question_type(raw_type):
+    key = str(raw_type).strip().lower()
+    if key not in TYPE_ALIASES:
+        raise ValueError(f"Tipo de pregunta desconocido en la columna Type: {raw_type!r}")
+    return TYPE_ALIASES[key]
 
 
 def parse_arguments():
@@ -50,7 +54,7 @@ def parse_arguments():
     parser.add_argument("--context-docs", type=str, default="./context_docs",
                         help="Path to the context documents directory")
     parser.add_argument("--dataset", type=str, default="./datasets/dataset_normativas.csv",
-                        help="Path to the CSV dataset file with columns: ID, Question, Answer")
+                        help="Path to the CSV dataset file with columns: ID, Type, Question, Answer")
     parser.add_argument("--question_id", type=int, default=None,
                         help="Question ID in the csv dataset file (if not provided, all questions will be benchmarked)")
     return parser.parse_args()
@@ -72,17 +76,39 @@ def load_context(dir_path):
 
 def load_dataset(path, question_id=None):
     df = pd.read_csv(path)
+    if "Type" not in df.columns:
+        raise ValueError("El dataset debe incluir la columna Type")
+
     df["ID"] = df["ID"].astype(int)
+    df["question_type"] = df["Type"].map(normalize_question_type)
 
     if question_id is not None:
         df = df[df["ID"] == question_id]
+        if df.empty:
+            raise ValueError(f"No hay pregunta con ID {question_id}")
         return df.to_dict("records")
 
     groups = {}
-    for tipo, (start, end) in TYPES_RANGES.items():
-        group = df[(df["ID"] >= start) & (df["ID"] <= end)]
+    for tipo, group in df.groupby("question_type", sort=False):
         groups[tipo] = group.to_dict("records")
     return groups
+
+
+def resolve_seed(seed):
+    if seed is None:
+        seed = secrets.randbits(32)
+    random.seed(seed)
+    return seed
+
+
+def build_bags(question_groups):
+    bags = []
+    for _ in range(NUM_BAGS):
+        sampled_questions = []
+        for q_list in question_groups.values():
+            sampled_questions.extend(random.choices(q_list, k=BAG_SIZE_PER_TYPE))
+        bags.append(sampled_questions)
+    return bags
 
 
 if __name__ == "__main__":
@@ -93,7 +119,7 @@ if __name__ == "__main__":
     if isinstance(question_groups, list):
         print("Single questin mode")
         row = question_groups[0]
-        question_type = get_question_type(row["ID"])
+        question_type = row["question_type"]
         for model_cfg in MODELS:
             print(f"Loading model {model_cfg.name}")
             wrapper = load_model_from_config(model_cfg, args.temperature)
@@ -105,7 +131,11 @@ if __name__ == "__main__":
             unload_model(wrapper)
         exit()
 
-    # Modo completo: crear CSV y ejecutar todas las preguntas
+    # Modo completo: mismas bags para todos los modelos
+    seed = resolve_seed(SEED)
+    bags = build_bags(question_groups)
+    print(f"Seed: {seed}")
+
     csv_path = f"./out/benchmark_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv"
     pd.DataFrame(columns=RECORD_COLUMNS).to_csv(csv_path, index=False)
     print(f"Saving results incrementally to {csv_path}")
@@ -115,15 +145,10 @@ if __name__ == "__main__":
         print(f"Loading model {model_cfg.name}")
         wrapper = load_model_from_config(model_cfg, args.temperature)
 
-        for bag_id in range(NUM_BAGS):
-            sampled_questions = []
-            for q_type, q_list in question_groups.items():
-                sample = random.choices(q_list, k=BAG_SIZE_PER_TYPE)
-                sampled_questions.extend(sample)
-
+        for bag_id, sampled_questions in enumerate(bags):
             for row in sampled_questions:
                 question = row["Question"]
-                question_type = get_question_type(row["ID"])
+                question_type = row["question_type"]
                 expected_answer = row["Answer"]
                 question_id = row["ID"]
 

@@ -71,7 +71,7 @@ class Benchmark:
         if result["memory"] is not None:
             print(f"RAM: {result['memory']['avg']}MB (min: {result['memory']['min']}MB, max: {result['memory']['max']}MB)")
         if result["gpu_util"] is not None:
-            print(f"GPU: {result['gpu_util']['avg']}% (min: {result['gpu_util']['min']}%, max: {result['gpu_util']['max']}%)")
+            print(f"GPU proceso: {result['gpu_util']['avg']}% (min: {result['gpu_util']['min']}%, max: {result['gpu_util']['max']}%)")
         if result["gpu_mem"] is not None:
-            print(f"GPU Mem: {result['gpu_mem']['avg']}MB (min: {result['gpu_mem']['min']}MB, max: {result['gpu_mem']['max']}MB)")
+            print(f"GPU Mem proceso: {result['gpu_mem']['avg']}MB (min: {result['gpu_mem']['min']}MB, max: {result['gpu_mem']['max']}MB)")
         print("\n" + "=" * 10)

@@ -60,6 +60,106 @@ def acierto_binario(esperada: str, obtenida: str):
         return None
     return 1.0 if e == o else 0.0
 
+
+def _es_acierto(valor) -> float:
+    if valor is None or pd.isna(valor):
+        return 0.0
+    return float(valor)
+
+
+def calcular_pesos_si_no(df: pd.DataFrame) -> dict:
+    """Pesos por bag para que sí y no aporten lo mismo.
+
+    Se calculan una vez con las respuestas esperadas del primer modelo:
+    las bags son las mismas para todos. Cada clase presente reparte 1/n_clases
+    entre sus filas (0.5 / n_clase cuando hay sí y no).
+    """
+    yes_no = df[df["question_type"] == "yes_no"]
+    if yes_no.empty:
+        return {}
+
+    modelo_ref = yes_no["model"].iloc[0]
+    referencia = yes_no[yes_no["model"] == modelo_ref]
+    pesos = {}
+
+    for bag_id, grupo in referencia.groupby("bag_id"):
+        n_si, n_no, pesos_bag = _pesos_de_grupo(grupo)
+        pesos[int(bag_id)] = {"n_si": n_si, "n_no": n_no, "pesos": pesos_bag}
+        print(
+            f"Pesos bag {int(bag_id)} (desde {modelo_ref}): "
+            f"sí={n_si} peso={pesos_bag.get(True)}, no={n_no} peso={pesos_bag.get(False)}"
+        )
+
+    for modelo, grupo_modelo in yes_no.groupby("model"):
+        if modelo == modelo_ref:
+            continue
+        for bag_id, grupo in grupo_modelo.groupby("bag_id"):
+            n_si, n_no, _ = _pesos_de_grupo(grupo)
+            ref = pesos.get(int(bag_id))
+            if ref is None or n_si != ref["n_si"] or n_no != ref["n_no"]:
+                raise ValueError(
+                    f"La bag {int(bag_id)} de {modelo} no tiene la misma mezcla "
+                    f"sí/no que {modelo_ref} ({n_si} sí, {n_no} no)"
+                )
+
+    return pesos
+
+
+def _pesos_de_grupo(grupo: pd.DataFrame):
+    clases = [extraer_si_no(str(respuesta)) for respuesta in grupo["expected_answer"]]
+    n_si = sum(clase is True for clase in clases)
+    n_no = sum(clase is False for clase in clases)
+    n_clases = (n_si > 0) + (n_no > 0)
+    pesos_bag = {}
+    if n_clases:
+        parte = 1.0 / n_clases
+        if n_si:
+            pesos_bag[True] = parte / n_si
+        if n_no:
+            pesos_bag[False] = parte / n_no
+    return n_si, n_no, pesos_bag
+
+
+def calcular_balanced_accuracy(df: pd.DataFrame, resultado_df: pd.DataFrame) -> pd.DataFrame:
+    """Accuracy balanceada por modelo y bag, reutilizando los pesos de la bag."""
+    vacio = pd.DataFrame(columns=["model", "question_type", "bag_id", "balanced_accuracy"])
+    pesos = calcular_pesos_si_no(df)
+    if not pesos:
+        return vacio
+
+    if len(df) != len(resultado_df):
+        raise ValueError("El detalle de métricas no coincide con el CSV de entrada")
+
+    filas = pd.DataFrame({
+        "bag_id": df["bag_id"].to_numpy(),
+        "model": df["model"].to_numpy(),
+        "question_type": df["question_type"].to_numpy(),
+        "clase": [extraer_si_no(str(respuesta)) for respuesta in df["expected_answer"]],
+        "acierto_binario": resultado_df["acierto_binario"].to_numpy(),
+    })
+    filas = filas[filas["question_type"] == "yes_no"]
+
+    registros = []
+    for (modelo, bag_id), grupo in filas.groupby(["model", "bag_id"], sort=False):
+        pesos_bag = pesos.get(int(bag_id), {}).get("pesos", {})
+        if not pesos_bag:
+            score = None
+        else:
+            score = 0.0
+            for clase, acierto in zip(grupo["clase"], grupo["acierto_binario"]):
+                peso = pesos_bag.get(clase)
+                if peso is None:
+                    continue
+                score += peso * _es_acierto(acierto)
+        registros.append({
+            "model": modelo,
+            "question_type": "yes_no",
+            "bag_id": bag_id,
+            "balanced_accuracy": score,
+        })
+
+    return pd.DataFrame(registros)
+
 #########################
 
 
@@ -161,7 +261,7 @@ def resumen_modelos(resultado_df: pd.DataFrame) -> pd.DataFrame:
     )
 
 
-def resumen_bagging(df_completo: pd.DataFrame) -> dict:
+def resumen_bagging(df_completo: pd.DataFrame, balanced_por_bag: pd.DataFrame | None = None) -> dict:
 
     # Metricas rendimdiento
     metricas_rendimiento = [
@@ -192,17 +292,27 @@ def resumen_bagging(df_completo: pd.DataFrame) -> dict:
         )
     ).round(4)
 
-    # Metricas calidad
-    metricas_calidad = [
+    # Metricas calidad. balanced_accuracy ya viene por bag, no por fila.
+    metricas_fila = [
         "f1_token", "rouge1", "rouge2",
         "meteor", "bertscore",
     ]
+    metricas_calidad = metricas_fila + ["balanced_accuracy"]
     promedio_calidad_por_bag = (
         df_completo
-        .groupby(["model", "question_type", "bag_id"])[metricas_calidad]
+        .groupby(["model", "question_type", "bag_id"])[metricas_fila]
         .mean()
         .reset_index()
     )
+    if balanced_por_bag is not None and not balanced_por_bag.empty:
+        promedio_calidad_por_bag = promedio_calidad_por_bag.merge(
+            balanced_por_bag,
+            on=["model", "question_type", "bag_id"],
+            how="left",
+        )
+    else:
+        promedio_calidad_por_bag["balanced_accuracy"] = pd.NA
+
     stats_calidad_entre_bags = (
         promedio_calidad_por_bag
         .groupby(["model", "question_type"])[metricas_calidad]
@@ -210,9 +320,19 @@ def resumen_bagging(df_completo: pd.DataFrame) -> dict:
     )
     minmax_calidad_crudo = (
         df_completo
-        .groupby(["model", "question_type"])[metricas_calidad]
+        .groupby(["model", "question_type"])[metricas_fila]
         .agg(["min", "max"])
     )
+    if balanced_por_bag is not None and not balanced_por_bag.empty:
+        minmax_bal = (
+            balanced_por_bag
+            .groupby(["model", "question_type"])["balanced_accuracy"]
+            .agg(["min", "max"])
+        )
+        minmax_bal.columns = pd.MultiIndex.from_product(
+            [["balanced_accuracy"], ["min", "max"]]
+        )
+        minmax_calidad_crudo = pd.concat([minmax_calidad_crudo, minmax_bal], axis=1)
     calidad = pd.concat([stats_calidad_entre_bags, minmax_calidad_crudo], axis=1)
     calidad = calidad.reindex(
         columns=pd.MultiIndex.from_product(
@@ -248,6 +368,7 @@ def ejecutar_evaluacion(csv_path: str, out_dir: str | None = None) -> dict:
 
     df = pd.read_csv(csv_path)
     resultado_df = evaluar_dataframe(df)
+    balanced_por_bag = calcular_balanced_accuracy(df, resultado_df)
     ruta_detalle = f"{base_out}_metricas.csv"
     resultado_df.to_csv(ruta_detalle, index=False)
     print(f"Resultados por fila guardados en {ruta_detalle}")
@@ -261,7 +382,7 @@ def ejecutar_evaluacion(csv_path: str, out_dir: str | None = None) -> dict:
         df[columnas_rendimiento], on=["bag_id", "model", "question_id"]
     )
 
-    resumenes = resumen_bagging(df_completo)
+    resumenes = resumen_bagging(df_completo, balanced_por_bag)
 
     ruta_rendimiento = f"{base_out}_rendimiento.csv"
     ruta_calidad = f"{base_out}_calidad.csv"

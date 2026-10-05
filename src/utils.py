@@ -51,8 +51,8 @@ def load_context(dir_path, question, k=5):
 def build_prompt(context, question, question_type):
     type_instructions = {
         "yes_no": "Responde SOLO con la palabra exacta 'sí' o 'no' (sin acentos, sin puntuación, sin texto adicional).",
-        "short_answer": "Responde con una frase corta y concisa de máximo 20 palabras.",
-        "open_ended": "Responde detalladamente pero sin superar las 200 palabras.",
+        "short_answer": "Responde con una frase corta y concisa de máximo 20 palabras, utiliza la menor cantidad de palabras posibles.",
+        "open_ended": "Responde detalladamente pero de forma concisa y clara, sin superar las 150 palabras.",
     }
 
     return f"""
