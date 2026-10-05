@@ -83,13 +83,10 @@ cd BIP-article-llm-benchmarks
 
 ### 2. Crear el entorno con Miniconda
 
-En un nodo Nukwa, `module` no existe hasta cargar el sistema de módulos de AlmaLinux 9:
-
 ```bash
-. /opt/Modules/3.2.10/init/sh
 module load miniconda/3
 conda create -n llm-env python=3.11 -y
-conda activate llm-env
+source activate llm-env
 ```
 
 El punto y el espacio del primer comando son obligatorios. Dentro de un job de SLURM use `conda activate llm-env`.
