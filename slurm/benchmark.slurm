@@ -11,7 +11,6 @@
 
 set -euo pipefail
 
-. /opt/Modules/3.2.10/init/sh
 module load miniconda/3
 conda activate llm-env
 
