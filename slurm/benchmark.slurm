@@ -18,7 +18,7 @@ export HF_HOME=/data/$USER/huggingface_cache
 export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
 
 cd /work/$USER/BIP-article-llm-benchmarks
-mkdir -p logs out
+mkdir -p logs out /data/$USER/huggingface_cache
 
 nvidia-smi
 python src/main.py
