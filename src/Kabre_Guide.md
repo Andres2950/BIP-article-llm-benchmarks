@@ -38,7 +38,7 @@ scp -P 22022 -r /ruta/local/BIP-article-llm-benchmarks usuario@kabre.cenat.ac.cr
 Reemplace `/ruta/local/` con la ubicación real del proyecto en la PC.
 
 ---
-
+ 
 ## 3. Navegar al proyecto
 
 ```bash

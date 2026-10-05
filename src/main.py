@@ -25,7 +25,7 @@ TYPE_ALIASES = {
 
 BAG_SIZE_PER_TYPE = 100 # 100 preguntas de cada tipo por bag
 NUM_BAGS = 3 # 3 bags por modelo
-SEED = None # None genera una semilla; un entero fija el muestreo de las bags
+SEED = 1234224714 # misma semilla en todas las corridas paralelas; None genera una al azar
 
 
 RECORD_COLUMNS = [
