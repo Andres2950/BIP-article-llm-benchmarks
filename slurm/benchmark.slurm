@@ -12,7 +12,7 @@
 set -euo pipefail
 
 module load miniconda/3
-conda activate llm-env
+source activate llm-env
 
 export HF_HOME=/data/$USER/huggingface_cache
 export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
