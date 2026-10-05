@@ -89,7 +89,7 @@ En un nodo Nukwa, `module` no existe hasta cargar el sistema de módulos de Alma
 . /opt/Modules/3.2.10/init/sh
 module load miniconda/3
 conda create -n llm-env python=3.11 -y
-source activate llm-env
+conda activate llm-env
 ```
 
 El punto y el espacio del primer comando son obligatorios. Dentro de un job de SLURM use `source activate llm-env`. `conda activate` falla si el shell del nodo no inicializó conda.
@@ -97,24 +97,19 @@ El punto y el espacio del primer comando son obligatorios. Dentro de un job de S
 ### 3. Instalar dependencias
 
 ```bash
-pip install -r requirements.txt
+PIP_CONFIG_FILE=/dev/null pip install -r requirements.txt --index-url https://pypi.org/simple
 ```
 
-`llama-cpp-python` carga los GGUF y no está en `requirements.txt`. No lo compile. Instale una rueda CUDA ya construida, de una versión de CUDA igual o menor a la que reporta el driver:
+`llama-cpp-python` carga los GGUF y no está en `requirements.txt`. No lo compile. En la L40S de Nukwa el driver reporta CUDA 13.3; la rueda precompilada que cabe es CUDA 13.2 (`cu132`). Python 3.11 la instala: el tag es `py3-none` y el paquete pide `requires-python >= 3.8`.
+
+De ese índice, pip en Nukwa solo acepta 0.3.25, 0.3.26, 0.3.27 y 0.3.28. La 0.3.36 está publicada, pero su rueda es `manylinux_2_35` (glibc 2.35) y AlmaLinux 9 trae glibc 2.34, así que pip ni la lista. Use 0.3.28, la más nueva compatible:
 
 ```bash
-nvidia-smi
-```
-
-En la primera línea aparece `CUDA Version: 12.x`. Use el índice `cu12x` correspondiente (`12.4` → `cu124`). Una rueda más vieja también sirve si el driver es más nuevo. En las V100 no use CUDA 13: esas ruedas piden compute capability 7.5 y la V100 es 7.0. La L40S sí la acepta.
-
-```bash
-pip install llama-cpp-python \
-  --extra-index-url https://abetlen.github.io/llama-cpp-python/whl/cu124 \
+PIP_CONFIG_FILE=/dev/null pip install llama-cpp-python==0.3.28 --isolated \
+  --index-url https://pypi.org/simple \
+  --extra-index-url https://abetlen.github.io/llama-cpp-python/whl/cu132 \
   --only-binary=llama-cpp-python
 ```
-
-Cambie `cu124` por `cu118`, `cu121`, `cu122`, `cu123`, `cu125`, `cu130` o `cu132` según la línea de `nvidia-smi`. `--only-binary` hace que pip falle si no hay rueda, en lugar de compilar.
 
 ### 4. Elegir los modelos
 
@@ -144,9 +139,8 @@ Prueba de una pregunta (`--question_id 54`), en la cola de depuración de Nukwa 
 
 set -euo pipefail
 
-. /opt/Modules/3.2.10/init/sh
 module load miniconda/3
-source activate llm-env
+conda activate llm-env
 
 export HF_HOME=/data/$USER/huggingface_cache
 export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
@@ -174,9 +168,8 @@ Benchmark completo, cola `nukwa` (máximo 24 horas). Se excluyen `nukwa-00` a `n
 
 set -euo pipefail
 
-. /opt/Modules/3.2.10/init/sh
 module load miniconda/3
-source activate llm-env
+conda activate llm-env
 
 export HF_HOME=/data/$USER/huggingface_cache
 export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True

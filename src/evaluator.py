@@ -9,6 +9,7 @@ import nltk
 from nltk.tokenize import word_tokenize
 from nltk.translate.meteor_score import meteor_score
 from rouge_score import rouge_scorer
+from rouge_score.tokenizers import Tokenizer
 
 try:
     from bert_score import score as bert_score_fn
@@ -163,9 +164,25 @@ def calcular_balanced_accuracy(df: pd.DataFrame, resultado_df: pd.DataFrame) -> 
 #########################
 
 
+class TokenizerEspanol(Tokenizer):
+    """El tokenizer de rouge_score borra todo lo que no es [a-z0-9].
+
+    Eso parte cáncer en c + ncer y detección en detecci + n. Aquí se
+    conservan las letras Unicode, incluidos acentos y ñ.
+    """
+
+    _separador = re.compile(r"[^\w]+", flags=re.UNICODE)
+
+    def tokenize(self, text):
+        text = text.lower().replace("_", " ")
+        text = self._separador.sub(" ", text)
+        return [token for token in text.split() if token]
+
+
 _rouge_scorer = rouge_scorer.RougeScorer(
     ["rouge1", "rouge2"],
-    use_stemmer=False
+    use_stemmer=False,
+    tokenizer=TokenizerEspanol(),
 )
 
 
