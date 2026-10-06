@@ -12,8 +12,12 @@
 set -euo pipefail
 
 module load miniconda/3
-source activate llm-env
+source activate /work/$USER/envs/llm-env
 
+mkdir -p logs out /data/$USER/huggingface_cache /work/$USER/conda-pkgs /work/$USER/pip-cache
+
+export CONDA_PKGS_DIRS=/work/$USER/conda-pkgs
+export PIP_CACHE_DIR=/work/$USER/pip-cache
 export HF_HOME=/data/$USER/huggingface_cache
 export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
 

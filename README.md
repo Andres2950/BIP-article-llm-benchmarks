@@ -83,13 +83,21 @@ cd BIP-article-llm-benchmarks
 
 ### 2. Crear el entorno con Miniconda
 
+`/home` solo tiene 10 GB. Un `conda create -n` cae en `~/.conda/envs` y pip llena ese disco. Cree el entorno en `/work`, que tiene 100 GB, y deje ahí también la caché de conda y de pip:
+
 ```bash
+mkdir -p /work/$USER/envs /work/$USER/conda-pkgs /work/$USER/pip-cache
+export CONDA_PKGS_DIRS=/work/$USER/conda-pkgs
+export PIP_CACHE_DIR=/work/$USER/pip-cache
+
 module load miniconda/3
-conda create -n llm-env python=3.11 -y
-source activate llm-env
+conda create --prefix /work/$USER/envs/llm-env python=3.11 -y
+source activate /work/$USER/envs/llm-env
 ```
 
-El punto y el espacio del primer comando son obligatorios. Dentro de un job de SLURM use `conda activate llm-env`.
+En un nodo Nukwa, el punto y el espacio del primer comando son obligatorios: sin eso `module` no existe.
+
+`--prefix` fija la ruta. `conda activate` lleva esa ruta completa, no el nombre `llm-env`. El entorno que ya quedó en el home no se mueve: deje de usarlo. Cuando el nuevo funcione, puede borrarlo con `conda remove -n llm-env --all`.
 
 ### 3. Instalar dependencias
 
@@ -130,15 +138,15 @@ Prueba de una pregunta (`--question_id 54`), en la cola de depuración de Nukwa 
 #SBATCH --partition=nukwa-debug
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=4
-#SBATCH --mem=32G
-#SBATCH --time=01:00:00
+#SBATCH --mem=64G
+#SBATCH --time=02:00:00
 #SBATCH --exclude=nukwa-00.cnca,nukwa-01.cnca,nukwa-02.cnca,nukwa-03.cnca
 
 set -euo pipefail
 
 . /opt/Modules/3.2.10/init/sh
 module load miniconda/3
-conda activate llm-env
+conda activate /work/$USER/envs/llm-env
 
 export HF_HOME=/data/$USER/huggingface_cache
 export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
@@ -168,7 +176,7 @@ set -euo pipefail
 
 . /opt/Modules/3.2.10/init/sh
 module load miniconda/3
-conda activate llm-env
+conda activate /work/$USER/envs/llm-env
 
 export HF_HOME=/data/$USER/huggingface_cache
 export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
