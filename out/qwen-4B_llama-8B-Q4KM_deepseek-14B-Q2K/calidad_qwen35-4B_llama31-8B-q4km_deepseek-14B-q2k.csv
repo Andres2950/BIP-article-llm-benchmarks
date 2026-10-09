@@ -1,0 +1,12 @@
+,,f1_token,f1_token,f1_token,f1_token,rouge1,rouge1,rouge1,rouge1,rouge2,rouge2,rouge2,rouge2,meteor,meteor,meteor,meteor,bertscore,bertscore,bertscore,bertscore,balanced_accuracy,balanced_accuracy,balanced_accuracy,balanced_accuracy
+,,mean,std,min,max,mean,std,min,max,mean,std,min,max,mean,std,min,max,mean,std,min,max,mean,std,min,max
+model,question_type,,,,,,,,,,,,,,,,,,,,,,,,
+DeepSeek-R1-Distill-Qwen-14B-Q2_K,open_ended,,,,,0.386,0.0314,0.0,0.7975,0.1612,0.017,0.0,0.5963,0.2748,0.021,0.0069,0.7787,0.7192912604157683,0.0179,0.4820961654186249,0.8928896188735962,,,,
+DeepSeek-R1-Distill-Qwen-14B-Q2_K,short_answer,0.1578,0.0108,0.0,0.8,,,,,,,,,,,,,,,,,,,,
+DeepSeek-R1-Distill-Qwen-14B-Q2_K,yes_no,0.758,0.0315,0.0,1.0,,,,,,,,,,,,,,,,,0.7298,0.0133,0.7147,0.7396
+Llama-3.1-8B-Instruct-Q4_K_M,open_ended,,,,,0.2329,0.0222,0.0,0.4504,0.0898,0.0084,0.0,0.2785,0.2591,0.0162,0.022,0.6579,0.6565781579950444,0.0086,0.4721071124076843,0.7622043490409851,,,,
+Llama-3.1-8B-Instruct-Q4_K_M,short_answer,0.0585,0.0103,0.0,0.6667,,,,,,,,,,,,,,,,,,,,
+Llama-3.1-8B-Instruct-Q4_K_M,yes_no,0.6913,0.0099,0.0,1.0,,,,,,,,,,,,,,,,,0.7331,0.0244,0.7051,0.75
+Qwen3.5-4B,open_ended,,,,,0.0883,0.0019,0.004,0.3012,0.0139,0.0014,0.0,0.1241,0.134,0.0038,0.0312,0.394,0.5964844829427501,0.0004,0.5134203433990479,0.6934790015220642,,,,
+Qwen3.5-4B,short_answer,0.0066,0.0035,0.0,0.0784,,,,,,,,,,,,,,,,,,,,
+Qwen3.5-4B,yes_no,0.0309,0.021,0.0,1.0,,,,,,,,,,,,,,,,,0.04,0.0254,0.0201,0.0686

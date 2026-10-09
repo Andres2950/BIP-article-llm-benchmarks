@@ -1,0 +1,4 @@
+,total_duration_sec,total_duration_sec,total_duration_sec,total_duration_sec,output_tokens,output_tokens,output_tokens,output_tokens,cpu_avg,cpu_avg,cpu_avg,cpu_avg,memory_avg,memory_avg,memory_avg,memory_avg,gpu_util_avg,gpu_util_avg,gpu_util_avg,gpu_util_avg,gpu_mem_avg,gpu_mem_avg,gpu_mem_avg,gpu_mem_avg
+,mean,std,min,max,mean,std,min,max,mean,std,min,max,mean,std,min,max,mean,std,min,max,mean,std,min,max
+model,,,,,,,,,,,,,,,,,,,,,,,,
+Qwen3.5-35B-A3B-Q4_K_M,1.8549,0.0433,0.2858,3.6673,252.7355,4.5813,13,500,94.9918,0.4774,53.0437,104.8167,2472.919,14.9943,2324.3125,2594.1016,84.6352,1.346,28.5,97.0,21414.4535,2.6786,21374.0,21416.0

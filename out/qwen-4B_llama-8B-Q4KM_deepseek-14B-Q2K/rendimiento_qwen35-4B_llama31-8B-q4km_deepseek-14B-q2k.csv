@@ -1,0 +1,6 @@
+,total_duration_sec,total_duration_sec,total_duration_sec,total_duration_sec,output_tokens,output_tokens,output_tokens,output_tokens,cpu_avg,cpu_avg,cpu_avg,cpu_avg,memory_avg,memory_avg,memory_avg,memory_avg,gpu_util_avg,gpu_util_avg,gpu_util_avg,gpu_util_avg,gpu_mem_avg,gpu_mem_avg,gpu_mem_avg,gpu_mem_avg
+,mean,std,min,max,mean,std,min,max,mean,std,min,max,mean,std,min,max,mean,std,min,max,mean,std,min,max
+model,,,,,,,,,,,,,,,,,,,,,,,,
+DeepSeek-R1-Distill-Qwen-14B-Q2_K,1.2343,0.0355,0.0459,5.9794,77.3132,2.4494,4,505,94.5496,0.6261,39.9,129.8,4993.876,39.2493,4935.2099,5032.9043,92.2155,0.2139,51.0,99.0,10346.3384,6.342,10287.2727,10350.0
+Llama-3.1-8B-Instruct-Q4_K_M,2.2279,0.0146,0.1496,4.4172,248.1958,2.5298,2,501,96.1769,0.2134,63.2333,115.82,3891.985,70.5543,3742.1274,3945.5794,91.9857,0.3268,53.5,99.0,8169.6572,0.5937,8139.0,8170.0
+Qwen3.5-4B,7.6621,0.1241,1.5284,16.2545,251.6053,3.1673,47,502,98.4046,0.1149,63.4286,103.5562,3234.5383,41.7766,3034.9847,3275.9641,39.4453,0.137,22.8462,46.875,4228.0655,31.0634,3815.84,4246.0

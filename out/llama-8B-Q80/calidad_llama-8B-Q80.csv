@@ -1,0 +1,6 @@
+,,f1_token,f1_token,f1_token,f1_token,rouge1,rouge1,rouge1,rouge1,rouge2,rouge2,rouge2,rouge2,meteor,meteor,meteor,meteor,bertscore,bertscore,bertscore,bertscore,balanced_accuracy,balanced_accuracy,balanced_accuracy,balanced_accuracy
+,,mean,std,min,max,mean,std,min,max,mean,std,min,max,mean,std,min,max,mean,std,min,max,mean,std,min,max
+model,question_type,,,,,,,,,,,,,,,,,,,,,,,,
+Llama-3.1-8B-Instruct-Q8_0,open_ended,,,,,0.2328,0.0247,0.0,0.431,0.0914,0.0098,0.0,0.3237,0.259,0.0138,0.0041,0.6529,0.6521626974339716,0.0137,0.4367646276950836,0.7693920135498047,,,,
+Llama-3.1-8B-Instruct-Q8_0,short_answer,0.061,0.0043,0.0,0.9,,,,,,,,,,,,,,,,,,,,
+Llama-3.1-8B-Instruct-Q8_0,yes_no,0.8152,0.0651,0.0,1.0,,,,,,,,,,,,,,,,,0.8143,0.0386,0.7827,0.8574
