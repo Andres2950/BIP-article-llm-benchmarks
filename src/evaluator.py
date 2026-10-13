@@ -121,9 +121,46 @@ def _pesos_de_grupo(grupo: pd.DataFrame):
     return n_si, n_no, pesos_bag
 
 
+def aislar_respuesta(texto: str) -> str:
+    """Texto después del último </think>, cortado en el siguiente <think>.
+
+    Es el recorte con el que se rescata la respuesta del razonamiento.
+    Si el modelo no cierra el bloque, el resultado queda vacío.
+    """
+    t = str(texto)
+    if "</think>" in t:
+        t = t.rsplit("</think>", 1)[-1]
+    t = re.split(r"<think>", t, maxsplit=1, flags=re.IGNORECASE)[0]
+    return t.strip()
+
+
+def tiene_razonamiento(texto: str) -> float:
+    """1 si el texto guardado trae un marcador de razonamiento, 0 si no.
+
+    Los marcadores son <think>, </think> y 'Thinking Process'. En las
+    preguntas sí/no el CSV ya guarda solo la etiqueta extraída, así que
+    esta marca casi no aparece ahí aunque el modelo haya razonado.
+    """
+    t = str(texto).lower()
+    if "</think>" in t or "<think>" in t or "thinking process" in t:
+        return 1.0
+    return 0.0
+
+
 def calcular_balanced_accuracy(df: pd.DataFrame, resultado_df: pd.DataFrame) -> pd.DataFrame:
-    """Accuracy balanceada por modelo y bag, reutilizando los pesos de la bag."""
-    vacio = pd.DataFrame(columns=["model", "question_type", "bag_id", "balanced_accuracy"])
+    """Métricas de sí/no por modelo y bag.
+
+    balanced_accuracy reparte 0.5 entre cada clase; una respuesta sin
+    etiqueta cuenta como error. recall_si y recall_no usan el mismo
+    criterio. tasa_parseo es la fracción con etiqueta extraíble.
+    proporcion_si es la fracción cuya etiqueta es sí; las que no parsean
+    no cuentan como sí.
+    """
+    columnas = [
+        "model", "question_type", "bag_id", "balanced_accuracy",
+        "recall_si", "recall_no", "tasa_parseo", "proporcion_si",
+    ]
+    vacio = pd.DataFrame(columns=columnas)
     pesos = calcular_pesos_si_no(df)
     if not pesos:
         return vacio
@@ -136,6 +173,7 @@ def calcular_balanced_accuracy(df: pd.DataFrame, resultado_df: pd.DataFrame) -> 
         "model": df["model"].to_numpy(),
         "question_type": df["question_type"].to_numpy(),
         "clase": [extraer_si_no(str(respuesta)) for respuesta in df["expected_answer"]],
+        "pred": [extraer_si_no(str(respuesta)) for respuesta in df["response"]],
         "acierto_binario": resultado_df["acierto_binario"].to_numpy(),
     })
     filas = filas[filas["question_type"] == "yes_no"]
@@ -152,11 +190,23 @@ def calcular_balanced_accuracy(df: pd.DataFrame, resultado_df: pd.DataFrame) -> 
                 if peso is None:
                     continue
                 score += peso * _es_acierto(acierto)
+
+        clases = list(grupo["clase"])
+        preds = list(grupo["pred"])
+        n_si = sum(clase is True for clase in clases)
+        n_no = sum(clase is False for clase in clases)
+        aciertos_si = sum(pred is True and clase is True for pred, clase in zip(preds, clases))
+        aciertos_no = sum(pred is False and clase is False for pred, clase in zip(preds, clases))
+        n = len(grupo)
         registros.append({
             "model": modelo,
             "question_type": "yes_no",
             "bag_id": bag_id,
             "balanced_accuracy": score,
+            "recall_si": (aciertos_si / n_si) if n_si else None,
+            "recall_no": (aciertos_no / n_no) if n_no else None,
+            "tasa_parseo": sum(pred is not None for pred in preds) / n if n else None,
+            "proporcion_si": sum(pred is True for pred in preds) / n if n else None,
         })
 
     return pd.DataFrame(registros)
@@ -229,6 +279,7 @@ def evaluar_dataframe(df: pd.DataFrame) -> pd.DataFrame:
         obtenida = str(fila["response"])
         tipo = fila["question_type"]
 
+        aislada = aislar_respuesta(obtenida)
         r = {
             "bag_id": fila["bag_id"],
             "model": fila["model"],
@@ -240,16 +291,24 @@ def evaluar_dataframe(df: pd.DataFrame) -> pd.DataFrame:
             "rouge2": None,
             "meteor": None,
             "bertscore": None,
+            "razonamiento": tiene_razonamiento(obtenida),
+            "f1_aislado": None,
+            "rouge1_aislado": None,
+            "rouge2_aislado": None,
         }
 
         if tipo in ("yes_no", "short_answer"):
             r["f1_token"] = f1_score(esperada, obtenida)
+            r["f1_aislado"] = f1_score(esperada, aislada)
             if tipo == "yes_no":
                 r["acierto_binario"] = acierto_binario(esperada, obtenida)
 
         elif tipo == "open_ended":
             r.update(calcular_rouge(esperada, obtenida))
             r["meteor"] = calcular_meteor(esperada, obtenida)
+            aislado = calcular_rouge(esperada, aislada)
+            r["rouge1_aislado"] = aislado["rouge1"]
+            r["rouge2_aislado"] = aislado["rouge2"]
 
         resultados.append(r)
 
@@ -278,9 +337,26 @@ def resumen_modelos(resultado_df: pd.DataFrame) -> pd.DataFrame:
     )
 
 
+def _throughput_por_bag(df_completo: pd.DataFrame) -> pd.DataFrame:
+    """Tokens por segundo de cada bag: tokens emitidos / segundos de generación.
+
+    No es el promedio de los cocientes por pregunta. Una pregunta corta
+    pesaría igual que una larga, y el número del paper es el cociente de
+    los totales.
+    """
+    suma = (
+        df_completo
+        .groupby(["model", "bag_id"])[["output_tokens", "total_duration_sec"]]
+        .sum()
+    )
+    duracion = suma["total_duration_sec"].where(suma["total_duration_sec"] > 0)
+    tasa = (suma["output_tokens"] / duracion).rename("tokens_per_sec")
+    return tasa.reset_index()
+
+
 def resumen_bagging(df_completo: pd.DataFrame, balanced_por_bag: pd.DataFrame | None = None) -> dict:
 
-    # Metricas rendimdiento
+    # Metricas rendimdiento. tokens_per_sec se agrega aparte, por bag.
     metricas_rendimiento = [
         "total_duration_sec", "output_tokens",
         "cpu_avg", "memory_avg", "gpu_util_avg", "gpu_mem_avg"
@@ -303,18 +379,30 @@ def resumen_bagging(df_completo: pd.DataFrame, balanced_por_bag: pd.DataFrame | 
         .agg(["min", "max"])
     )
     rendimiento = pd.concat([stats_entre_bags, minmax_crudo], axis=1)
+    tasas = _throughput_por_bag(df_completo)
+    stats_tasa = tasas.groupby("model")["tokens_per_sec"].agg(["mean", "std", "min", "max"])
+    stats_tasa.columns = pd.MultiIndex.from_product([["tokens_per_sec"], ["mean", "std", "min", "max"]])
+    rendimiento = pd.concat([rendimiento, stats_tasa], axis=1)
     rendimiento = rendimiento.reindex(
         columns=pd.MultiIndex.from_product(
-            [metricas_rendimiento, ["mean", "std", "min", "max"]]
+            [metricas_rendimiento[:2] + ["tokens_per_sec"] + metricas_rendimiento[2:],
+             ["mean", "std", "min", "max"]]
         )
     ).round(4)
 
-    # Metricas calidad. balanced_accuracy ya viene por bag, no por fila.
+    # Por fila: calidad léxica, marca de razonamiento y rescoring del
+    # texto aislado. Por bag, y solo en sí/no: balanced_accuracy, recall
+    # por clase, tasa de parseo y proporción de sí.
     metricas_fila = [
         "f1_token", "rouge1", "rouge2",
         "meteor", "bertscore",
+        "razonamiento", "f1_aislado", "rouge1_aislado", "rouge2_aislado",
     ]
-    metricas_calidad = metricas_fila + ["balanced_accuracy"]
+    metricas_por_bag = [
+        "balanced_accuracy", "recall_si", "recall_no",
+        "tasa_parseo", "proporcion_si",
+    ]
+    metricas_calidad = metricas_fila + metricas_por_bag
     promedio_calidad_por_bag = (
         df_completo
         .groupby(["model", "question_type", "bag_id"])[metricas_fila]
@@ -328,7 +416,8 @@ def resumen_bagging(df_completo: pd.DataFrame, balanced_por_bag: pd.DataFrame | 
             how="left",
         )
     else:
-        promedio_calidad_por_bag["balanced_accuracy"] = pd.NA
+        for metrica in metricas_por_bag:
+            promedio_calidad_por_bag[metrica] = pd.NA
 
     stats_calidad_entre_bags = (
         promedio_calidad_por_bag
@@ -341,15 +430,12 @@ def resumen_bagging(df_completo: pd.DataFrame, balanced_por_bag: pd.DataFrame | 
         .agg(["min", "max"])
     )
     if balanced_por_bag is not None and not balanced_por_bag.empty:
-        minmax_bal = (
+        minmax_bag = (
             balanced_por_bag
-            .groupby(["model", "question_type"])["balanced_accuracy"]
+            .groupby(["model", "question_type"])[metricas_por_bag]
             .agg(["min", "max"])
         )
-        minmax_bal.columns = pd.MultiIndex.from_product(
-            [["balanced_accuracy"], ["min", "max"]]
-        )
-        minmax_calidad_crudo = pd.concat([minmax_calidad_crudo, minmax_bal], axis=1)
+        minmax_calidad_crudo = pd.concat([minmax_calidad_crudo, minmax_bag], axis=1)
     calidad = pd.concat([stats_calidad_entre_bags, minmax_calidad_crudo], axis=1)
     calidad = calidad.reindex(
         columns=pd.MultiIndex.from_product(
@@ -376,6 +462,34 @@ def asegurar_recursos_nltk():
             nltk.download(nombre, quiet=True)
 
 
+def unir_por_fila(df: pd.DataFrame, resultado_df: pd.DataFrame) -> pd.DataFrame:
+    """Pega los recursos al lado de las métricas, en el mismo orden de filas.
+
+    No se une por question_id: dentro de una bag ese id se repite, y un
+    merge por esa clave duplica filas. evaluar_dataframe recorre el CSV
+    en orden, así que la fila i de un lado es la fila i del otro.
+    """
+    if len(df) != len(resultado_df):
+        raise ValueError("El detalle de métricas no coincide con el CSV de entrada")
+
+    claves = ["bag_id", "model", "question_id", "question_type"]
+    izquierda = df[claves].reset_index(drop=True).astype(str)
+    derecha = resultado_df[claves].reset_index(drop=True).astype(str)
+    if not izquierda.equals(derecha):
+        raise ValueError(
+            "El detalle de métricas no está en el mismo orden que el CSV de entrada"
+        )
+
+    recursos = [
+        "total_duration_sec", "output_tokens", "cpu_avg", "memory_avg",
+        "gpu_util_avg", "gpu_mem_avg",
+    ]
+    return pd.concat(
+        [resultado_df.reset_index(drop=True), df[recursos].reset_index(drop=True)],
+        axis=1,
+    )
+
+
 def ejecutar_evaluacion(csv_path: str, out_dir: str | None = None) -> dict:
     asegurar_recursos_nltk()
     csv_path = Path(csv_path)
@@ -386,18 +500,19 @@ def ejecutar_evaluacion(csv_path: str, out_dir: str | None = None) -> dict:
     df = pd.read_csv(csv_path)
     resultado_df = evaluar_dataframe(df)
     balanced_por_bag = calcular_balanced_accuracy(df, resultado_df)
+
+    df_completo = unir_por_fila(df, resultado_df)
+    duracion = df_completo["total_duration_sec"].astype(float)
+    df_completo["tokens_per_sec"] = (
+        df_completo["output_tokens"].astype(float) / duracion.where(duracion > 0)
+    )
+    resultado_df = df_completo.drop(columns=[
+        "total_duration_sec", "output_tokens", "cpu_avg", "memory_avg",
+        "gpu_util_avg", "gpu_mem_avg",
+    ])
     ruta_detalle = f"{base_out}_metricas.csv"
     resultado_df.to_csv(ruta_detalle, index=False)
     print(f"Resultados por fila guardados en {ruta_detalle}")
-
-    columnas_rendimiento = [
-        "bag_id", "model", "question_id", "total_duration_sec",
-        "output_tokens", "cpu_avg", "memory_avg",
-        "gpu_util_avg", "gpu_mem_avg"
-    ]
-    df_completo = resultado_df.merge(
-        df[columnas_rendimiento], on=["bag_id", "model", "question_id"]
-    )
 
     resumenes = resumen_bagging(df_completo, balanced_por_bag)
 
